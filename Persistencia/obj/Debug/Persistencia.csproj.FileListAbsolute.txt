@@ -1,0 +1,35 @@
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Juan\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Florencia\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\fer\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\sistemas\Documents\GitHub\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.pdb

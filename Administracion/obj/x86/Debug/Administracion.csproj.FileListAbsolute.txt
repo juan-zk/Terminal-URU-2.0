@@ -1,0 +1,13 @@
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Administracion.exe
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Administracion.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Logica.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Persistencia.dll
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Logica.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\bin\Debug\Persistencia.pdb
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.exe
+C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.pdb
