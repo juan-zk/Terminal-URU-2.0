@@ -10,7 +10,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SitioConsulta", "SitioConsulta\", "{7FF16A2D-9976-4975-BB43-6B353860B283}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{0A9A30AC-9EBE-4DAD-A41D-7499E8F221B7}|EntidadesCompartidas.dll;{B480B823-9CF3-4C3D-99AF-34AF5EB3BE11}|Logica.dll;{9CF347AA-5077-4435-8662-B70EF4C3751A}|Persistencia.dll;"
+		ProjectReferences = ""
 		Debug.AspNetCompiler.VirtualPath = "/SitioConsulta"
 		Debug.AspNetCompiler.PhysicalPath = "SitioConsulta\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SitioConsulta\"
@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SitioConsulta", "SitioConsu
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administracion", "Administracion\Administracion.csproj", "{157C3129-0F24-4955-9FE2-5E18A91D7F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioWeb", "ServicioWeb\ServicioWeb.csproj", "{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,16 @@ Global
 		{157C3129-0F24-4955-9FE2-5E18A91D7F82}.Release|Mixed Platforms.Build.0 = Release|x86
 		{157C3129-0F24-4955-9FE2-5E18A91D7F82}.Release|x86.ActiveCfg = Release|x86
 		{157C3129-0F24-4955-9FE2-5E18A91D7F82}.Release|x86.Build.0 = Release|x86
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

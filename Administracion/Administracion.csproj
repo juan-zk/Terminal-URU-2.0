@@ -73,16 +73,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EntidadesCompartidas\EntidadesCompartidas.csproj">
-      <Project>{0A9A30AC-9EBE-4DAD-A41D-7499E8F221B7}</Project>
-      <Name>EntidadesCompartidas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Logica\Logica.csproj">
-      <Project>{B480B823-9CF3-4C3D-99AF-34AF5EB3BE11}</Project>
-      <Name>Logica</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

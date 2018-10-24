@@ -33,3 +33,10 @@ C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\bin\Debug\EntidadesCompartida
 C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Juan\Desktop\TerminalURU 2.0\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Persistencia\obj\Debug\Persistencia.pdb
