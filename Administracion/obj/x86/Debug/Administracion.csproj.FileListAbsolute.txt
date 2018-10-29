@@ -18,3 +18,5 @@ C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Adm
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.exe
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Main.resources

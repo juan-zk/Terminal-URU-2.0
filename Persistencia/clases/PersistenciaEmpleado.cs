@@ -173,12 +173,12 @@ namespace Persistencia
         }
 
        
-        public void Borrar(string pCedula)
+        public void Borrar(Empleado pEmp)
         {
             SqlConnection cnn = new SqlConnection(Conexion.CONEXION);
             SqlCommand cmd = new SqlCommand("BorrarEmpleado", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Cedula", pCedula);
+            cmd.Parameters.AddWithValue("@Cedula", pEmp._Cedula);
             SqlParameter Retorno = new SqlParameter();
             Retorno.Direction = ParameterDirection.ReturnValue;
             cmd.Parameters.Add(Retorno);

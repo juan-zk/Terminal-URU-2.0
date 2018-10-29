@@ -1,0 +1,11 @@
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\ServicioWeb.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\ServicioWeb.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\EntidadesCompartidas.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Logica.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Persistencia.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\EntidadesCompartidas.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Logica.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Persistencia.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.dll
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.pdb

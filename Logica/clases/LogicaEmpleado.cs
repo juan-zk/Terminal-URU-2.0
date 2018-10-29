@@ -39,9 +39,9 @@ namespace Logica
             FabricaPersistencia.GetPersistenciaEmpleado().Modificar(pEmp);
         }
         
-        public void Borrar(string pCedula)
+        public void Borrar(Empleado pEmp)
         {
-            FabricaPersistencia.GetPersistenciaEmpleado().Borrar(pCedula);
+            FabricaPersistencia.GetPersistenciaEmpleado().Borrar(pEmp);
         }
     }
 }

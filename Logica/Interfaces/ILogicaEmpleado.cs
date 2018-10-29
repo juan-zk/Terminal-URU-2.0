@@ -18,6 +18,6 @@ namespace Logica
 
         void Modificar(Empleado pEmp);
 
-        void Borrar(string pCedula);
+        void Borrar(Empleado pEmp);
     }
 }
