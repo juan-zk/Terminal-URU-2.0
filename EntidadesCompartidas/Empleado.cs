@@ -5,6 +5,7 @@ using System.Text;
 
 namespace EntidadesCompartidas
 {
+    [Serializable]
    public class Empleado
     {
        // Atributos
@@ -62,5 +63,7 @@ namespace EntidadesCompartidas
            _NombreCompleto = pNombreCompleto;
            
        }
+        // constructor por defecto
+       public Empleado() { }
     }
 }

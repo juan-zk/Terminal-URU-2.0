@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/Servicio" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="default web site/Servicio" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="11/01/2018 17:17:36" />
+    <file relUrl="ServicioCompanias.asmx" publishTime="10/24/2018 00:55:04" />
+    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/01/2018 17:17:26" />
+    <file relUrl="bin/Persistencia.dll" publishTime="11/01/2018 17:17:26" />
+    <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="11/01/2018 17:17:24" />
+    <file relUrl="ServicioTerminales.asmx" publishTime="10/24/2018 00:54:30" />
+    <file relUrl="bin/Logica.pdb" publishTime="11/01/2018 17:17:26" />
+    <file relUrl="ServicioEmpleados.asmx" publishTime="10/24/2018 00:55:48" />
+    <file relUrl="bin/ServicioWeb.dll" publishTime="11/01/2018 17:17:26" />
+    <file relUrl="ServicioViajes.asmx" publishTime="10/24/2018 00:55:21" />
+    <file relUrl="bin/Persistencia.pdb" publishTime="11/01/2018 17:17:25" />
+    <file relUrl="bin/EntidadesCompartidas.dll" publishTime="11/01/2018 17:17:24" />
+    <file relUrl="bin/Logica.dll" publishTime="11/01/2018 17:17:26" />
+  </publishProfile>
+</publishData>

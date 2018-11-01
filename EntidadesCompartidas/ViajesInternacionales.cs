@@ -5,6 +5,7 @@ using System.Text;
 
 namespace EntidadesCompartidas
 {
+    [Serializable]
    public class ViajesInternacionales:Viaje
     {
        // Atributo
@@ -36,5 +37,6 @@ namespace EntidadesCompartidas
            _ServicioBordo = pServicioBordo;
            _Documentacion = pDocumentacion;
        }
+       public ViajesInternacionales() : base() { }
     }
 }

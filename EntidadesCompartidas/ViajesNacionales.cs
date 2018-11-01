@@ -5,6 +5,7 @@ using System.Text;
 
 namespace EntidadesCompartidas
 {
+    [Serializable]
    public class ViajesNacionales:Viaje
     {
        // Atributos 
@@ -29,6 +30,7 @@ namespace EntidadesCompartidas
        {
            _ParadasIntermedias = pParadasIntermedias;
        }
-       
+       //constructor por defecto
+       public ViajesNacionales() : base() { }
    }
 }

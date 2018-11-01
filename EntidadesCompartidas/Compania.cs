@@ -5,6 +5,7 @@ using System.Text;
 
 namespace EntidadesCompartidas
 {
+   [Serializable]
    public class Compania
     {
        // Atributos 
@@ -56,5 +57,8 @@ namespace EntidadesCompartidas
            _Direccion = pDireccion;
            _Telefono = pTelefono;
        }
+
+       //constructor por defecto
+       public Compania() { }
     }
 }

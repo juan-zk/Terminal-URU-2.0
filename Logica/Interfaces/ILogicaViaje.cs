@@ -10,8 +10,8 @@ namespace Logica
     {
         //BUSCAR
 
-        ViajesInternacionales Buscar(int pNumero);
-        ViajesNacionales BuscarViaje(int pNumero);        
+        Viaje Buscar(int pNumero);
+              
 
         //ABM
         void Modificar(Viaje pViaje);

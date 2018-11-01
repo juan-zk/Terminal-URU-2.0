@@ -5,6 +5,7 @@ using System.Text;
 
 namespace EntidadesCompartidas
 {
+    [Serializable]
    public class Terminal
     {
        //Atributos 
@@ -75,5 +76,7 @@ namespace EntidadesCompartidas
            _Pais = pPais;
            _Facilidades = pFacilidades;
        }
+        //constructor por defecto
+       public Terminal() { }
     }
 }

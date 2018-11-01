@@ -5,9 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using Logica;
-using EntidadesCompartidas;
-
 public partial class ConsultaDeViajes : System.Web.UI.Page
 {
     void LlenarDDL()
