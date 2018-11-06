@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using ServicioWeb;
+using System.Web.Services.Protocols;
+
 public partial class CntrlViaje : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)

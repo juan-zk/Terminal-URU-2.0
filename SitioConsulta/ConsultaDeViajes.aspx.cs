@@ -5,11 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using ServicioWeb;
+using System.Web.Services.Protocols;
+
 public partial class ConsultaDeViajes : System.Web.UI.Page
 {
-    void LlenarDDL()
-    {
-        List<Terminal> terminales = FabricaLogica.GetLogicaTerminales().Listar();
+    ServicioTURU ServicioTerminal = new ServicioTURU();
+    void LlenarDDL()    
+    {      
+
+        List<Terminal> terminales = ServicioTerminal.ListarTerminales().ToList();
         ddlDestino.Items.Clear();
         foreach (Terminal ter in terminales)
         {
@@ -17,7 +22,7 @@ public partial class ConsultaDeViajes : System.Web.UI.Page
             ddlDestino.Items.Add(l);
         }
 
-        List<Compania> companias = FabricaLogica.GetLogicaCompania().Listar();
+        List<Compania> companias = ServicioTerminal.ListarCompanias().ToList();
         ddlCompania.Items.Clear();
         ddlCompania.Items.Add("Todas");
         foreach (Compania c in companias)
@@ -34,9 +39,7 @@ public partial class ConsultaDeViajes : System.Web.UI.Page
         {
             try
             {
-                List<Viaje> viajes = new List<Viaje>();
-                viajes.AddRange(FabricaLogica.GetLogicaViajes().Listar());
-                viajes.AddRange(FabricaLogica.GetLogicaViajes().ListarViaje());
+                List<Viaje> viajes = ServicioTerminal.ListarViajes().ToList();
 
                 Session["ListaDeViajes"] = viajes;
 
@@ -60,11 +63,7 @@ public partial class ConsultaDeViajes : System.Web.UI.Page
             {
                 int codViaje = Convert.ToInt32(((TextBox)e.Item.Controls[1]).Text);
 
-                Viaje v = FabricaLogica.GetLogicaViajes().Buscar(codViaje);
-                if (v == null)
-                {
-                    v = FabricaLogica.GetLogicaViajes().BuscarViaje(codViaje);
-                }
+                Viaje v = ServicioTerminal.BuscarViaje(codViaje);                
 
                 Session["ConsultaViaje"] = v;
                 Response.Redirect("~/DetalleDeViaje.aspx");
@@ -114,9 +113,7 @@ public partial class ConsultaDeViajes : System.Web.UI.Page
     {
         try
         {
-            List<Viaje> viajes = new List<Viaje>();
-            viajes.AddRange(FabricaLogica.GetLogicaViajes().Listar());
-            viajes.AddRange(FabricaLogica.GetLogicaViajes().ListarViaje());
+            List<Viaje> viajes = ServicioTerminal.ListarViajes().ToList();
 
             Session["ListaDeViajes"] = viajes;
 

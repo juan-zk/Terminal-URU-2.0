@@ -6,7 +6,7 @@ using System.Text;
 namespace EntidadesCompartidas
 {
     [Serializable]
-   public abstract class Viaje
+   public class Viaje
     {
        // Atributos
        private int NumViaje;

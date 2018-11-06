@@ -32,7 +32,6 @@ namespace Logica
         {
             List<Viaje> viajes = new List<Viaje>();
             viajes.AddRange(Listar());
-            viajes.AddRange(ListarViaje());
             TimeSpan dif;
 
             if (pViaje._FechaArribo <= pViaje._FechaPartida)
@@ -67,7 +66,6 @@ namespace Logica
 
             List<Viaje> viajes = new List<Viaje>();
             viajes.AddRange(Listar());
-            viajes.AddRange(ListarViaje());
             TimeSpan dif;
             if (pViaje._FechaArribo < DateTime.Now || pViaje._FechaPartida < DateTime.Now)
             {
@@ -96,13 +94,12 @@ namespace Logica
         
         // LISTAS
 
-        public List<ViajesInternacionales> Listar()
+        public List<Viaje> Listar()
         {
-            return FabricaPersistencia.GetPersistenciaViajeInternacional().Listar();
-        }
-        public List<ViajesNacionales> ListarViaje()
-        {
-            return FabricaPersistencia.GetPersistenciaViajeNacional().ListarViaje();
+            List<Viaje> viajes = new List<Viaje>();
+            viajes.AddRange(FabricaPersistencia.GetPersistenciaViajeInternacional().Listar());
+            viajes.AddRange(FabricaPersistencia.GetPersistenciaViajeNacional().ListarViaje());
+            return viajes;
         }
 
     }

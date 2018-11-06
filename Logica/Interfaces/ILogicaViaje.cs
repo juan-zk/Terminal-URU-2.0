@@ -22,9 +22,7 @@ namespace Logica
 
         
         //  LISTAS
-        
-        List<ViajesNacionales> ListarViaje();
-        List<ViajesInternacionales> Listar();
+        List<Viaje> Listar();
         
     }
 }

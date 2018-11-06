@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DC32CCA9-B67C-4C0C-A2DD-1BE385A451D6}</ProjectGuid>
+    <ProjectGuid>{05D2629A-DBB3-4E5D-ACA0-ACB528825F8A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,10 +50,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ServicioCompanias.asmx" />
-    <Content Include="ServicioEmpleados.asmx" />
-    <Content Include="ServicioTerminales.asmx" />
-    <Content Include="ServicioViajes.asmx" />
+    <Content Include="ServicioTURU.asmx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -64,20 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicioCompanias.asmx.cs">
-      <DependentUpon>ServicioCompanias.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ServicioEmpleados.asmx.cs">
-      <DependentUpon>ServicioEmpleados.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ServicioTerminales.asmx.cs">
-      <DependentUpon>ServicioTerminales.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ServicioViajes.asmx.cs">
-      <DependentUpon>ServicioViajes.asmx</DependentUpon>
+    <Compile Include="ServicioTURU.asmx.cs">
+      <DependentUpon>ServicioTURU.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -99,7 +84,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>65487</DevelopmentServerPort>
+          <DevelopmentServerPort>20128</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
