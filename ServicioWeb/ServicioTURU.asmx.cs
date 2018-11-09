@@ -6,7 +6,6 @@ using System.Web.Services;
 
 using EntidadesCompartidas;
 using Logica;
-using System.Collections.Generic;
 using System.Xml;
 using System.Web.Services.Protocols;
 
@@ -323,6 +322,16 @@ namespace ServicioWeb
 
 
         //VIAJES---------------------------------------------------------------------------
+        [WebMethod]
+        public ViajesInternacionales HerenciaInternacionales(ViajesInternacionales pViaje)
+        {
+            return pViaje;
+        }
+        [WebMethod]
+        public ViajesNacionales HerenciaNacionales(ViajesNacionales pViaje)
+        {
+            return pViaje;
+        }
         [WebMethod]
         public Viaje BuscarViaje(int numero)
         {

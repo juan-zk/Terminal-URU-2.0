@@ -19,3 +19,7 @@ C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\E
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
