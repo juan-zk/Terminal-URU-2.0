@@ -13,7 +13,6 @@ C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracio
 C:\Users\Juan\Desktop\TerminalURU 2.0\Administracion\obj\x86\Debug\Administracion.pdb
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.exe
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.pdb
-C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.exe

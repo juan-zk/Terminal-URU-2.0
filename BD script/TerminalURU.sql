@@ -910,4 +910,16 @@ insert into ViajesNacionales values(8,3)
 --select * from Terminales
 --select *from Viajes
 go
+--usuario iis
+CREATE LOGIN [IIS APPPOOL\DefaultAppPool] FROM WINDOWS 
+GO
+
+USE TerminalURU
+GO
+
+CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool]
+GO
+
+Grant Execute to [IIS APPPOOL\DefaultAppPool]
+go
 
