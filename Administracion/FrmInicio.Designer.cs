@@ -53,15 +53,15 @@
             this.menuUsr});
             this.stpMenu.Location = new System.Drawing.Point(0, 0);
             this.stpMenu.Name = "stpMenu";
-            this.stpMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.stpMenu.Size = new System.Drawing.Size(765, 24);
+            this.stpMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.stpMenu.Size = new System.Drawing.Size(1020, 28);
             this.stpMenu.TabIndex = 0;
             this.stpMenu.Text = "menu";
             // 
             // menuEstad
             // 
             this.menuEstad.Name = "menuEstad";
-            this.menuEstad.Size = new System.Drawing.Size(79, 20);
+            this.menuEstad.Size = new System.Drawing.Size(97, 24);
             this.menuEstad.Text = "Estadisticas";
             // 
             // menuViaje
@@ -70,38 +70,39 @@
             this.menuViajeNac,
             this.menuViajeInter});
             this.menuViaje.Name = "menuViaje";
-            this.menuViaje.Size = new System.Drawing.Size(49, 20);
+            this.menuViaje.Size = new System.Drawing.Size(60, 24);
             this.menuViaje.Text = "Viajes";
             // 
             // menuViajeNac
             // 
             this.menuViajeNac.Name = "menuViajeNac";
-            this.menuViajeNac.Size = new System.Drawing.Size(154, 22);
+            this.menuViajeNac.Size = new System.Drawing.Size(178, 24);
             this.menuViajeNac.Text = "Nacionales";
             // 
             // menuViajeInter
             // 
             this.menuViajeInter.Name = "menuViajeInter";
-            this.menuViajeInter.Size = new System.Drawing.Size(154, 22);
+            this.menuViajeInter.Size = new System.Drawing.Size(178, 24);
             this.menuViajeInter.Text = "Internacionales";
             // 
             // menuComp
             // 
             this.menuComp.Name = "menuComp";
-            this.menuComp.Size = new System.Drawing.Size(79, 20);
+            this.menuComp.Size = new System.Drawing.Size(95, 24);
             this.menuComp.Text = "Compañias";
             // 
             // menuTerm
             // 
             this.menuTerm.Name = "menuTerm";
-            this.menuTerm.Size = new System.Drawing.Size(77, 20);
+            this.menuTerm.Size = new System.Drawing.Size(92, 24);
             this.menuTerm.Text = "Terminales";
             // 
             // menuEmp
             // 
             this.menuEmp.Name = "menuEmp";
-            this.menuEmp.Size = new System.Drawing.Size(77, 20);
+            this.menuEmp.Size = new System.Drawing.Size(95, 24);
             this.menuEmp.Text = "Empleados";
+            this.menuEmp.Click += new System.EventHandler(this.menuEmp_Click);
             // 
             // menuUsr
             // 
@@ -111,31 +112,32 @@
             this.menuUsrSalir});
             this.menuUsr.Name = "menuUsr";
             this.menuUsr.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuUsr.Size = new System.Drawing.Size(59, 20);
+            this.menuUsr.Size = new System.Drawing.Size(71, 24);
             this.menuUsr.Text = "Usuario";
             // 
             // menuUsrCerrarS
             // 
             this.menuUsrCerrarS.Name = "menuUsrCerrarS";
-            this.menuUsrCerrarS.Size = new System.Drawing.Size(142, 22);
+            this.menuUsrCerrarS.Size = new System.Drawing.Size(163, 24);
             this.menuUsrCerrarS.Text = "Cerrar sesion";
             this.menuUsrCerrarS.Click += new System.EventHandler(this.menuUsrCerrarS_Click);
             // 
             // menuUsrSalir
             // 
             this.menuUsrSalir.Name = "menuUsrSalir";
-            this.menuUsrSalir.Size = new System.Drawing.Size(142, 22);
+            this.menuUsrSalir.Size = new System.Drawing.Size(163, 24);
             this.menuUsrSalir.Text = "Salir";
             this.menuUsrSalir.Click += new System.EventHandler(this.menuUsrSalir_Click);
             // 
             // FrmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 379);
+            this.ClientSize = new System.Drawing.Size(1020, 466);
             this.Controls.Add(this.stpMenu);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.stpMenu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion TerminalURU";

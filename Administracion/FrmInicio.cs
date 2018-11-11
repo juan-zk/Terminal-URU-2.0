@@ -13,6 +13,8 @@ namespace Administracion
 {
     public partial class FrmInicio : Form
     {
+        internal Form f = null;
+
         public FrmInicio(Empleado em)
         {
             InitializeComponent();
@@ -28,7 +30,21 @@ namespace Administracion
         private void menuUsrCerrarS_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form f = new Login();
+            f = new Login();
+            f.Show();
+        }
+
+        private void menuEmp_Click(object sender, EventArgs e)
+        {
+            if (f != null)
+            {
+                f.Close();
+                f = null;
+            }
+
+            f = new ABMEmpleado();
+            f.MdiParent = this;
+            f.StartPosition = FormStartPosition.WindowsDefaultLocation;
             f.Show();
         }
 

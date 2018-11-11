@@ -38,3 +38,4 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Admi
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMEmpleado.resources
