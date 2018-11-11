@@ -57,6 +57,12 @@
     <Compile Include="ABMEmpleado.Designer.cs">
       <DependentUpon>ABMEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="ABMTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMTerminal.Designer.cs">
+      <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <EmbeddedResource Include="ABMEmpleado.resx">
       <DependentUpon>ABMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMTerminal.resx">
+      <DependentUpon>ABMTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
@@ -129,7 +138,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\cancelar.png" />
+    <Content Include="img\eliminar.png" />
     <Content Include="img\key.png" />
+    <Content Include="img\modificar.bmp" />
+    <Content Include="img\nuevo.bmp" />
     <None Include="Web References\ServicioWeb\ServicioTURU.disco" />
   </ItemGroup>
   <ItemGroup>

@@ -96,6 +96,7 @@
             this.menuTerm.Name = "menuTerm";
             this.menuTerm.Size = new System.Drawing.Size(92, 24);
             this.menuTerm.Text = "Terminales";
+            this.menuTerm.Click += new System.EventHandler(this.menuTerm_Click);
             // 
             // menuEmp
             // 

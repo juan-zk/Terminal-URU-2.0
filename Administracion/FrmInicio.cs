@@ -41,8 +41,20 @@ namespace Administracion
                 f.Close();
                 f = null;
             }
-
             f = new ABMEmpleado();
+            f.MdiParent = this;
+            f.StartPosition = FormStartPosition.WindowsDefaultLocation;
+            f.Show();
+        }
+
+        private void menuTerm_Click(object sender, EventArgs e)
+        {
+            if (f != null)
+            {
+                f.Close();
+                f = null;
+            }
+            f = new ABMTerminal();
             f.MdiParent = this;
             f.StartPosition = FormStartPosition.WindowsDefaultLocation;
             f.Show();
