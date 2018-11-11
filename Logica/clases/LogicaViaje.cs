@@ -84,7 +84,6 @@ namespace Logica
                         throw new Exception("No puede haber un viaje al mismo destino con la misma hora de salida, al menos 2 hrs de diferencia.");
                 }
             }
-
             if (pViaje is ViajesInternacionales)
                 FabricaPersistencia.GetPersistenciaViajeInternacional().Agregar((ViajesInternacionales)pViaje);
             else

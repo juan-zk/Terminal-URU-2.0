@@ -18,6 +18,11 @@ namespace EntidadesCompartidas
        private Empleado Emp;
 
        // Propiedades 
+       public string _Destino
+       {
+           set { }
+           get { return string.Format(Ter._Codigo + " " + Ter._Ciudad); }
+       }
        public int _NumViaje
        {
            get { return NumViaje; }
@@ -91,6 +96,7 @@ namespace EntidadesCompartidas
                    throw new Exception("Error en el Empleado");
            }
        }
+       
 
        // Constructor
        public Viaje(int pNumViaje, Compania pCom, Terminal pTer, DateTime pFechaPartida, DateTime pFechaArribo, int pCantidadAsientos, Empleado pEmp)

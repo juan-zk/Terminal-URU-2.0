@@ -325,7 +325,7 @@ namespace ServicioWeb
         [WebMethod]
         public ViajesInternacionales HerenciaInternacionales(ViajesInternacionales pViaje)
         {
-            return pViaje;
+            return pViaje;            
         }
         [WebMethod]
         public ViajesNacionales HerenciaNacionales(ViajesNacionales pViaje)

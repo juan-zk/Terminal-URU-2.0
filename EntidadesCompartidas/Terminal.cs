@@ -62,11 +62,7 @@ namespace EntidadesCompartidas
                else
                    throw new Exception("Debe seleccionar al menos una facilidad");
            }
-       }
-       public string _Destino
-       {
-           get { return string.Format(_Codigo + " " + _Ciudad); }
-       }
+       }       
 
        // Constructor
        public Terminal(string pCodigo, string pCiudad, string pPais, List<string> pFacilidades)

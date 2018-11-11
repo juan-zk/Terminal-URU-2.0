@@ -40,12 +40,10 @@ public partial class ConsultaDeViajes : System.Web.UI.Page
             try
             {
                 List<Viaje> viajes = ServicioTerminal.ListarViajes().ToList();
-
                 Session["ListaDeViajes"] = viajes;
-
+                
                 rptrViajes.DataSource = viajes;
                 rptrViajes.DataBind();
-
                 LlenarDDL();
 
             }

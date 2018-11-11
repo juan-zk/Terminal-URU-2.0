@@ -10,7 +10,7 @@ namespace EntidadesCompartidas
     {
        // Atributos 
        private int ParadasIntermedias;
-
+       
        // Propiedades
 
        public int _ParadasIntermedias
