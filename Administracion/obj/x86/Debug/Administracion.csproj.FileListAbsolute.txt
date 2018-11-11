@@ -18,7 +18,6 @@ C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Adm
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.exe
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.pdb
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
-C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Main.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Main.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
@@ -27,3 +26,5 @@ C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Ad
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.pdb
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.exe
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.exe.config
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.FrmInicio.resources
