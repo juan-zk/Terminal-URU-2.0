@@ -19,8 +19,6 @@ namespace Administracion
         public ABMEmpleado()
         {
             InitializeComponent();
-            txtContraseña.Enabled = false;
-            txtNombreCompleto.Enabled = false;
             this.DesactivoBotones();
             
         }

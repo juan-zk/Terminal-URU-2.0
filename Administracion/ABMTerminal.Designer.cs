@@ -237,7 +237,7 @@
             this.Controls.Add(this.tsBotones);
             this.Name = "ABMTerminal";
             this.Text = "Terminales";
-            this.Load += new System.EventHandler(this.ABMTerminal_Load);
+            
             this.tsBotones.ResumeLayout(false);
             this.tsBotones.PerformLayout();
             this.grp.ResumeLayout(false);
