@@ -35,13 +35,15 @@
             this.txtNombreCompleto = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.EPNCedula = new System.Windows.Forms.ErrorProvider(this.components);
             this.BarraHerramientas = new System.Windows.Forms.ToolStrip();
+            this.btnDeshacer = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar1 = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar1 = new System.Windows.Forms.ToolStripButton();
+            this.btnAgregar1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.EPNCedula)).BeginInit();
+            this.BarraHerramientas.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -92,40 +94,10 @@
             this.txtCedula.Size = new System.Drawing.Size(209, 20);
             this.txtCedula.TabIndex = 5;
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(136, 247);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(245, 247);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(354, 246);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(245, 316);
+            this.lblError.Location = new System.Drawing.Point(191, 219);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(39, 13);
             this.lblError.TabIndex = 9;
@@ -137,22 +109,64 @@
             // 
             // BarraHerramientas
             // 
+            this.BarraHerramientas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnDeshacer,
+            this.btnModificar1,
+            this.btnEliminar1,
+            this.btnAgregar1});
             this.BarraHerramientas.Location = new System.Drawing.Point(0, 0);
             this.BarraHerramientas.Name = "BarraHerramientas";
-            this.BarraHerramientas.Size = new System.Drawing.Size(837, 25);
+            this.BarraHerramientas.Size = new System.Drawing.Size(482, 25);
             this.BarraHerramientas.TabIndex = 10;
             this.BarraHerramientas.Text = "toolStrip1";
+            // 
+            // btnDeshacer
+            // 
+            this.btnDeshacer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDeshacer.Image = global::Administracion.Properties.Resources.cancelar;
+            this.btnDeshacer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDeshacer.Name = "btnDeshacer";
+            this.btnDeshacer.Size = new System.Drawing.Size(23, 22);
+            this.btnDeshacer.Text = "Deshacer";
+            this.btnDeshacer.Click += new System.EventHandler(this.btnDeshacer_Click);
+            // 
+            // btnModificar1
+            // 
+            this.btnModificar1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnModificar1.Image = global::Administracion.Properties.Resources.modificar;
+            this.btnModificar1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar1.Name = "btnModificar1";
+            this.btnModificar1.Size = new System.Drawing.Size(23, 22);
+            this.btnModificar1.Text = "Modificar";
+            this.btnModificar1.Click += new System.EventHandler(this.btnModificar1_Click);
+            // 
+            // btnEliminar1
+            // 
+            this.btnEliminar1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEliminar1.Image = global::Administracion.Properties.Resources.eliminar;
+            this.btnEliminar1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar1.Name = "btnEliminar1";
+            this.btnEliminar1.Size = new System.Drawing.Size(23, 22);
+            this.btnEliminar1.Text = "Eliminar";
+            this.btnEliminar1.Click += new System.EventHandler(this.btnEliminar1_Click);
+            // 
+            // btnAgregar1
+            // 
+            this.btnAgregar1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAgregar1.Image = global::Administracion.Properties.Resources.nuevo;
+            this.btnAgregar1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregar1.Name = "btnAgregar1";
+            this.btnAgregar1.Size = new System.Drawing.Size(23, 22);
+            this.btnAgregar1.Text = "Nuevo";
+            this.btnAgregar1.Click += new System.EventHandler(this.btnAgregar1_Click);
             // 
             // ABMEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 440);
+            this.ClientSize = new System.Drawing.Size(482, 440);
             this.Controls.Add(this.BarraHerramientas);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombreCompleto);
@@ -162,6 +176,8 @@
             this.Name = "ABMEmpleado";
             this.Text = "ABMEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.EPNCedula)).EndInit();
+            this.BarraHerramientas.ResumeLayout(false);
+            this.BarraHerramientas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,11 +191,12 @@
         private System.Windows.Forms.TextBox txtNombreCompleto;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ErrorProvider EPNCedula;
         private System.Windows.Forms.ToolStrip BarraHerramientas;
+        private System.Windows.Forms.ToolStripButton btnDeshacer;
+        private System.Windows.Forms.ToolStripButton btnModificar1;
+        private System.Windows.Forms.ToolStripButton btnEliminar1;
+        private System.Windows.Forms.ToolStripButton btnAgregar1;
     }
 }

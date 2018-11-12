@@ -19,14 +19,38 @@ namespace Administracion
         public ABMEmpleado()
         {
             InitializeComponent();
+            txtContraseña.Enabled = false;
+            txtNombreCompleto.Enabled = false;
+            this.DesactivoBotones();
             
         }
 
         private void DesactivoBotones()
         {
-            btnAgregar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnModificar.Enabled = false;
+            btnAgregar1.Enabled = false;
+            btnEliminar1.Enabled = false;
+            btnModificar1.Enabled = false;
+        }
+        
+        private void ActivoAgregar()
+        {
+            btnAgregar1.Enabled = true;
+            btnEliminar1.Enabled = false;
+            btnModificar1.Enabled = false;
+
+            txtContraseña.Text = "";
+            txtNombreCompleto.Text = "";
+        }
+       
+        private void ActivoActualizacion()
+        {
+            btnAgregar1.Enabled = false;
+            btnEliminar1.Enabled = true;
+            btnModificar1.Enabled = true;
+
+            txtCedula.Text = _Emp._Cedula;
+            txtContraseña.Text = _Emp._Contraseña;
+            txtNombreCompleto.Text = _Emp._NombreCompleto;
         }
 
         private void LimpioCajaTexto()
@@ -39,54 +63,14 @@ namespace Administracion
 
         private void txtCedula_Validating(object sender, CancelEventArgs e)
         {
-            try
-            {
-                Convert.ToInt32(txtCedula.Text);
-                EPNCedula.Clear();
-            }
-            catch (Exception ex)
-            {
-                EPNCedula.SetError(txtCedula, "Solo se pueden ingresar numeros");
-                e.Cancel = true;
-            }
 
             try
             {
                 _Emp = new Administracion.ServicioWeb.ServicioTURU().BuscarEmpleado(txtCedula.Text);
-                this.LimpioCajaTexto();
-
                 if (_Emp == null)
-                {
-                    btnAgregar.Enabled = true;
-                }
+                    this.ActivoAgregar();
                 else
-                {
-                    btnModificar.Enabled = true;
-                    btnEliminar.Enabled = true;
-                    txtCedula.Text = _Emp._Cedula;
-                    txtContraseña.Text = _Emp._Contraseña;
-                    txtNombreCompleto.Text = _Emp._NombreCompleto;
-                }
-            }
-            catch (System.Web.Services.Protocols.SoapException ex)
-            {
-                
-            }
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _Emp._Cedula = txtCedula.Text.Trim();
-                _Emp._Contraseña = txtContraseña.Text.Trim();
-                _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
-
-                new Administracion.ServicioWeb.ServicioTURU().AgregarEmpleado(_Emp);
-                this.DesactivoBotones();
-                this.LimpioCajaTexto();
-
-                lblError.Text = "Alta con Exito";
+                    this.ActivoActualizacion();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             { }
@@ -94,7 +78,11 @@ namespace Administracion
             { }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+
+
+     
+
+        private void btnEliminar1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -109,9 +97,9 @@ namespace Administracion
             { }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar1_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 _Emp._Cedula = txtCedula.Text.Trim();
                 _Emp._Contraseña = txtContraseña.Text.Trim();
@@ -121,6 +109,34 @@ namespace Administracion
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
                 lblError.Text = " Modificar con Exito";
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            { }
+            catch (Exception ex)
+            { }
+        }
+
+        private void btnDeshacer_Click(object sender, EventArgs e)
+        {
+            _Emp = null;
+            this.DesactivoBotones();
+            this.LimpioCajaTexto();
+
+        }
+
+        private void btnAgregar1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _Emp._Cedula = txtCedula.Text.Trim();
+                _Emp._Contraseña = txtContraseña.Text.Trim();
+                _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
+
+                new Administracion.ServicioWeb.ServicioTURU().AgregarEmpleado(_Emp);
+                this.DesactivoBotones();
+                this.LimpioCajaTexto();
+
+                lblError.Text = "Alta con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             { }
