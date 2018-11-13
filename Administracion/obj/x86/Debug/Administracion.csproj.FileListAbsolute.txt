@@ -41,3 +41,6 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Admi
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMEmpleado.resources
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMTerminal.resources
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMViajesNacionales.resources
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.exe.config
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.exe
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.pdb
