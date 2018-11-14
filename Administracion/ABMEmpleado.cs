@@ -28,6 +28,7 @@ namespace Administracion
             btnAgregar1.Enabled = false;
             btnEliminar1.Enabled = false;
             btnModificar1.Enabled = false;
+            lblError.Text = "";
         }
         
         private void ActivoAgregar()
@@ -62,13 +63,33 @@ namespace Administracion
         private void txtCedula_Validating(object sender, CancelEventArgs e)
         {
 
+
             try
             {
+                Convert.ToInt32(txtCedula.Text);
+                EPNCedula.Clear();
+            }
+            catch (Exception ex)
+            {
+                EPNCedula.SetError(txtCedula, "Solo se puede Ingresar Numeros");
+                e.Cancel = true;
+            }
+            
+            
+            try
+            {
+               
                 _Emp = new Administracion.ServicioWeb.ServicioTURU().BuscarEmpleado(txtCedula.Text);
                 if (_Emp == null)
+                {
                     this.ActivoAgregar();
+                    lblError.Text = "Usuario no encontrado, Complete los campos para Agregar.";
+                }
                 else
+                {
                     this.ActivoActualizacion();
+                    lblError.Text = "";
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             { }
@@ -106,7 +127,7 @@ namespace Administracion
 
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
-                lblError.Text = " Modificar con Exito";
+                lblError.Text = " Modificado con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             { }
@@ -126,6 +147,7 @@ namespace Administracion
         {
             try
             {
+                Empleado _Emp = new Empleado();
                 _Emp._Cedula = txtCedula.Text.Trim();
                 _Emp._Contraseña = txtContraseña.Text.Trim();
                 _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
