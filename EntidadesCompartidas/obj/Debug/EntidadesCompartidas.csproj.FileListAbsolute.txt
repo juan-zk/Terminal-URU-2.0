@@ -27,3 +27,4 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\En
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.csprojResolveAssemblyReference.cache
