@@ -69,6 +69,12 @@
     <Compile Include="ABMViajesNacionales.Designer.cs">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormErrores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormErrores.Designer.cs">
+      <DependentUpon>FormErrores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABMViajesNacionales.resx">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErrores.resx">
+      <DependentUpon>FormErrores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>

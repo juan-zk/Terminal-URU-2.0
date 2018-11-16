@@ -182,6 +182,7 @@
             this.btnFacilidadAgregar.Size = new System.Drawing.Size(25, 22);
             this.btnFacilidadAgregar.TabIndex = 11;
             this.btnFacilidadAgregar.UseVisualStyleBackColor = true;
+            this.btnFacilidadAgregar.Click += new System.EventHandler(this.btnFacilidadAgregar_Click);
             // 
             // btnFacilidadBorrar
             // 
@@ -237,7 +238,6 @@
             this.Controls.Add(this.tsBotones);
             this.Name = "ABMTerminal";
             this.Text = "Terminales";
-            
             this.tsBotones.ResumeLayout(false);
             this.tsBotones.PerformLayout();
             this.grp.ResumeLayout(false);

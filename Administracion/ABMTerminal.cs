@@ -16,5 +16,16 @@ namespace Administracion
             InitializeComponent();
         }
 
+        private void btnFacilidadAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtFacilidad.Text != "")
+                    lstFacilidad.Items.Add(txtFacilidad.Text);
+                txtFacilidad.Text = "";
+            }
+            catch (Exception ex) { lblMensaje.Text = ex.Message; }
+        }
+
     }
 }

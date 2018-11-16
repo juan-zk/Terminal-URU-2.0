@@ -21,22 +21,24 @@ namespace Administracion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ServicioTURU Sweb = new ServicioTURU();
-            string ci = txtUsr.Text;
-            string pass = txtPass.Text;
-
-            Empleado emp = Sweb.Logueo(ci, pass);
-
-            if (emp == null)
+            try
             {
-                lblError.Text = ("Usuario o contraseña invalidos");
+                ServicioTURU Sweb = new ServicioTURU();
+                string ci = txtUsr.Text;
+                string pass = txtPass.Text;
+
+                Empleado emp = Sweb.Logueo(ci, pass);
+
+                if (emp == null)
+                    throw new Exception("Usuario o contraseña invalidos");                
+                else
+                {
+                    this.Hide();
+                    Form f = new FrmInicio(emp);
+                    f.Show();
+                }
             }
-            else
-            {
-                this.Hide();
-                Form f = new FrmInicio(emp);
-                f.Show();
-            }
+            catch (Exception ex) { lblError.Text = ex.Message; }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

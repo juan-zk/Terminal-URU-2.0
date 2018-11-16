@@ -29,35 +29,59 @@ namespace Administracion
 
         private void menuUsrCerrarS_Click(object sender, EventArgs e)
         {
-            this.Close();
-            f = new Login();
-            f.Show();
+            try
+            {
+                this.Close();
+                f = new Login();
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                Form f = new FormErrores(ex.Message);
+                f.ShowDialog();
+            }
         }
 
         private void menuEmp_Click(object sender, EventArgs e)
         {
-            if (f != null)
+            try
             {
-                f.Close();
-                f = null;
+                if (f != null)
+                {
+                    f.Close();
+                    f = null;
+                }
+                f = new ABMEmpleado();
+                f.MdiParent = this;
+                f.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                f.Show();
             }
-            f = new ABMEmpleado();
-            f.MdiParent = this;
-            f.StartPosition = FormStartPosition.WindowsDefaultLocation;
-            f.Show();
+            catch (Exception ex)
+            {
+                Form f = new FormErrores(ex.Message);
+                f.ShowDialog();
+            }
         }
 
         private void menuTerm_Click(object sender, EventArgs e)
         {
-            if (f != null)
+            try
             {
-                f.Close();
-                f = null;
+                if (f != null)
+                {
+                    f.Close();
+                    f = null;
+                }
+                f = new ABMTerminal();
+                f.MdiParent = this;
+                f.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                f.Show();
             }
-            f = new ABMTerminal();
-            f.MdiParent = this;
-            f.StartPosition = FormStartPosition.WindowsDefaultLocation;
-            f.Show();
+            catch (Exception ex)
+            {
+                Form f = new FormErrores(ex.Message);
+                f.ShowDialog();
+            }
         }
 
     }
