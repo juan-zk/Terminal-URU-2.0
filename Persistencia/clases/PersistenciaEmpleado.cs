@@ -160,7 +160,10 @@ namespace Persistencia
                 {
                     throw new Exception("erro sql.");
                 }
-                
+                if (resultado == 0)
+                {
+                    throw new Exception("Empleado modificado correctamente.");
+                }
             }
             catch (Exception ex)
             { throw ex; }

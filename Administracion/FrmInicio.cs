@@ -60,18 +60,5 @@ namespace Administracion
             f.Show();
         }
 
-        private void menuViajeNac_Click(object sender, EventArgs e)
-        {
-            if (f != null)
-            {
-                f.Close();
-                f = null;
-            }
-            f = new ABMViajesNacionales();
-            f.MdiParent = this;
-            f.StartPosition = FormStartPosition.WindowsDefaultLocation;
-                f.Show();
-        }
-
     }
 }
