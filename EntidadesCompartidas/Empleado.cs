@@ -34,10 +34,10 @@ namespace EntidadesCompartidas
            get { return Contraseña; }
            set 
            {
-               if (value.Length >= 6)
+               if (value.Length == 6)
                     Contraseña = value;
                else
-                   throw new Exception("La contraseña debe tener al menos 6 caracteres");
+                   throw new Exception("La contraseña debe tener 6 caracteres");
            }
        }
 

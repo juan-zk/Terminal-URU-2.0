@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMCompanias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMCompanias.Designer.cs">
+      <DependentUpon>ABMCompanias.cs</DependentUpon>
+    </Compile>
     <Compile Include="ABMEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="ABMTerminal.Designer.cs">
       <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMViajesInternacionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMViajesInternacionales.Designer.cs">
+      <DependentUpon>ABMViajesInternacionales.cs</DependentUpon>
     </Compile>
     <Compile Include="ABMViajesNacionales.cs">
       <SubType>Form</SubType>
@@ -88,11 +100,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ABMCompanias.resx">
+      <DependentUpon>ABMCompanias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABMEmpleado.resx">
       <DependentUpon>ABMEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ABMTerminal.resx">
       <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMViajesInternacionales.resx">
+      <DependentUpon>ABMViajesInternacionales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ABMViajesNacionales.resx">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
@@ -162,10 +180,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8091/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://localhost:20128/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://localhost:8091/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:20128/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
