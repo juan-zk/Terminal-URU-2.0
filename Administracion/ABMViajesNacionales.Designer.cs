@@ -65,7 +65,7 @@
             this.btnDesahcer});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(676, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1121, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -117,59 +117,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 62);
+            this.label1.Location = new System.Drawing.Point(17, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.Size = new System.Drawing.Size(168, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese Numero de Viaje:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 136);
+            this.label2.Location = new System.Drawing.Point(16, 167);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Compañia:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 105);
+            this.label3.Location = new System.Drawing.Point(16, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 13);
+            this.label3.Size = new System.Drawing.Size(191, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Terminal de Arribo (Destino):";
             // 
             // datePartida
             // 
-            this.datePartida.Location = new System.Drawing.Point(12, 303);
+            this.datePartida.Location = new System.Drawing.Point(474, 76);
+            this.datePartida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datePartida.Name = "datePartida";
-            this.datePartida.Size = new System.Drawing.Size(200, 20);
+            this.datePartida.Size = new System.Drawing.Size(265, 22);
             this.datePartida.TabIndex = 4;
             // 
             // dateArribo
             // 
-            this.dateArribo.Location = new System.Drawing.Point(261, 303);
+            this.dateArribo.Location = new System.Drawing.Point(828, 76);
+            this.dateArribo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateArribo.Name = "dateArribo";
-            this.dateArribo.Size = new System.Drawing.Size(200, 20);
+            this.dateArribo.Size = new System.Drawing.Size(265, 22);
             this.dateArribo.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 287);
+            this.label4.Location = new System.Drawing.Point(549, 56);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.Size = new System.Drawing.Size(116, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Fecha de Partida";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(314, 287);
+            this.label5.Location = new System.Drawing.Point(899, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.Size = new System.Drawing.Size(109, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Fecha de Arribo";
             // 
@@ -177,26 +184,29 @@
             // 
             this.cbCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCompañia.FormattingEnabled = true;
-            this.cbCompañia.Location = new System.Drawing.Point(175, 128);
+            this.cbCompañia.Location = new System.Drawing.Point(233, 158);
+            this.cbCompañia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCompañia.Name = "cbCompañia";
-            this.cbCompañia.Size = new System.Drawing.Size(121, 21);
+            this.cbCompañia.Size = new System.Drawing.Size(160, 24);
             this.cbCompañia.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 163);
+            this.label6.Location = new System.Drawing.Point(16, 201);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.Size = new System.Drawing.Size(142, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Paradas Intermedias:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 208);
+            this.label7.Location = new System.Drawing.Point(17, 256);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.Size = new System.Drawing.Size(146, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "Cantidad de Asientos:";
             // 
@@ -216,41 +226,46 @@
             "8",
             "9",
             "10"});
-            this.cbParadas.Location = new System.Drawing.Point(175, 155);
+            this.cbParadas.Location = new System.Drawing.Point(233, 191);
+            this.cbParadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbParadas.Name = "cbParadas";
-            this.cbParadas.Size = new System.Drawing.Size(121, 21);
+            this.cbParadas.Size = new System.Drawing.Size(160, 24);
             this.cbParadas.TabIndex = 11;
             // 
             // cbTerminal
             // 
             this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(175, 97);
+            this.cbTerminal.Location = new System.Drawing.Point(233, 119);
+            this.cbTerminal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTerminal.Name = "cbTerminal";
-            this.cbTerminal.Size = new System.Drawing.Size(121, 21);
+            this.cbTerminal.Size = new System.Drawing.Size(160, 24);
             this.cbTerminal.TabIndex = 12;
             // 
             // txtAsientos
             // 
-            this.txtAsientos.Location = new System.Drawing.Point(175, 208);
+            this.txtAsientos.Location = new System.Drawing.Point(233, 256);
+            this.txtAsientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAsientos.Name = "txtAsientos";
-            this.txtAsientos.Size = new System.Drawing.Size(121, 20);
+            this.txtAsientos.Size = new System.Drawing.Size(160, 22);
             this.txtAsientos.TabIndex = 13;
             // 
             // txtNumViaje
             // 
-            this.txtNumViaje.Location = new System.Drawing.Point(175, 62);
+            this.txtNumViaje.Location = new System.Drawing.Point(233, 76);
+            this.txtNumViaje.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumViaje.Name = "txtNumViaje";
-            this.txtNumViaje.Size = new System.Drawing.Size(121, 20);
+            this.txtNumViaje.Size = new System.Drawing.Size(160, 22);
             this.txtNumViaje.TabIndex = 14;
             this.txtNumViaje.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumViajes_Validating);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(175, 371);
+            this.lblError.Location = new System.Drawing.Point(521, 325);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(39, 13);
+            this.lblError.Size = new System.Drawing.Size(54, 17);
             this.lblError.TabIndex = 15;
             this.lblError.Text = "lblError";
             // 
@@ -260,9 +275,9 @@
             // 
             // ABMViajesNacionales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 427);
+            this.ClientSize = new System.Drawing.Size(1121, 406);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtNumViaje);
             this.Controls.Add(this.txtAsientos);
@@ -279,6 +294,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ABMViajesNacionales";
             this.Text = "ABMViajesNacionales";
             this.toolStrip1.ResumeLayout(false);

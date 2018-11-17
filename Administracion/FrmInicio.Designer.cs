@@ -78,6 +78,7 @@
             this.menuViajeNac.Name = "menuViajeNac";
             this.menuViajeNac.Size = new System.Drawing.Size(178, 24);
             this.menuViajeNac.Text = "Nacionales";
+            this.menuViajeNac.Click += new System.EventHandler(this.menuViajeNac_Click);
             // 
             // menuViajeInter
             // 

@@ -14,10 +14,11 @@ namespace Administracion
     public partial class FrmInicio : Form
     {
         internal Form f = null;
-
+        internal Empleado _Emp;
         public FrmInicio(Empleado em)
         {
             InitializeComponent();
+            _Emp = em;
             Empleado empLog = em;
             menuUsr.Text = em._NombreCompleto;
         }
@@ -73,6 +74,27 @@ namespace Administracion
                     f = null;
                 }
                 f = new ABMTerminal();
+                f.MdiParent = this;
+                f.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                Form f = new FormErrores(ex.Message);
+                f.ShowDialog();
+            }
+        }
+
+        private void menuViajeNac_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (f != null)
+                {
+                    f.Close();
+                    f = null;
+                }
+                f = new ABMViajesNacionales(_Emp);
                 f.MdiParent = this;
                 f.StartPosition = FormStartPosition.WindowsDefaultLocation;
                 f.Show();

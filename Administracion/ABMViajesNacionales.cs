@@ -13,39 +13,34 @@ namespace Administracion
     public partial class ABMViajesNacionales : Form
     {
 
-        private Empleado _Emp; 
-        private Viaje Viaje ;
+        private Empleado _Emp;
+        private Viaje Viaje;
         private ViajesNacionales Vnacional;
-        public ABMViajesNacionales()
-        {
-           
-            InitializeComponent();
-        
-            this.DesactivoBotones();
-           
 
-        
+        public ABMViajesNacionales(Empleado pEmp)
+        {
+
+            InitializeComponent();
+            _Emp = pEmp;
+            this.DesactivoBotones();
+
             //Lista de terminales
             List<Terminal> Terminales = null;
-           Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
-           foreach (Terminal ter in Terminales)
-           {
-               cbTerminal.Items.Add(ter._Codigo);
-           }
+            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
+            foreach (Terminal ter in Terminales)
+            {
+                cbTerminal.Items.Add(ter._Codigo);
+            }
 
             //lista de Compañias 
-           List<Compania> Compania = null;
-           Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompanias().ToList();
-           foreach (Compania com in Compania)
-           {
-               cbCompañia.Items.Add(com._Nombre);
-           }
+            List<Compania> Compania = null;
+            Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompanias().ToList();
+            foreach (Compania com in Compania)
+            {
+                cbCompañia.Items.Add(com._Nombre);
+            }
         }
-
-  
-
-       
-
+        
         private void DesactivoBotones()
         {
             btnAgregar.Enabled = false;
@@ -59,7 +54,7 @@ namespace Administracion
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-           
+
         }
 
         private void ActivoActualizacion()
@@ -67,22 +62,20 @@ namespace Administracion
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
-
-          //  cbCompañia.DataSource = Viaje._Com;
-          
-           // cbTerminal.DataSource = Viaje._Ter;
-            DateTime FechaArribo = dateArribo.Value;
-            FechaArribo = Viaje._FechaArribo;
-            DateTime FechaPartida = datePartida.Value;
-            FechaPartida = Viaje._FechaPartida;
+            cbTerminal.Enabled = true;
+            cbCompañia.Enabled = true;
+            cbParadas.Enabled = true;
+            cbCompañia.Text = Viaje._Com._Nombre;
+            cbTerminal.Text = Viaje._Ter._Codigo;
+            cbParadas.Text = ((ViajesNacionales)Viaje)._ParadasIntermedias.ToString();
+            string FechaArribo = dateArribo.Text;            
+            FechaArribo = Viaje._FechaArribo.ToString();
+            string FechaPartida = datePartida.Text;
+            FechaPartida = Viaje._FechaPartida.ToString();
             txtAsientos.Text = Viaje._CantidadAsientos.ToString();
-            //paradas intermedias
-           
-              
-            _Emp = Viaje._Emp;
-          
+            //paradas intermedias            
 
-            
+
         }
 
         private void LimpioCajaTexto()
@@ -111,10 +104,10 @@ namespace Administracion
                 e.Cancel = true;
             }
 
-            try 
+            try
             {
 
-                Viaje = new Administracion.ServicioWeb.ServicioTURU().BuscarViaje( Convert.ToInt32(txtNumViaje.Text));
+                Viaje = new Administracion.ServicioWeb.ServicioTURU().BuscarViaje(Convert.ToInt32(txtNumViaje.Text));
                 if (Viaje == null)
                 {
                     this.ActivoAgregar();
@@ -122,14 +115,15 @@ namespace Administracion
                 }
                 else
                 {
-                    
+                    if (Viaje is ViajesInternacionales)
+                        throw new Exception("Ese numero corresponde a un viaje internacional!");
                     this.ActivoActualizacion();
                     lblError.Text = "";
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                
+
             }
             catch (Exception ex)
             {
@@ -154,8 +148,9 @@ namespace Administracion
 
 
 
-                // ViajesNacionales ViajeN = new ViajesNacionales(Convert.ToInt32(txtNumViaje.Text), Com, Ter, Convert.ToDateTime(datePartida.Value), Convert.ToDateTime(dateArribo.Value), Convert.ToInt32(txtAsientos.Text), Convert.ToInt32(cbParadas.Text), _Emp);
-                // ViajeN = new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(ViajeN);
+                //ViajesNacionales ViajeN = new ViajesNacionales(Convert.ToInt32(txtNumViaje.Text), Com, Ter, Convert.ToDateTime(datePartida.Value), Convert.ToDateTime(dateArribo.Value), Convert.ToInt32(txtAsientos.Text), Convert.ToInt32(cbParadas.Text), _Emp);
+                
+                //ViajeN = new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(ViajeN);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
 

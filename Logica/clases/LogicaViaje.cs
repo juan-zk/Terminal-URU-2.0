@@ -23,7 +23,13 @@ namespace Logica
 
         public Viaje Buscar(int pNumero)
         {
-            return FabricaPersistencia.GetPersistenciaViajeInternacional().Buscar(pNumero);
+            Viaje v;
+            v = FabricaPersistencia.GetPersistenciaViajeInternacional().Buscar(pNumero);
+
+            if (v==null)
+                v = FabricaPersistencia.GetPersistenciaViajeNacional().BuscarViaje(pNumero);
+
+            return v;
         }
 
         // ABM
