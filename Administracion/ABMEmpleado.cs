@@ -71,9 +71,16 @@ namespace Administracion
                     this.ActivoActualizacion();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
 
@@ -90,9 +97,16 @@ namespace Administracion
                 lblError.Text = "Baja con exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         private void btnModificar1_Click(object sender, EventArgs e)
@@ -109,9 +123,16 @@ namespace Administracion
                 lblError.Text = " Modificar con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         private void btnDeshacer_Click(object sender, EventArgs e)
@@ -137,9 +158,16 @@ namespace Administracion
                 lblError.Text = "Alta con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
 

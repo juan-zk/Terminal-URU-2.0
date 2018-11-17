@@ -15,6 +15,7 @@ namespace Administracion
 
         private Empleado _Emp;
         private Viaje Viaje;
+         
         private ViajesNacionales Vnacional;
 
         public ABMViajesNacionales(Empleado pEmp)
@@ -65,28 +66,40 @@ namespace Administracion
             cbTerminal.Enabled = true;
             cbCompañia.Enabled = true;
             cbParadas.Enabled = true;
+            
             cbCompañia.Text = Viaje._Com._Nombre;
             cbTerminal.Text = Viaje._Ter._Codigo;
             cbParadas.Text = ((ViajesNacionales)Viaje)._ParadasIntermedias.ToString();
-            string FechaArribo = dateArribo.Text;            
-            FechaArribo = Viaje._FechaArribo.ToString();
-            string FechaPartida = datePartida.Text;
-            FechaPartida = Viaje._FechaPartida.ToString();
             txtAsientos.Text = Viaje._CantidadAsientos.ToString();
-            //paradas intermedias            
+            
+            
+                 
+            dateArribo.Text = Viaje._FechaArribo.ToString();
+            
+            datePartida.Text = Viaje._FechaPartida.ToString();
+            
+            
 
 
         }
-
+        private void btnDesahcer_Click(object sender, EventArgs e)
+        {
+           // _Emp = null;
+            this.DesactivoBotones();
+            this.LimpioCajaTexto();
+        }
+        
         private void LimpioCajaTexto()
         {
+
+
+            this.cbCompañia.SelectedItem = null;
+            this.cbParadas.SelectedItem = null;
+            this.cbTerminal.SelectedItem = null;
             txtNumViaje.Text = "";
             txtAsientos.Text = "";
-            cbCompañia = null;
-            cbTerminal = null;
-            cbParadas = null;
-            dateArribo = null;
-            datePartida = null;
+            dateArribo.Value = DateTime.Now;
+            datePartida.Value = DateTime.Now;
             lblError.Text = "";
         }
 
@@ -111,19 +124,22 @@ namespace Administracion
                 if (Viaje == null)
                 {
                     this.ActivoAgregar();
-                    lblError.Text = "";
+                    lblError.Text = "No hay viajes asociados al numero seleccionado. Si lo desea puede agregar un viaje.";
                 }
                 else
                 {
                     if (Viaje is ViajesInternacionales)
                         throw new Exception("Ese numero corresponde a un viaje internacional!");
-                    this.ActivoActualizacion();
-                    lblError.Text = "";
+                        this.ActivoActualizacion();
+                        lblError.Text = "";
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
             }
             catch (Exception ex)
             {
@@ -131,35 +147,45 @@ namespace Administracion
             }
         }
 
-        private void btnDesahcer_Click(object sender, EventArgs e)
-        {
-            _Emp = null;
-            this.DesactivoBotones();
-            this.LimpioCajaTexto();
-        }
+     
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
             try
             {
-                Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.Text);
-                Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.Text);
+                Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.SelectedItem.ToString());
+                Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.SelectedItem.ToString());
 
-
-
-                //ViajesNacionales ViajeN = new ViajesNacionales(Convert.ToInt32(txtNumViaje.Text), Com, Ter, Convert.ToDateTime(datePartida.Value), Convert.ToDateTime(dateArribo.Value), Convert.ToInt32(txtAsientos.Text), Convert.ToInt32(cbParadas.Text), _Emp);
+                Viaje = new Viaje();
+                Viaje._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
+                Viaje._Com = Com;
+                Viaje._Ter = Ter;
+                Viaje._FechaPartida = Convert.ToDateTime(datePartida.Value);
+                Viaje._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Viaje._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
+                ((ViajesNacionales)Viaje)._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
+                Viaje._Emp = _Emp;
+            
+             
                 
-                //ViajeN = new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(ViajeN);
+                new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(Viaje);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
 
                 lblError.Text = "Alta con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -169,17 +195,33 @@ namespace Administracion
                 Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.Text);
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.Text);
 
-                // ViajesNacionales ViajeN = new ViajesNacionales(Convert.ToInt32(txtNumViaje.Text), Com, Ter, Convert.ToDateTime(datePartida.Value), Convert.ToDateTime(dateArribo.Value), Convert.ToInt32(txtAsientos.Text), Convert.ToInt32(cbParadas.Text), _Emp);
-                // ViajeN = new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(ViajeN);
+                Viaje = new Viaje();
+                Viaje._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
+                Viaje._Com = Com;
+                Viaje._Ter = Ter;
+                Viaje._FechaPartida = Convert.ToDateTime(datePartida.Value);
+                Viaje._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Viaje._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
+                ((ViajesNacionales)Viaje)._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim()); //(Probleama al pasar el viaje)
+                Viaje._Emp = _Emp;
+
+                new Administracion.ServicioWeb.ServicioTURU().ModificarViaje(Viaje);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
 
                 lblError.Text = " Modificado con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
 
         }
 
@@ -187,15 +229,23 @@ namespace Administracion
         {
             try
             {
+                Viaje = new Viaje();
                 new Administracion.ServicioWeb.ServicioTURU().EliminarViaje(Viaje);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
                 lblError.Text = "Baja con exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
-            { }
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
             catch (Exception ex)
-            { }
+            {
+                lblError.Text = ex.Message;
+            }
         }
     }
 }
