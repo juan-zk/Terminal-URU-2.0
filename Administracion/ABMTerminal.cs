@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,6 +18,7 @@ namespace Administracion
         public ABMTerminal()
         {
             InitializeComponent();
+            LimpiarCampos();
         }
 
         void LimpiarCampos()
@@ -106,6 +108,45 @@ namespace Administracion
             {
                 lblMensaje.Text = ex.Message;
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Terminal t = new Terminal();
+                t._Codigo = txtCodigo.Text;
+                t._Pais = cmbPais.Text;
+                t._Ciudad = txtCiudad.Text;
+                string[] listaT = new string[lstFacilidad.Items.Count];
+                for (int i = 0; i < lstFacilidad.Items.Count; i++)
+                {
+                    listaT[i] = (lstFacilidad.Items[i].ToString());
+                }
+                t._Facilidades = listaT;
+
+                ServicioTURU Sweb = new ServicioTURU();
+                Sweb.AgregarTerminal(t);
+                lblMensaje.Text = "Terminal agregada correctamente";
+                LimpiarCampos();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+            
         }
 
     }
