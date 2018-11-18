@@ -38,7 +38,17 @@ namespace Administracion
                     f.Show();
                 }
             }
-            catch (Exception ex) { lblError.Text = ex.Message; }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

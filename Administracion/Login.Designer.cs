@@ -106,7 +106,7 @@
             // 
             this.lblError.AutoSize = true;
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(428, 139);
+            this.lblError.Location = new System.Drawing.Point(284, 138);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 7;

@@ -69,6 +69,7 @@
             // btnAgregar
             // 
             this.btnAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregar.Name = "btnAgregar";
@@ -78,6 +79,7 @@
             // btnEliminar
             // 
             this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
@@ -87,6 +89,7 @@
             // btnModificar
             // 
             this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnModificar.Enabled = false;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
@@ -113,6 +116,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(250, 22);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // txtCiudad
             // 
@@ -192,6 +196,7 @@
             this.btnFacilidadBorrar.Size = new System.Drawing.Size(25, 22);
             this.btnFacilidadBorrar.TabIndex = 10;
             this.btnFacilidadBorrar.UseVisualStyleBackColor = true;
+            this.btnFacilidadBorrar.Click += new System.EventHandler(this.btnFacilidadBorrar_Click);
             // 
             // label4
             // 

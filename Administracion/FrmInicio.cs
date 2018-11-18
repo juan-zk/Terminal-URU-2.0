@@ -36,6 +36,19 @@ namespace Administracion
                 f = new Login();
                 f.Show();
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText);
+                    f.ShowDialog();
+                }
+            }
             catch (Exception ex)
             {
                 Form f = new FormErrores(ex.Message);
@@ -56,6 +69,19 @@ namespace Administracion
                 f.MdiParent = this;
                 f.StartPosition = FormStartPosition.WindowsDefaultLocation;
                 f.Show();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText);
+                    f.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
@@ -78,6 +104,19 @@ namespace Administracion
                 f.StartPosition = FormStartPosition.WindowsDefaultLocation;
                 f.Show();
             }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText);
+                    f.ShowDialog();
+                }
+            }
             catch (Exception ex)
             {
                 Form f = new FormErrores(ex.Message);
@@ -98,6 +137,19 @@ namespace Administracion
                 f.MdiParent = this;
                 f.StartPosition = FormStartPosition.WindowsDefaultLocation;
                 f.Show();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText);
+                    f.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
