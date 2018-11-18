@@ -158,5 +158,34 @@ namespace Administracion
             }
         }
 
+        private void menuEstad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (f != null)
+                {
+                    f.Close();
+                    f = null;
+                }
+                f = new Estadisticas();
+                f.MdiParent = this;
+                f.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                f.Show();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    f.ShowDialog();
+                }
+                else
+                {
+                    Form f = new FormErrores(ex.Detail.InnerText);
+                    f.ShowDialog();
+                }
+            }
+        }
+
     }
 }

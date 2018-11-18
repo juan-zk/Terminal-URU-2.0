@@ -45,4 +45,4 @@ C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Adm
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMTerminal.resources
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMViajesNacionales.resources
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.FormErrores.resources
-C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
+C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Estadisticas.resources

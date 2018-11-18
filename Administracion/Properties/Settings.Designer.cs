@@ -26,7 +26,7 @@ namespace Administracion.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8091/ServicioTURU.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:20128/ServicioTURU.asmx")]
         public string Administracion_ServicioWeb_ServicioTURU {
             get {
                 return ((string)(this["Administracion_ServicioWeb_ServicioTURU"]));
