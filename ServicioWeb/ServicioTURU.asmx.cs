@@ -457,6 +457,44 @@ namespace ServicioWeb
             }
         }
 
+        [WebMethod]
+        public string ViajesXML() {
+            string a;
+            ILogicaViaje LViaje = FabricaLogica.GetLogicaViajes();
+            List<Viaje> ListarViajes = LViaje.Listar();            
+
+            XmlDocument DocumentoXML = new XmlDocument();
+            XmlNode NodoV = DocumentoXML.CreateNode(XmlNodeType.Element, "Viaje", "");
+
+            foreach (Viaje V in ListarViajes)
+            {
+                XmlNode NodoNum = DocumentoXML.CreateNode(XmlNodeType.Element, "Numero", "");
+                NodoNum.InnerText = V._NumViaje.ToString();
+                NodoV.AppendChild(NodoNum);
+
+                XmlNode NodoCiudad = DocumentoXML.CreateNode(XmlNodeType.Element, "CiudadDestino", "");
+                NodoCiudad.InnerText = V._Ter._Ciudad;
+                NodoV.AppendChild(NodoCiudad);
+
+                XmlNode NodoPais = DocumentoXML.CreateNode(XmlNodeType.Element, "PaisDestino", "");
+                NodoPais.InnerText = V._Ter._Pais;
+                NodoV.AppendChild(NodoPais);
+
+                XmlNode NodoCompañia = DocumentoXML.CreateNode(XmlNodeType.Element, "Compañia", "");
+                NodoCompañia.InnerText = V._Com._Nombre;
+                NodoV.AppendChild(NodoCompañia);
+
+                XmlNode NodoFecha = DocumentoXML.CreateNode(XmlNodeType.Element, "Fecha", "");
+                NodoFecha.InnerText = V._FechaPartida.ToString(); ;
+                NodoV.AppendChild(NodoFecha);
+
+                DocumentoXML.DocumentElement.AppendChild(NodoV);
+
+            }
+            a = DocumentoXML.InnerXml;
+            return a;
+        }
+
     }
 }
 

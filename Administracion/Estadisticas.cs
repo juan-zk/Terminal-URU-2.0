@@ -18,7 +18,7 @@ namespace Administracion
 {
     public partial class Estadisticas : Form
     {
-        List<Viaje> ListarViajes;
+        
         public Estadisticas()
         {
             InitializeComponent();
@@ -29,46 +29,7 @@ namespace Administracion
         {
             try
             {
-                ListarViajes = new List<Viaje>();
-                ListarViajes = new Administracion.ServicioWeb.ServicioTURU().ListarViajes().ToList();
-                
-                XmlDocument DocumentoXML = new XmlDocument();
-                DocumentoXML.Load("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
-                XmlNode NodoV = DocumentoXML.CreateNode(XmlNodeType.Element, "Viaje","");
-               
-                foreach (Viaje V in ListarViajes)
-                {
-                    XmlNode NodoNum = DocumentoXML.CreateNode(XmlNodeType.Element, "Numero", "");
-                    NodoNum.InnerText = V._NumViaje.ToString();
-                    NodoV.AppendChild(NodoNum);
-
-                    XmlNode NodoCiudad = DocumentoXML.CreateNode(XmlNodeType.Element, "CiudadDestino", "");
-                    NodoCiudad.InnerText = V._Ter._Ciudad;
-                    NodoV.AppendChild(NodoCiudad);
-
-                    XmlNode NodoPais = DocumentoXML.CreateNode(XmlNodeType.Element, "PaisDestino", "");
-                    NodoPais.InnerText = V._Ter._Pais;
-                    NodoV.AppendChild(NodoPais);
-
-                    XmlNode NodoCompañia = DocumentoXML.CreateNode(XmlNodeType.Element, "Compañia", "");
-                    NodoCompañia.InnerText = V._Com._Nombre;
-                    NodoV.AppendChild(NodoCompañia);
-
-                    XmlNode NodoFecha = DocumentoXML.CreateNode(XmlNodeType.Element, "Fecha", "");
-                    NodoFecha.InnerText = V._FechaPartida.ToString(); ;
-                    NodoV.AppendChild(NodoFecha);
-
-                    DocumentoXML.DocumentElement.AppendChild(NodoV);
-
-                }
-
-                DocumentoXML.Save("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
-
-                DataSet Ds = new DataSet();
-                Ds.ReadXml("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
-
-              //  gvViajes.DataSource= Ds;
-                gvViajes.DataMember = Ds.ToString();
+                ServicioTURU Sweb = new ServicioTURU();
                 
             }
             catch (Exception ex)
