@@ -7,12 +7,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Web;
 using Administracion.ServicioWeb;
 
 using System.Xml;
 using System.Configuration;
-using System.Data;
+
 
 namespace Administracion
 {
@@ -31,9 +31,9 @@ namespace Administracion
             {
                 ListarViajes = new List<Viaje>();
                 ListarViajes = new Administracion.ServicioWeb.ServicioTURU().ListarViajes().ToList();
-
+                
                 XmlDocument DocumentoXML = new XmlDocument();
-                DocumentoXML.Load("~/XML/Viajes.xml");
+                DocumentoXML.Load("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
                 XmlNode NodoV = DocumentoXML.CreateNode(XmlNodeType.Element, "Viaje","");
                
                 foreach (Viaje V in ListarViajes)
@@ -62,12 +62,13 @@ namespace Administracion
 
                 }
 
-                DocumentoXML.Save("~/XML/Viajes.xml");
+                DocumentoXML.Save("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
 
                 DataSet Ds = new DataSet();
-                Ds.ReadXml("~/XML/Viajes.xml");
+                Ds.ReadXml("C:\\Users\\fer\\Documents\\GitHub\\Terminal-URU-2.0\\Administracion\\XML\\Viajes.xml");
 
-                gvViajes.DataSource = Ds;
+              //  gvViajes.DataSource= Ds;
+                gvViajes.DataMember = Ds.ToString();
                 
             }
             catch (Exception ex)

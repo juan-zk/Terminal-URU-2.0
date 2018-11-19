@@ -1,4 +1,87 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Terminal>
-</Terminal>  
-  
+  <Viaje>
+    <Numero>1</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaA</Compañia>
+    <Fecha>15/09/2018 13:00:00</Fecha>
+    <Numero>2</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaX</Compañia>
+    <Fecha>30/09/2018 16:00:00</Fecha>
+    <Numero>3</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaC</Compañia>
+    <Fecha>20/12/2018 19:00:00</Fecha>
+    <Numero>4</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>05/10/2018 13:00:00</Fecha>
+    <Numero>6</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>03/08/2018 17:30:00</Fecha>
+    <Numero>5</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>12/10/2018 17:30:00</Fecha>
+    <Numero>7</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>20/10/2018 17:30:00</Fecha>
+    <Numero>8</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>21/10/2018 17:30:00</Fecha>
+  </Viaje>
+  <Viaje>
+    <Numero>1</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaA</Compañia>
+    <Fecha>15/09/2018 13:00:00</Fecha>
+    <Numero>2</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaX</Compañia>
+    <Fecha>30/09/2018 16:00:00</Fecha>
+    <Numero>3</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaC</Compañia>
+    <Fecha>20/12/2018 19:00:00</Fecha>
+    <Numero>4</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>05/10/2018 13:00:00</Fecha>
+    <Numero>6</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>03/08/2018 17:30:00</Fecha>
+    <Numero>5</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>12/10/2018 17:30:00</Fecha>
+    <Numero>7</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>20/10/2018 17:30:00</Fecha>
+    <Numero>8</Numero>
+    <CiudadDestino>Montevideo</CiudadDestino>
+    <PaisDestino>Uruguay</PaisDestino>
+    <Compañia>CompañiaD</Compañia>
+    <Fecha>21/10/2018 17:30:00</Fecha>
+  </Viaje>
+</Terminal>
