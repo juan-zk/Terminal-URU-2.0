@@ -110,12 +110,12 @@ namespace Administracion
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -146,7 +146,6 @@ namespace Administracion
             {
                 lblMensaje.Text = ex.Message;
             }
-
         }
 
     }

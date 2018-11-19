@@ -75,6 +75,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(23, 22);
             this.btnAgregar.Text = "Nuevo";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // btnEliminar
             // 
@@ -109,13 +110,14 @@
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(23, 22);
             this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(136, 51);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(250, 22);
-            this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TabIndex = 0;
             this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // txtCiudad
@@ -130,7 +132,7 @@
             this.txtFacilidad.Location = new System.Drawing.Point(136, 269);
             this.txtFacilidad.Name = "txtFacilidad";
             this.txtFacilidad.Size = new System.Drawing.Size(250, 22);
-            this.txtFacilidad.TabIndex = 3;
+            this.txtFacilidad.TabIndex = 4;
             // 
             // lstFacilidad
             // 
@@ -139,15 +141,22 @@
             this.lstFacilidad.Location = new System.Drawing.Point(136, 179);
             this.lstFacilidad.Name = "lstFacilidad";
             this.lstFacilidad.Size = new System.Drawing.Size(250, 84);
-            this.lstFacilidad.TabIndex = 4;
+            this.lstFacilidad.TabIndex = 3;
             // 
             // cmbPais
             // 
+            this.cmbPais.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Items.AddRange(new object[] {
+            "Uruguay",
+            "Argentina",
+            "Brasil",
+            "Paraguay"});
             this.cmbPais.Location = new System.Drawing.Point(136, 91);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(250, 24);
-            this.cmbPais.TabIndex = 5;
+            this.cmbPais.TabIndex = 1;
             // 
             // grp
             // 
@@ -184,7 +193,7 @@
             this.btnFacilidadAgregar.Location = new System.Drawing.Point(392, 269);
             this.btnFacilidadAgregar.Name = "btnFacilidadAgregar";
             this.btnFacilidadAgregar.Size = new System.Drawing.Size(25, 22);
-            this.btnFacilidadAgregar.TabIndex = 11;
+            this.btnFacilidadAgregar.TabIndex = 5;
             this.btnFacilidadAgregar.UseVisualStyleBackColor = true;
             this.btnFacilidadAgregar.Click += new System.EventHandler(this.btnFacilidadAgregar_Click);
             // 
@@ -194,7 +203,7 @@
             this.btnFacilidadBorrar.Location = new System.Drawing.Point(392, 241);
             this.btnFacilidadBorrar.Name = "btnFacilidadBorrar";
             this.btnFacilidadBorrar.Size = new System.Drawing.Size(25, 22);
-            this.btnFacilidadBorrar.TabIndex = 10;
+            this.btnFacilidadBorrar.TabIndex = 6;
             this.btnFacilidadBorrar.UseVisualStyleBackColor = true;
             this.btnFacilidadBorrar.Click += new System.EventHandler(this.btnFacilidadBorrar_Click);
             // 
