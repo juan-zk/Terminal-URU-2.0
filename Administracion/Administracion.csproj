@@ -69,6 +69,12 @@
     <Compile Include="ABMViajesNacionales.Designer.cs">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormErrores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABMViajesNacionales.resx">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormErrores.resx">
       <DependentUpon>FormErrores.cs</DependentUpon>
@@ -162,6 +171,7 @@
     <Content Include="img\key.png" />
     <Content Include="img\modificar.bmp" />
     <Content Include="img\nuevo.bmp" />
+    <Content Include="XML\Viajes.xml" />
     <None Include="Web References\ServicioWeb\ServicioTURU.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -171,10 +181,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8091/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://localhost:20128/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://localhost:8091/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:20128/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
