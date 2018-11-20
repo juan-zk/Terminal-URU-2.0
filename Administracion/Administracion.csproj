@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMCompanias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMCompanias.Designer.cs">
+      <DependentUpon>ABMCompanias.cs</DependentUpon>
+    </Compile>
     <Compile Include="ABMEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="ABMTerminal.Designer.cs">
       <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMViajesInternacionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMViajesInternacionales.Designer.cs">
+      <DependentUpon>ABMViajesInternacionales.cs</DependentUpon>
     </Compile>
     <Compile Include="ABMViajesNacionales.cs">
       <SubType>Form</SubType>
