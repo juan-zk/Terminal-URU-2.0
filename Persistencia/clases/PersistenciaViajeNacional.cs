@@ -103,8 +103,7 @@ namespace Persistencia
                     throw new Exception("Las fechas deben ser posteriores a la actual");
                 if (respuesta == -9)
                     throw new Exception("La fecha de arribo debe ser posterior a la de partida..");
-                if (respuesta == 1)
-                    throw new Exception("Viaje agregado correctamente.");
+                
 
             }
             catch (Exception ex)
@@ -161,8 +160,7 @@ namespace Persistencia
                     throw new Exception("La terminal ingresada ya se encuentra baja, intente con otra porfavor.");
                 if (respuesta == -11)
                     throw new Exception("La fecha de arribo debe ser posterior a la fecha de partida.");
-                if (respuesta == 1)
-                    throw new Exception("Viaje modificado correctamente.");
+                
             }
             catch (Exception ex)
             { throw ex; }
@@ -193,8 +191,7 @@ namespace Persistencia
                     throw new Exception("ERROR al eliminar el viaje");
                 if (res == -3)
                     throw new Exception("ERROR al eliminar viaje Nacional");
-                if (res == 1)
-                    throw new Exception("Viaje eliminado correctamente");
+                
             }
             catch (Exception ex)
             { throw ex; }

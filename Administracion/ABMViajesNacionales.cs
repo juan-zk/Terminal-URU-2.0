@@ -13,10 +13,10 @@ namespace Administracion
     public partial class ABMViajesNacionales : Form
     {
 
-        private Empleado _Emp;
-        private Viaje Viaje;
+        internal Empleado _Emp = new Empleado();
+        internal Viaje Viaje = new Viaje();
          
-        private ViajesNacionales Vnacional = new ViajesNacionales();
+        internal ViajesNacionales Vnacional = new ViajesNacionales();
 
         public ABMViajesNacionales(Empleado pEmp)
         {
@@ -26,7 +26,7 @@ namespace Administracion
             this.DesactivoBotones();
 
             //Lista de terminales
-            List<Terminal> Terminales = null;
+            List<Terminal> Terminales = new List<Terminal>();
             Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
             foreach (Terminal ter in Terminales)
             {
@@ -34,7 +34,7 @@ namespace Administracion
             }
 
             //lista de Compañias 
-            List<Compania> Compania = null;
+            List<Compania> Compania = new List<Compania>();
             Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompanias().ToList();
             foreach (Compania com in Compania)
             {

@@ -174,13 +174,16 @@
     <None Include="Web References\ServicioWeb\ServicioTURU.disco" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8091/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://localhost:20128/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://localhost:8091/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:20128/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -188,9 +191,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Administracion_ServicioWeb_ServicioTURU</CachedSettingsPropName>
     </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
