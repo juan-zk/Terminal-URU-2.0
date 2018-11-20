@@ -90,7 +90,7 @@ namespace Administracion
                     CamposBajaModi();
                     txtCiudad.Text = term._Ciudad;
                     cmbPais.Text = term._Pais;
-                    for (int i = 0; i < (term._Facilidades.Count()); i++)
+                    for (int i = 0; i < (term._Facilidades.Length); i++)
                     {
                         lstFacilidad.Items.Add(term._Facilidades[i]);
                     }

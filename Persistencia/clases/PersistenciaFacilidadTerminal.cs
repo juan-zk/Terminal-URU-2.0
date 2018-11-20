@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 
@@ -61,9 +62,10 @@ namespace Persistencia
             catch (Exception ex) { throw ex; }
         }
 
-        internal static List<string> CargarFacilidades(string cod)
+        internal static string[] CargarFacilidades(string cod)
         {
-            List<string> f = new List<string>();
+            string[] resp;
+            List<string> f = new List<string>();          
             SqlConnection cnn = new SqlConnection(Conexion.CONEXION);
             SqlCommand cmd = new SqlCommand("ListarFacilidades", cnn);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -76,19 +78,24 @@ namespace Persistencia
             {
                 cnn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+                if (dr.HasRows)                    
                 {
                     while (dr.Read())
                     {
                         f.Add((string)dr[0]);
                     }
                 }
+                resp = new string[f.Count];
+                for (int i = 0; i < f.Count; i++)
+                {
+                    resp[i] = f[i];
+                }
                 
             }
             catch (Exception ex) { throw ex; }
             finally { cnn.Close(); }
 
-            return f;
+            return resp;
         }
 
         internal static void Modificar(Terminal t, SqlTransaction tran)

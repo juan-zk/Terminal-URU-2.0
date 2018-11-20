@@ -16,7 +16,7 @@ namespace Administracion
         private Empleado _Emp;
         private Viaje Viaje;
          
-        private ViajesNacionales Vnacional;
+        private ViajesNacionales Vnacional = new ViajesNacionales();
 
         public ABMViajesNacionales(Empleado pEmp)
         {
@@ -121,7 +121,8 @@ namespace Administracion
             {
 
                 Viaje = new Administracion.ServicioWeb.ServicioTURU().BuscarViaje(Convert.ToInt32(txtNumViaje.Text));
-                if (Viaje == null)
+                Vnacional = (ViajesNacionales)Viaje;
+                if (Vnacional == null)
                 {
                     this.ActivoAgregar();
                     lblError.Text = "No hay viajes asociados al numero seleccionado. Si lo desea puede agregar un viaje.";
@@ -157,19 +158,19 @@ namespace Administracion
                 Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.SelectedItem.ToString());
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.SelectedItem.ToString());
 
-                Viaje = new Viaje();
-                Viaje._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
-                Viaje._Com = Com;
-                Viaje._Ter = Ter;
-                Viaje._FechaPartida = Convert.ToDateTime(datePartida.Value);
-                Viaje._FechaArribo = Convert.ToDateTime(dateArribo.Value);
-                Viaje._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
-                ((ViajesNacionales)Viaje)._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
-                Viaje._Emp = _Emp;
-            
-             
-                
-                new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(Viaje);
+                Vnacional = new ViajesNacionales();
+                Vnacional._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
+                Vnacional._Com = Com;
+                Vnacional._Ter = Ter;
+                Vnacional._FechaPartida = Convert.ToDateTime(datePartida.Value);
+                Vnacional._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Vnacional._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
+                Vnacional._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
+                Vnacional._Emp = _Emp;
+
+
+
+                new Administracion.ServicioWeb.ServicioTURU().AgregarViaje(Vnacional);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
 
@@ -195,17 +196,16 @@ namespace Administracion
                 Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.Text);
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.Text);
 
-                Viaje = new Viaje();
-                Viaje._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
-                Viaje._Com = Com;
-                Viaje._Ter = Ter;
-                Viaje._FechaPartida = Convert.ToDateTime(datePartida.Value);
-                Viaje._FechaArribo = Convert.ToDateTime(dateArribo.Value);
-                Viaje._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
-                ((ViajesNacionales)Viaje)._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim()); //(Probleama al pasar el viaje)
-                Viaje._Emp = _Emp;
+                Vnacional._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
+                Vnacional._Com = Com;
+                Vnacional._Ter = Ter;
+                Vnacional._FechaPartida = Convert.ToDateTime(datePartida.Value);
+                Vnacional._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Vnacional._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
+                Vnacional._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
+                Vnacional._Emp = _Emp;
 
-                new Administracion.ServicioWeb.ServicioTURU().ModificarViaje(Viaje);
+                new Administracion.ServicioWeb.ServicioTURU().ModificarViaje(Vnacional);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
 
@@ -229,8 +229,8 @@ namespace Administracion
         {
             try
             {
-                Viaje = new Viaje();
-                new Administracion.ServicioWeb.ServicioTURU().EliminarViaje(Viaje);
+             
+                new Administracion.ServicioWeb.ServicioTURU().EliminarViaje(Vnacional);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
                 lblError.Text = "Baja con exito";

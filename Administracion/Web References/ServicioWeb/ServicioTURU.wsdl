@@ -324,6 +324,16 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Viaje" nillable="true" type="tns:Viaje" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ViajesXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="ViajesXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViajesXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="BuscarCompaniaSoapIn">
@@ -458,6 +468,12 @@
   <wsdl:message name="ListarViajesSoapOut">
     <wsdl:part name="parameters" element="tns:ListarViajesResponse" />
   </wsdl:message>
+  <wsdl:message name="ViajesXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ViajesXML" />
+  </wsdl:message>
+  <wsdl:message name="ViajesXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ViajesXMLResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServicioTURUSoap">
     <wsdl:operation name="BuscarCompania">
       <wsdl:input message="tns:BuscarCompaniaSoapIn" />
@@ -546,6 +562,10 @@
     <wsdl:operation name="ListarViajes">
       <wsdl:input message="tns:ListarViajesSoapIn" />
       <wsdl:output message="tns:ListarViajesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViajesXML">
+      <wsdl:input message="tns:ViajesXMLSoapIn" />
+      <wsdl:output message="tns:ViajesXMLSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServicioTURUSoap" type="tns:ServicioTURUSoap">
@@ -748,6 +768,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ViajesXML">
+      <soap:operation soapAction="http://tempuri.org/ViajesXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServicioTURUSoap12" type="tns:ServicioTURUSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -942,6 +971,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarViajes">
       <soap12:operation soapAction="http://tempuri.org/ListarViajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViajesXML">
+      <soap12:operation soapAction="http://tempuri.org/ViajesXML" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

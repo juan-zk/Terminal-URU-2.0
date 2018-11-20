@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="localhost" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/ServicioWeb" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Perfil1" publishMethod="MSDeploy" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/Logica.dll" publishTime="11/18/2018 14:16:44" />
-    <file relUrl="bin/Persistencia.dll" publishTime="11/18/2018 14:16:43" />
-    <file relUrl="bin/Logica.pdb" publishTime="11/18/2018 14:16:44" />
-    <file relUrl="bin/EntidadesCompartidas.dll" publishTime="11/18/2018 14:16:40" />
-    <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="11/18/2018 14:16:39" />
-    <file relUrl="bin/Persistencia.pdb" publishTime="11/18/2018 14:16:43" />
-    <file relUrl="Web.config" publishTime="11/18/2018 14:26:39" />
-    <file relUrl="bin/ServicioWeb.dll" publishTime="11/18/2018 14:17:34" />
-    <file relUrl="ServicioTURU.asmx" publishTime="11/05/2018 23:58:40" />
-    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/18/2018 14:17:34" />
+  <publishProfile publishUrl="C:\Users\Juan\Desktop\Servicio" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/ServicioWeb" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Logica.dll" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/Persistencia.dll" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/Logica.pdb" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/EntidadesCompartidas.dll" publishTime="11/19/2018 21:55:41" />
+    <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="11/19/2018 21:55:41" />
+    <file relUrl="Web.config" publishTime="11/19/2018 22:10:23" />
+    <file relUrl="bin/ServicioWeb.dll" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="ServicioTURU.asmx" publishTime="11/19/2018 20:13:00" />
+    <file relUrl="bin/Persistencia.pdb" publishTime="11/19/2018 22:10:22" />
   </publishProfile>
 </publishData>
