@@ -458,41 +458,57 @@ namespace ServicioWeb
         }
 
         [WebMethod]
-        public string ViajesXML() {
-            string a;
+        public string ViajesXML() 
+        {
             ILogicaViaje LViaje = FabricaLogica.GetLogicaViajes();
-            List<Viaje> ListarViajes = LViaje.Listar();            
+            List<Viaje> ListarViajes = LViaje.Listar();
 
             XmlDocument DocumentoXML = new XmlDocument();
             XmlNode NodoV = DocumentoXML.CreateNode(XmlNodeType.Element, "Viaje", "");
-
-            foreach (Viaje V in ListarViajes)
+            try
             {
-                XmlNode NodoNum = DocumentoXML.CreateNode(XmlNodeType.Element, "Numero", "");
-                NodoNum.InnerText = V._NumViaje.ToString();
-                NodoV.AppendChild(NodoNum);
+                foreach (Viaje V in ListarViajes)
+                {
+                    XmlNode NodoViaje = DocumentoXML.CreateNode(XmlNodeType.Element, "Viaje", "");
 
-                XmlNode NodoCiudad = DocumentoXML.CreateNode(XmlNodeType.Element, "CiudadDestino", "");
-                NodoCiudad.InnerText = V._Ter._Ciudad;
-                NodoV.AppendChild(NodoCiudad);
+                    XmlNode NodoNum = DocumentoXML.CreateNode(XmlNodeType.Element, "Numero", "");
+                    NodoNum.InnerText = V._NumViaje.ToString();
+                    NodoViaje.AppendChild(NodoNum);
 
-                XmlNode NodoPais = DocumentoXML.CreateNode(XmlNodeType.Element, "PaisDestino", "");
-                NodoPais.InnerText = V._Ter._Pais;
-                NodoV.AppendChild(NodoPais);
+                    XmlNode NodoCiudad = DocumentoXML.CreateNode(XmlNodeType.Element, "CiudadDestino", "");
+                    NodoCiudad.InnerText = V._Ter._Ciudad;
+                    NodoViaje.AppendChild(NodoCiudad);
 
-                XmlNode NodoCompañia = DocumentoXML.CreateNode(XmlNodeType.Element, "Compañia", "");
-                NodoCompañia.InnerText = V._Com._Nombre;
-                NodoV.AppendChild(NodoCompañia);
+                    XmlNode NodoPais = DocumentoXML.CreateNode(XmlNodeType.Element, "PaisDestino", "");
+                    NodoPais.InnerText = V._Ter._Pais;
+                    NodoViaje.AppendChild(NodoPais);
 
-                XmlNode NodoFecha = DocumentoXML.CreateNode(XmlNodeType.Element, "Fecha", "");
-                NodoFecha.InnerText = V._FechaPartida.ToString(); ;
-                NodoV.AppendChild(NodoFecha);
+                    XmlNode NodoCompañia = DocumentoXML.CreateNode(XmlNodeType.Element, "Compañia", "");
+                    NodoCompañia.InnerText = V._Com._Nombre;
+                    NodoViaje.AppendChild(NodoCompañia);
 
-                DocumentoXML.DocumentElement.AppendChild(NodoV);
+                    XmlNode NodoFecha = DocumentoXML.CreateNode(XmlNodeType.Element, "FechaPartida", "");
+                    NodoFecha.InnerText = V._FechaPartida.ToString(); ;
+                    NodoViaje.AppendChild(NodoFecha);
 
+                    NodoV.AppendChild(NodoViaje);
+
+                }
             }
-            a = DocumentoXML.InnerXml;
-            return a;
+            catch (Exception ex)
+            {
+                XmlDocument _undoc = new System.Xml.XmlDocument();
+                XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+
+                _NodoDetalle.InnerText = ex.Message;
+                _NodoError.AppendChild(_NodoDetalle);
+                SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
+                throw _MiEx;
+            }
+            DocumentoXML.AppendChild(NodoV);
+
+            return DocumentoXML.OuterXml;
         }
 
     }

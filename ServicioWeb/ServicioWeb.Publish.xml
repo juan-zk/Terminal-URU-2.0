@@ -4,12 +4,12 @@
     <file relUrl="bin/Logica.dll" publishTime="11/19/2018 22:10:22" />
     <file relUrl="bin/Persistencia.dll" publishTime="11/19/2018 22:10:22" />
     <file relUrl="bin/Logica.pdb" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/19/2018 22:10:22" />
     <file relUrl="bin/EntidadesCompartidas.dll" publishTime="11/19/2018 21:55:41" />
     <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="11/19/2018 21:55:41" />
-    <file relUrl="bin/Persistencia.pdb" publishTime="11/19/2018 22:10:22" />
     <file relUrl="Web.config" publishTime="11/19/2018 22:10:23" />
     <file relUrl="bin/ServicioWeb.dll" publishTime="11/19/2018 22:10:22" />
     <file relUrl="ServicioTURU.asmx" publishTime="11/19/2018 20:13:00" />
-    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/19/2018 22:10:22" />
+    <file relUrl="bin/Persistencia.pdb" publishTime="11/19/2018 22:10:22" />
   </publishProfile>
 </publishData>
