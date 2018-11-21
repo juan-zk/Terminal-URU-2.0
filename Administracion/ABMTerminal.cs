@@ -81,6 +81,7 @@ namespace Administracion
         {
             try
             {
+                lblMensaje.Text = "";
                 ServicioTURU Sweb = new ServicioTURU();
                 term = Sweb.BuscarTerminal(txtCodigo.Text);
                 if (term == null)
@@ -133,6 +134,47 @@ namespace Administracion
                 ServicioTURU Sweb = new ServicioTURU();
                 Sweb.AgregarTerminal(t);
                 lblMensaje.Text = "Terminal agregada correctamente";
+                LimpiarCampos();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ServicioTURU Sweb = new ServicioTURU();
+
+            Sweb.EliminarTerminal(term);
+            lblMensaje.Text = "Terminal eliminada correctamente";
+            LimpiarCampos();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                term._Pais = cmbPais.Text;
+                term._Ciudad = txtCiudad.Text;
+                string[] listaT = new string[lstFacilidad.Items.Count];
+                for (int i = 0; i < lstFacilidad.Items.Count; i++)
+                {
+                    listaT[i] = (lstFacilidad.Items[i].ToString());
+                }
+                term._Facilidades = listaT;
+
+                ServicioTURU Sweb = new ServicioTURU();
+                Sweb.ModificarTerminal(term);
+                lblMensaje.Text = "Terminal modificada correctamente";
                 LimpiarCampos();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
