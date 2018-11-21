@@ -92,11 +92,12 @@
             this.menuComp.Name = "menuComp";
             this.menuComp.Size = new System.Drawing.Size(79, 20);
             this.menuComp.Text = "Compañias";
+            this.menuComp.Click += new System.EventHandler(this.menuComp_Click);
             // 
             // menuTerm
             // 
             this.menuTerm.Name = "menuTerm";
-            this.menuTerm.Size = new System.Drawing.Size(77, 20);
+            this.menuTerm.Size = new System.Drawing.Size(76, 20);
             this.menuTerm.Text = "Terminales";
             this.menuTerm.Click += new System.EventHandler(this.menuTerm_Click);
             // 
@@ -140,7 +141,7 @@
             this.Controls.Add(this.stpMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.stpMenu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion TerminalURU";

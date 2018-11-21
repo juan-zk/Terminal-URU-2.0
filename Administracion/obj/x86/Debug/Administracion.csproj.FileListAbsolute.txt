@@ -19,7 +19,6 @@ C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Adm
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.pdb
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Login.resources
-C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Main.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.exe
@@ -47,3 +46,12 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Admi
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.FormErrores.resources
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Estadisticas.resources
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Estadisticas.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\bin\Debug\Administracion.exe.config
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMEmpleado.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMTerminal.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMViajesNacionales.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Estadisticas.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.FormErrores.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.FrmInicio.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMCompanias.resources
+C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache

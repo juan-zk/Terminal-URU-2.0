@@ -31,17 +31,18 @@
          {
              this.tsAcciones = new System.Windows.Forms.ToolStrip();
              this.btnAgregar = new System.Windows.Forms.ToolStripButton();
-             this.btnModificar = new System.Windows.Forms.ToolStripButton();
              this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+             this.btnModificar = new System.Windows.Forms.ToolStripButton();
+             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
              this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
              this.gbCompanias = new System.Windows.Forms.GroupBox();
-             this.lblNombre = new System.Windows.Forms.Label();
-             this.txtNombre = new System.Windows.Forms.TextBox();
-             this.lblDireccion = new System.Windows.Forms.Label();
-             this.txtDireccion = new System.Windows.Forms.TextBox();
-             this.lblTelefono = new System.Windows.Forms.Label();
              this.txtTelefono = new System.Windows.Forms.TextBox();
-             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+             this.lblTelefono = new System.Windows.Forms.Label();
+             this.txtDireccion = new System.Windows.Forms.TextBox();
+             this.lblDireccion = new System.Windows.Forms.Label();
+             this.txtNombre = new System.Windows.Forms.TextBox();
+             this.lblNombre = new System.Windows.Forms.Label();
+             this.lblError = new System.Windows.Forms.Label();
              this.tsAcciones.SuspendLayout();
              this.gbCompanias.SuspendLayout();
              this.SuspendLayout();
@@ -68,15 +69,7 @@
              this.btnAgregar.Name = "btnAgregar";
              this.btnAgregar.Size = new System.Drawing.Size(23, 22);
              this.btnAgregar.Text = "Nuevo";
-             // 
-             // btnModificar
-             // 
-             this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-             this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
-             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-             this.btnModificar.Name = "btnModificar";
-             this.btnModificar.Size = new System.Drawing.Size(23, 22);
-             this.btnModificar.Text = "Modificar";
+             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
              // 
              // btnEliminar
              // 
@@ -86,6 +79,22 @@
              this.btnEliminar.Name = "btnEliminar";
              this.btnEliminar.Size = new System.Drawing.Size(23, 22);
              this.btnEliminar.Text = "Eliminar";
+             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+             // 
+             // btnModificar
+             // 
+             this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+             this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
+             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+             this.btnModificar.Name = "btnModificar";
+             this.btnModificar.Size = new System.Drawing.Size(23, 22);
+             this.btnModificar.Text = "Modificar";
+             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+             // 
+             // toolStripSeparator1
+             // 
+             this.toolStripSeparator1.Name = "toolStripSeparator1";
+             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
              // 
              // btnLimpiar
              // 
@@ -95,9 +104,11 @@
              this.btnLimpiar.Name = "btnLimpiar";
              this.btnLimpiar.Size = new System.Drawing.Size(23, 22);
              this.btnLimpiar.Text = "Limpiar";
+             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
              // 
              // gbCompanias
              // 
+             this.gbCompanias.Controls.Add(this.lblError);
              this.gbCompanias.Controls.Add(this.txtTelefono);
              this.gbCompanias.Controls.Add(this.lblTelefono);
              this.gbCompanias.Controls.Add(this.txtDireccion);
@@ -111,37 +122,12 @@
              this.gbCompanias.TabStop = false;
              this.gbCompanias.Text = "Compañias";
              // 
-             // lblNombre
+             // txtTelefono
              // 
-             this.lblNombre.AutoSize = true;
-             this.lblNombre.Location = new System.Drawing.Point(7, 29);
-             this.lblNombre.Name = "lblNombre";
-             this.lblNombre.Size = new System.Drawing.Size(44, 13);
-             this.lblNombre.TabIndex = 0;
-             this.lblNombre.Text = "Nombre";
-             // 
-             // txtNombre
-             // 
-             this.txtNombre.Location = new System.Drawing.Point(141, 21);
-             this.txtNombre.Name = "txtNombre";
-             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-             this.txtNombre.TabIndex = 0;
-             // 
-             // lblDireccion
-             // 
-             this.lblDireccion.AutoSize = true;
-             this.lblDireccion.Location = new System.Drawing.Point(7, 62);
-             this.lblDireccion.Name = "lblDireccion";
-             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
-             this.lblDireccion.TabIndex = 2;
-             this.lblDireccion.Text = "Dirección";
-             // 
-             // txtDireccion
-             // 
-             this.txtDireccion.Location = new System.Drawing.Point(141, 54);
-             this.txtDireccion.Name = "txtDireccion";
-             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-             this.txtDireccion.TabIndex = 1;
+             this.txtTelefono.Location = new System.Drawing.Point(141, 84);
+             this.txtTelefono.Name = "txtTelefono";
+             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+             this.txtTelefono.TabIndex = 2;
              // 
              // lblTelefono
              // 
@@ -152,17 +138,47 @@
              this.lblTelefono.TabIndex = 4;
              this.lblTelefono.Text = "Teléfono";
              // 
-             // txtTelefono
+             // txtDireccion
              // 
-             this.txtTelefono.Location = new System.Drawing.Point(141, 84);
-             this.txtTelefono.Name = "txtTelefono";
-             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-             this.txtTelefono.TabIndex = 2;
+             this.txtDireccion.Location = new System.Drawing.Point(141, 54);
+             this.txtDireccion.Name = "txtDireccion";
+             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+             this.txtDireccion.TabIndex = 1;
              // 
-             // toolStripSeparator1
+             // lblDireccion
              // 
-             this.toolStripSeparator1.Name = "toolStripSeparator1";
-             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+             this.lblDireccion.AutoSize = true;
+             this.lblDireccion.Location = new System.Drawing.Point(7, 62);
+             this.lblDireccion.Name = "lblDireccion";
+             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+             this.lblDireccion.TabIndex = 2;
+             this.lblDireccion.Text = "Dirección";
+             // 
+             // txtNombre
+             // 
+             this.txtNombre.Location = new System.Drawing.Point(141, 21);
+             this.txtNombre.Name = "txtNombre";
+             this.txtNombre.Size = new System.Drawing.Size(100, 20);
+             this.txtNombre.TabIndex = 0;
+             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+             this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
+             // 
+             // lblNombre
+             // 
+             this.lblNombre.AutoSize = true;
+             this.lblNombre.Location = new System.Drawing.Point(7, 29);
+             this.lblNombre.Name = "lblNombre";
+             this.lblNombre.Size = new System.Drawing.Size(44, 13);
+             this.lblNombre.TabIndex = 0;
+             this.lblNombre.Text = "Nombre";
+             // 
+             // lblError
+             // 
+             this.lblError.AutoSize = true;
+             this.lblError.Location = new System.Drawing.Point(141, 152);
+             this.lblError.Name = "lblError";
+             this.lblError.Size = new System.Drawing.Size(0, 13);
+             this.lblError.TabIndex = 5;
              // 
              // ABMCompanias
              // 
@@ -197,5 +213,6 @@
          private System.Windows.Forms.TextBox txtNombre;
          private System.Windows.Forms.Label lblNombre;
          private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+         private System.Windows.Forms.Label lblError;
      }
  }

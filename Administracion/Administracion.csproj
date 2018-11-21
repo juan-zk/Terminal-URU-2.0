@@ -112,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ABMCompanias.resx">
+      <DependentUpon>ABMCompanias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABMEmpleado.resx">
       <DependentUpon>ABMEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,10 +195,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:20128/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://192.168.0.106:8091/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://localhost:20128/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://192.168.0.106:8091/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
