@@ -51,7 +51,7 @@ namespace Administracion
 
         private void menuUsrSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();            
         }
 
         private void menuUsrCerrarS_Click(object sender, EventArgs e)
