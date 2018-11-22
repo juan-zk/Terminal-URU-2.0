@@ -58,3 +58,4 @@ C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debu
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMCompanias.resources
 C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMCompanias.resources
+C:\Users\Juan\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
