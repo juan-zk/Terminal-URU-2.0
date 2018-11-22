@@ -27,7 +27,6 @@ namespace Administracion
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-            lblError.Text = "";
         }
         void HabilitarAgregar()
         {
@@ -51,6 +50,7 @@ namespace Administracion
         {
             try
             {
+                lblError.Text = "";
                 ServicioTURU Sweb = new ServicioTURU();
                 _Comp = Sweb.BuscarCompania(txtNombre.Text);
                 if (_Comp == null)

@@ -122,10 +122,7 @@ namespace Persistencia
                 {
                     throw new Exception(" la cedula del empleado ya existe");
                 }
-                if (resultado == 2)
-                {
-                    throw new Exception("Empleado  RE-Insertado correctamente");
-                }
+                
                 
             }
             catch (Exception ex)

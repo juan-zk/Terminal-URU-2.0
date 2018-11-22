@@ -108,9 +108,7 @@ namespace Persistencia
                     throw new Exception("ERROR SQL");
                 if (respuesta == -4)
                     throw new Exception("El teléfono debe ser único, el ingresado ya se encuentra registrado");
-                if (respuesta == 1 || respuesta == 2)
-                    throw new Exception("Compañia agregada correctamente.");
-
+                
             }
             catch (Exception ex)
             { throw ex; }
@@ -142,8 +140,7 @@ namespace Persistencia
                     throw new Exception("ERROR SQL, no se pudo completar su petición");
                 if (respuesta == -3)
                     throw new Exception("El teléfono debe ser único, el ingresado ya se encuentra registrado");
-                if (respuesta == 0)
-                    throw new Exception("Compañia modificada correctamente.");
+               
             }
             catch (Exception ex)
             { throw ex; }
@@ -171,8 +168,7 @@ namespace Persistencia
                 int res = (int)resSQL.Value;
                 if (res == -3)
                     throw new Exception("Error al eliminar.");
-                if (res == 1)
-                    throw new Exception("Compañia eliminada correctamente");
+               
             }
             catch (Exception ex)
             { throw ex; }

@@ -34,7 +34,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -55,7 +55,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -76,7 +76,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -97,7 +97,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -118,7 +118,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -141,7 +141,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -162,7 +162,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -183,7 +183,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -204,7 +204,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -225,7 +225,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -247,7 +247,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -268,7 +268,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -289,7 +289,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -310,7 +310,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -331,7 +331,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -364,7 +364,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -385,7 +385,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -406,7 +406,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -427,7 +427,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -448,7 +448,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
@@ -499,7 +499,7 @@ namespace ServicioWeb
             {
                 XmlDocument _undoc = new System.Xml.XmlDocument();
                 XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
 
                 _NodoDetalle.InnerText = ex.Message;
                 _NodoError.AppendChild(_NodoDetalle);
