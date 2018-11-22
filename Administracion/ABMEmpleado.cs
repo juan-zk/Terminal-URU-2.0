@@ -28,6 +28,7 @@ namespace Administracion
             btnAgregar1.Enabled = false;
             btnEliminar1.Enabled = false;
             btnModificar1.Enabled = false;
+            lblError.Text = "";
         }
         
         private void ActivoAgregar()
@@ -113,6 +114,7 @@ namespace Administracion
         {
             try
             {
+                _Emp = new Empleado();
                 _Emp._Cedula = txtCedula.Text.Trim();
                 _Emp._Contraseña = txtContraseña.Text.Trim();
                 _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
@@ -147,6 +149,8 @@ namespace Administracion
         {
             try
             {
+                _Emp = new Empleado();
+
                 _Emp._Cedula = txtCedula.Text.Trim();
                 _Emp._Contraseña = txtContraseña.Text.Trim();
                 _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
