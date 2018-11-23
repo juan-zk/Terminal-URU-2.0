@@ -34,15 +34,16 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFechas = new System.Windows.Forms.Button();
             this.btnViajesAnuales = new System.Windows.Forms.Button();
-            this.cbPais = new System.Windows.Forms.ComboBox();
             this.lblError = new System.Windows.Forms.Label();
             this.dateFecha1 = new System.Windows.Forms.DateTimePicker();
             this.dateFecha2 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnFiltroPais = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbPais = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvViajes)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gvViajes
@@ -51,11 +52,11 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.gvViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvViajes.Location = new System.Drawing.Point(7, 222);
+            this.gvViajes.Location = new System.Drawing.Point(13, 273);
+            this.gvViajes.Margin = new System.Windows.Forms.Padding(4);
             this.gvViajes.Name = "gvViajes";
             this.gvViajes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.gvViajes.Size = new System.Drawing.Size(1340, 225);
+            this.gvViajes.Size = new System.Drawing.Size(1002, 315);
             this.gvViajes.TabIndex = 0;
             // 
             // toolStrip1
@@ -65,7 +66,7 @@
             this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1359, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1028, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -85,105 +86,123 @@
             // 
             // btnFechas
             // 
-            this.btnFechas.Location = new System.Drawing.Point(922, 109);
+            this.btnFechas.Location = new System.Drawing.Point(55, 140);
+            this.btnFechas.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechas.Name = "btnFechas";
-            this.btnFechas.Size = new System.Drawing.Size(124, 23);
+            this.btnFechas.Size = new System.Drawing.Size(165, 28);
             this.btnFechas.TabIndex = 2;
-            this.btnFechas.Text = "Filtro por Fechas";
+            this.btnFechas.Text = "Ver viajes";
             this.btnFechas.UseVisualStyleBackColor = true;
             this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
             // 
             // btnViajesAnuales
             // 
-            this.btnViajesAnuales.Location = new System.Drawing.Point(7, 179);
+            this.btnViajesAnuales.Location = new System.Drawing.Point(798, 186);
+            this.btnViajesAnuales.Margin = new System.Windows.Forms.Padding(4);
             this.btnViajesAnuales.Name = "btnViajesAnuales";
-            this.btnViajesAnuales.Size = new System.Drawing.Size(124, 23);
+            this.btnViajesAnuales.Size = new System.Drawing.Size(197, 28);
             this.btnViajesAnuales.TabIndex = 3;
-            this.btnViajesAnuales.Text = "Viajes por Año";
+            this.btnViajesAnuales.Text = "Cantidad de Viajes por año";
             this.btnViajesAnuales.UseVisualStyleBackColor = true;
-            // 
-            // cbPais
-            // 
-            this.cbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPais.FormattingEnabled = true;
-            this.cbPais.Location = new System.Drawing.Point(7, 84);
-            this.cbPais.Name = "cbPais";
-            this.cbPais.Size = new System.Drawing.Size(121, 21);
-            this.cbPais.TabIndex = 4;
+            this.btnViajesAnuales.Click += new System.EventHandler(this.btnViajesAnuales_Click);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(381, 466);
+            this.lblError.Location = new System.Drawing.Point(13, 252);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(39, 13);
+            this.lblError.Size = new System.Drawing.Size(54, 17);
             this.lblError.TabIndex = 5;
             this.lblError.Text = "lblError";
             // 
             // dateFecha1
             // 
-            this.dateFecha1.Location = new System.Drawing.Point(707, 51);
+            this.dateFecha1.Location = new System.Drawing.Point(13, 80);
+            this.dateFecha1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateFecha1.Name = "dateFecha1";
-            this.dateFecha1.Size = new System.Drawing.Size(200, 20);
+            this.dateFecha1.Size = new System.Drawing.Size(265, 22);
             this.dateFecha1.TabIndex = 6;
             // 
             // dateFecha2
             // 
-            this.dateFecha2.Location = new System.Drawing.Point(1062, 51);
+            this.dateFecha2.Location = new System.Drawing.Point(13, 110);
+            this.dateFecha2.Margin = new System.Windows.Forms.Padding(4);
             this.dateFecha2.Name = "dateFecha2";
-            this.dateFecha2.Size = new System.Drawing.Size(200, 20);
+            this.dateFecha2.Size = new System.Drawing.Size(265, 22);
             this.dateFecha2.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(758, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(452, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Si desea filtrar los viajes por fehca, Seleccione dos fechas y luego presione \"Fi" +
-                "ltro por Fechas\"";
-            // 
-            // btnFiltroPais
-            // 
-            this.btnFiltroPais.Location = new System.Drawing.Point(7, 109);
-            this.btnFiltroPais.Name = "btnFiltroPais";
-            this.btnFiltroPais.Size = new System.Drawing.Size(118, 23);
-            this.btnFiltroPais.TabIndex = 9;
-            this.btnFiltroPais.Text = "Filtro  Pais";
-            this.btnFiltroPais.UseVisualStyleBackColor = true;
-            this.btnFiltroPais.Click += new System.EventHandler(this.btnFiltroPais_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 51);
+            this.label2.Location = new System.Drawing.Point(396, 55);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 13);
+            this.label2.Size = new System.Drawing.Size(162, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Para filtrar por pais Selecione uno pais de la lista y presione \"Filtro Pais\".";
+            this.label2.Text = "Ver por Pais de Destino:";
+            // 
+            // cbPais
+            // 
+            this.cbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPais.FormattingEnabled = true;
+            this.cbPais.Items.AddRange(new object[] {
+            "Uruguay",
+            "Argentina",
+            "Brasil",
+            "Paraguay"});
+            this.cbPais.Location = new System.Drawing.Point(399, 82);
+            this.cbPais.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPais.Name = "cbPais";
+            this.cbPais.Size = new System.Drawing.Size(197, 24);
+            this.cbPais.TabIndex = 4;
+            this.cbPais.SelectedIndexChanged += new System.EventHandler(this.cbPais_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbPais);
+            this.groupBox1.Controls.Add(this.dateFecha2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dateFecha1);
+            this.groupBox1.Controls.Add(this.btnViajesAnuales);
+            this.groupBox1.Controls.Add(this.btnFechas);
+            this.groupBox1.Location = new System.Drawing.Point(13, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1002, 221);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Opciones de filtrado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Ver por rango de Fechas:";
             // 
             // Estadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 488);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnFiltroPais);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateFecha2);
-            this.Controls.Add(this.dateFecha1);
+            this.ClientSize = new System.Drawing.Size(1028, 601);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.cbPais);
-            this.Controls.Add(this.btnViajesAnuales);
-            this.Controls.Add(this.btnFechas);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gvViajes);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Estadisticas";
             this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.gvViajes)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,12 +216,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Button btnFechas;
         private System.Windows.Forms.Button btnViajesAnuales;
-        private System.Windows.Forms.ComboBox cbPais;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.DateTimePicker dateFecha1;
         private System.Windows.Forms.DateTimePicker dateFecha2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnFiltroPais;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbPais;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
