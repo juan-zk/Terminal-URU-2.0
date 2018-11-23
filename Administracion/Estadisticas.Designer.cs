@@ -53,7 +53,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.gvViajes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvViajes.Location = new System.Drawing.Point(13, 273);
-            this.gvViajes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gvViajes.Margin = new System.Windows.Forms.Padding(4);
             this.gvViajes.Name = "gvViajes";
             this.gvViajes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.gvViajes.Size = new System.Drawing.Size(1002, 315);
@@ -87,7 +87,7 @@
             // btnFechas
             // 
             this.btnFechas.Location = new System.Drawing.Point(55, 140);
-            this.btnFechas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFechas.Margin = new System.Windows.Forms.Padding(4);
             this.btnFechas.Name = "btnFechas";
             this.btnFechas.Size = new System.Drawing.Size(165, 28);
             this.btnFechas.TabIndex = 2;
@@ -98,7 +98,7 @@
             // btnViajesAnuales
             // 
             this.btnViajesAnuales.Location = new System.Drawing.Point(798, 186);
-            this.btnViajesAnuales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViajesAnuales.Margin = new System.Windows.Forms.Padding(4);
             this.btnViajesAnuales.Name = "btnViajesAnuales";
             this.btnViajesAnuales.Size = new System.Drawing.Size(197, 28);
             this.btnViajesAnuales.TabIndex = 3;
@@ -127,7 +127,7 @@
             // dateFecha2
             // 
             this.dateFecha2.Location = new System.Drawing.Point(13, 110);
-            this.dateFecha2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateFecha2.Margin = new System.Windows.Forms.Padding(4);
             this.dateFecha2.Name = "dateFecha2";
             this.dateFecha2.Size = new System.Drawing.Size(265, 22);
             this.dateFecha2.TabIndex = 7;
@@ -174,7 +174,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1002, 221);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listado de Viajes";
+            this.groupBox1.Text = "Opciones de filtrado";
             // 
             // label1
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gvViajes);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Estadisticas";
             this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.gvViajes)).EndInit();
