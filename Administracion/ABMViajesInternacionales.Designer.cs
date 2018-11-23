@@ -29,8 +29,18 @@
         private void InitializeComponent()
         {
             this.tsAcciones = new System.Windows.Forms.ToolStrip();
+            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
             this.gbViajesInter = new System.Windows.Forms.GroupBox();
+            this.lblHoraArribo = new System.Windows.Forms.Label();
+            this.dtFechaArribo = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraPartida = new System.Windows.Forms.Label();
+            this.dtFechaPartida = new System.Windows.Forms.DateTimePicker();
+            this.cbTerminales = new System.Windows.Forms.ComboBox();
+            this.cbCompanias = new System.Windows.Forms.ComboBox();
             this.txtDocumentacion = new System.Windows.Forms.TextBox();
             this.lblDocumentacion = new System.Windows.Forms.Label();
             this.chkServicioaBordo = new System.Windows.Forms.CheckBox();
@@ -46,16 +56,7 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.cbCompanias = new System.Windows.Forms.ComboBox();
-            this.cbTerminales = new System.Windows.Forms.ComboBox();
-            this.dtFechaPartida = new System.Windows.Forms.DateTimePicker();
-            this.lblHoraPartida = new System.Windows.Forms.Label();
-            this.dtFechaArribo = new System.Windows.Forms.DateTimePicker();
-            this.lblHoraArribo = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.tsAcciones.SuspendLayout();
             this.gbViajesInter.SuspendLayout();
             this.SuspendLayout();
@@ -74,13 +75,51 @@
             this.tsAcciones.TabIndex = 0;
             this.tsAcciones.Text = "toolStrip1";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAgregar.Image = global::Administracion.Properties.Resources.nuevo;
+            this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(23, 22);
+            this.btnAgregar.Text = "Nuevo";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEliminar.Image = global::Administracion.Properties.Resources.eliminar;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(23, 22);
+            this.btnEliminar.Text = "Eliminar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(23, 22);
+            this.btnModificar.Text = "Modificar";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLimpiar.Image = global::Administracion.Properties.Resources.cancelar;
+            this.btnLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(23, 22);
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // gbViajesInter
             // 
+            this.gbViajesInter.Controls.Add(this.lblError);
             this.gbViajesInter.Controls.Add(this.lblHoraArribo);
             this.gbViajesInter.Controls.Add(this.dtFechaArribo);
             this.gbViajesInter.Controls.Add(this.lblHoraPartida);
@@ -109,11 +148,59 @@
             this.gbViajesInter.TabStop = false;
             this.gbViajesInter.Text = "Viajes Internacionales";
             // 
+            // lblHoraArribo
+            // 
+            this.lblHoraArribo.AutoSize = true;
+            this.lblHoraArribo.Location = new System.Drawing.Point(362, 168);
+            this.lblHoraArribo.Name = "lblHoraArribo";
+            this.lblHoraArribo.Size = new System.Drawing.Size(75, 13);
+            this.lblHoraArribo.TabIndex = 23;
+            this.lblHoraArribo.Text = "Hora de Arribo";
+            // 
+            // dtFechaArribo
+            // 
+            this.dtFechaArribo.Location = new System.Drawing.Point(454, 124);
+            this.dtFechaArribo.Name = "dtFechaArribo";
+            this.dtFechaArribo.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaArribo.TabIndex = 22;
+            // 
+            // lblHoraPartida
+            // 
+            this.lblHoraPartida.AutoSize = true;
+            this.lblHoraPartida.Location = new System.Drawing.Point(362, 70);
+            this.lblHoraPartida.Name = "lblHoraPartida";
+            this.lblHoraPartida.Size = new System.Drawing.Size(81, 13);
+            this.lblHoraPartida.TabIndex = 21;
+            this.lblHoraPartida.Text = "Hora de Partida";
+            // 
+            // dtFechaPartida
+            // 
+            this.dtFechaPartida.Location = new System.Drawing.Point(454, 23);
+            this.dtFechaPartida.Name = "dtFechaPartida";
+            this.dtFechaPartida.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaPartida.TabIndex = 20;
+            // 
+            // cbTerminales
+            // 
+            this.cbTerminales.FormattingEnabled = true;
+            this.cbTerminales.Location = new System.Drawing.Point(202, 123);
+            this.cbTerminales.Name = "cbTerminales";
+            this.cbTerminales.Size = new System.Drawing.Size(121, 21);
+            this.cbTerminales.TabIndex = 19;
+            // 
+            // cbCompanias
+            // 
+            this.cbCompanias.FormattingEnabled = true;
+            this.cbCompanias.Location = new System.Drawing.Point(202, 70);
+            this.cbCompanias.Name = "cbCompanias";
+            this.cbCompanias.Size = new System.Drawing.Size(121, 21);
+            this.cbCompanias.TabIndex = 18;
+            // 
             // txtDocumentacion
             // 
             this.txtDocumentacion.Location = new System.Drawing.Point(202, 254);
             this.txtDocumentacion.Name = "txtDocumentacion";
-            this.txtDocumentacion.Size = new System.Drawing.Size(121, 20);
+            this.txtDocumentacion.Size = new System.Drawing.Size(245, 20);
             this.txtDocumentacion.TabIndex = 7;
             // 
             // lblDocumentacion
@@ -217,6 +304,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(121, 20);
             this.txtNumero.TabIndex = 0;
+            this.txtNumero.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumero_Validating);
             // 
             // lblNumero
             // 
@@ -235,89 +323,13 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
-            // btnAgregar
+            // lblError
             // 
-            this.btnAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAgregar.Image = global::Administracion.Properties.Resources.nuevo;
-            this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(23, 22);
-            this.btnAgregar.Text = "Nuevo";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEliminar.Image = global::Administracion.Properties.Resources.eliminar;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(23, 22);
-            this.btnEliminar.Text = "Eliminar";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(23, 22);
-            this.btnModificar.Text = "Modificar";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnLimpiar.Image = global::Administracion.Properties.Resources.cancelar;
-            this.btnLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(23, 22);
-            this.btnLimpiar.Text = "Limpiar";
-            // 
-            // cbCompanias
-            // 
-            this.cbCompanias.FormattingEnabled = true;
-            this.cbCompanias.Location = new System.Drawing.Point(202, 70);
-            this.cbCompanias.Name = "cbCompanias";
-            this.cbCompanias.Size = new System.Drawing.Size(121, 21);
-            this.cbCompanias.TabIndex = 18;
-            // 
-            // cbTerminales
-            // 
-            this.cbTerminales.FormattingEnabled = true;
-            this.cbTerminales.Location = new System.Drawing.Point(202, 123);
-            this.cbTerminales.Name = "cbTerminales";
-            this.cbTerminales.Size = new System.Drawing.Size(121, 21);
-            this.cbTerminales.TabIndex = 19;
-            // 
-            // dtFechaPartida
-            // 
-            this.dtFechaPartida.Location = new System.Drawing.Point(454, 23);
-            this.dtFechaPartida.Name = "dtFechaPartida";
-            this.dtFechaPartida.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaPartida.TabIndex = 20;
-            // 
-            // lblHoraPartida
-            // 
-            this.lblHoraPartida.AutoSize = true;
-            this.lblHoraPartida.Location = new System.Drawing.Point(362, 70);
-            this.lblHoraPartida.Name = "lblHoraPartida";
-            this.lblHoraPartida.Size = new System.Drawing.Size(81, 13);
-            this.lblHoraPartida.TabIndex = 21;
-            this.lblHoraPartida.Text = "Hora de Partida";
-            // 
-            // dtFechaArribo
-            // 
-            this.dtFechaArribo.Location = new System.Drawing.Point(454, 124);
-            this.dtFechaArribo.Name = "dtFechaArribo";
-            this.dtFechaArribo.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaArribo.TabIndex = 22;
-            // 
-            // lblHoraArribo
-            // 
-            this.lblHoraArribo.AutoSize = true;
-            this.lblHoraArribo.Location = new System.Drawing.Point(362, 168);
-            this.lblHoraArribo.Name = "lblHoraArribo";
-            this.lblHoraArribo.Size = new System.Drawing.Size(75, 13);
-            this.lblHoraArribo.TabIndex = 23;
-            this.lblHoraArribo.Text = "Hora de Arribo";
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(376, 231);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 24;
             // 
             // ABMViajesInternacionales
             // 
@@ -367,5 +379,6 @@
         private System.Windows.Forms.DateTimePicker dtFechaPartida;
         private System.Windows.Forms.Label lblHoraArribo;
         private System.Windows.Forms.DateTimePicker dtFechaArribo;
+        private System.Windows.Forms.Label lblError;
     }
 }

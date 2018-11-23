@@ -256,7 +256,7 @@ namespace Administracion
                     f.Close();
                     f = null;
                 }
-                f = new ABMViajesInternacionales();
+                f = new ABMViajesInternacionales(_Emp);
                 f.MdiParent = this;
                 f.StartPosition = FormStartPosition.Manual;
                 f.Show();
