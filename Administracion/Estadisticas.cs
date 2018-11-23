@@ -27,10 +27,7 @@ namespace Administracion
 
             List<Terminal> Terminales = new List<Terminal>();
             Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
-            foreach (Terminal ter in Terminales)
-            {
-                cbPais.Items.Add(ter._Pais);
-            }
+
         }
 
         private void CargoDatos()
@@ -67,16 +64,16 @@ namespace Administracion
                 var Filtro = (from viaje in XML.Elements("Viaje")
                               where (Convert.ToDateTime(viaje.Element("FechaPartida").Value) >= dateFecha1.Value) && (Convert.ToDateTime(viaje.Element("FechaPartida").Value) <= dateFecha2.Value)
                               select new
-                            {
-                                NumeroViaje = viaje.Element("Numero").Value,
-                                CiudadDestino = viaje.Element("CiudadDestino").Value,
-                                PaisDestino = viaje.Element("PaisDestino").Value,
-                                Compañia = viaje.Element("Compañia").Value,
-                                FechaPartida = viaje.Element("FechaPartida").Value
-                            });
+                              {
+                                  NumeroViaje = viaje.Element("Numero").Value,
+                                  CiudadDestino = viaje.Element("CiudadDestino").Value,
+                                  PaisDestino = viaje.Element("PaisDestino").Value,
+                                  Compañia = viaje.Element("Compañia").Value,
+                                  FechaPartida = viaje.Element("FechaPartida").Value
+                              });
                 gvViajes.DataSource = Filtro.ToList();
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 lblError.Text = ex.Message;
             }
@@ -106,6 +103,58 @@ namespace Administracion
                 lblError.Text = ex.Message;
             }
         }
-        
+
+        private void btnViajesAnuales_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sewb = new ServicioTURU();
+                this.Carga = Sewb.ViajesXML();
+                XElement XML = XElement.Parse(Carga);
+                var Filtro = (from viaje in XML.Elements("Viaje")
+                              group viaje by new
+                              {
+                                  anio = Convert.ToDateTime(viaje.Element("FechaPartida").Value).Year,
+                                  comp = viaje.Element("Compañia").Value
+                              } into tabla
+                              select new
+                              {
+                                  Compañia = tabla.Key.comp,
+                                  Año = tabla.Key.anio,
+                                  Viajes = tabla.Count()
+                              });
+                gvViajes.DataSource = Filtro.ToList();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void cbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sewb = new ServicioTURU();
+                this.Carga = Sewb.ViajesXML();
+                XElement XML = XElement.Parse(Carga);
+                var Filtro = (from viaje in XML.Elements("Viaje")
+                              where (string)viaje.Element("PaisDestino") == cbPais.Text.Trim()
+                              select new
+                              {
+                                  NumeroViaje = viaje.Element("Numero").Value,
+                                  CiudadDestino = viaje.Element("CiudadDestino").Value,
+                                  PaisDestino = viaje.Element("PaisDestino").Value,
+                                  Compañia = viaje.Element("Compañia").Value,
+                                  FechaPartida = viaje.Element("FechaPartida").Value
+                              });
+                gvViajes.DataSource = Filtro.ToList();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
     }
 }
