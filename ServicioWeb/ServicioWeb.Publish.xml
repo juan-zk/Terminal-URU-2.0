@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="C:\Users\Juan\Desktop\Servicio" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/ServicioWeb" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="localhost" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/ServicioWeb" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="Perfil1" publishMethod="MSDeploy" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="bin/Logica.dll" publishTime="11/21/2018 21:44:42" />
     <file relUrl="bin/Persistencia.dll" publishTime="11/21/2018 21:44:42" />
     <file relUrl="bin/Logica.pdb" publishTime="11/21/2018 21:44:42" />
+    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/21/2018 21:44:42" />
     <file relUrl="bin/EntidadesCompartidas.dll" publishTime="11/21/2018 21:44:39" />
     <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="11/21/2018 21:44:39" />
-    <file relUrl="bin/Persistencia.pdb" publishTime="11/21/2018 21:44:42" />
     <file relUrl="Web.config" publishTime="11/21/2018 21:45:26" />
     <file relUrl="bin/ServicioWeb.dll" publishTime="11/21/2018 21:44:42" />
     <file relUrl="ServicioTURU.asmx" publishTime="11/20/2018 21:35:38" />
-    <file relUrl="bin/ServicioWeb.pdb" publishTime="11/21/2018 21:44:42" />
+    <file relUrl="bin/Persistencia.pdb" publishTime="11/21/2018 21:44:42" />
   </publishProfile>
 </publishData>

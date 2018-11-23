@@ -23,6 +23,14 @@ namespace Administracion
         {
             InitializeComponent();
             this.CargoDatos();
+            lblError.Text = "";
+
+            List<Terminal> Terminales = new List<Terminal>();
+            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
+            foreach (Terminal ter in Terminales)
+            {
+                cbPais.Items.Add(ter._Pais);
+            }
         }
 
         private void CargoDatos()
@@ -42,6 +50,56 @@ namespace Administracion
                                  FechaPartida = viaje.Element("FechaPartida").Value
                              });
                 gvViajes.DataSource = datos.ToList();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void btnFechas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sewb = new ServicioTURU();
+                this.Carga = Sewb.ViajesXML();
+                XElement XML = XElement.Parse(Carga);
+                var Filtro = (from viaje in XML.Elements("Viaje")
+                              where (Convert.ToDateTime(viaje.Element("FechaPartida").Value) >= dateFecha1.Value) && (Convert.ToDateTime(viaje.Element("FechaPartida").Value) <= dateFecha2.Value)
+                              select new
+                            {
+                                NumeroViaje = viaje.Element("Numero").Value,
+                                CiudadDestino = viaje.Element("CiudadDestino").Value,
+                                PaisDestino = viaje.Element("PaisDestino").Value,
+                                Compañia = viaje.Element("Compañia").Value,
+                                FechaPartida = viaje.Element("FechaPartida").Value
+                            });
+                gvViajes.DataSource = Filtro.ToList();
+            }
+             catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void btnFiltroPais_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sewb = new ServicioTURU();
+                this.Carga = Sewb.ViajesXML();
+                XElement XML = XElement.Parse(Carga);
+                var Filtro = (from viaje in XML.Elements("Viaje")
+                              where (string)viaje.Element("PaisDestino") == cbPais.Text.Trim()
+                              select new
+                              {
+                                  NumeroViaje = viaje.Element("Numero").Value,
+                                  CiudadDestino = viaje.Element("CiudadDestino").Value,
+                                  PaisDestino = viaje.Element("PaisDestino").Value,
+                                  Compañia = viaje.Element("Compañia").Value,
+                                  FechaPartida = viaje.Element("FechaPartida").Value
+                              });
+                gvViajes.DataSource = Filtro.ToList();
             }
             catch (Exception ex)
             {
