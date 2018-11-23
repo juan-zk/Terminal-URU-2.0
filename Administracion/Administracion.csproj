@@ -136,6 +136,9 @@
     <EmbeddedResource Include="ABMTerminal.resx">
       <DependentUpon>ABMTerminal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ABMViajesInternacionales.resx">
+      <DependentUpon>ABMViajesInternacionales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABMViajesNacionales.resx">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,19 +213,6 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:20128/ServicioTURU.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://localhost:20128/ServicioTURU.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>Administracion_ServicioWeb_ServicioTURU</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
@@ -243,6 +233,19 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.0.106:8091/ServicioTURU.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioWeb\</RelPath>
+      <UpdateFromURL>http://192.168.0.106:8091/ServicioTURU.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Administracion_ServicioWeb_ServicioTURU</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

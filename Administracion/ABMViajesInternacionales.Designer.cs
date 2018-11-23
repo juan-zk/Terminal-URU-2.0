@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             this.tsAcciones = new System.Windows.Forms.ToolStrip();
-            this.gbViajesInter = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.lblCompania = new System.Windows.Forms.Label();
-            this.txtCompania = new System.Windows.Forms.TextBox();
-            this.lblTerminal = new System.Windows.Forms.Label();
-            this.txtTerminal = new System.Windows.Forms.TextBox();
-            this.lblFechaPartida = new System.Windows.Forms.Label();
-            this.txtFechaPartida = new System.Windows.Forms.TextBox();
-            this.lblFechaArribo = new System.Windows.Forms.Label();
-            this.txtFechaArribo = new System.Windows.Forms.TextBox();
-            this.lblAsientos = new System.Windows.Forms.Label();
-            this.txtAsientos = new System.Windows.Forms.TextBox();
-            this.lblEmpleado = new System.Windows.Forms.Label();
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
-            this.lblServicioaBordo = new System.Windows.Forms.Label();
-            this.chkServicioaBordo = new System.Windows.Forms.CheckBox();
-            this.lblDocumentacion = new System.Windows.Forms.Label();
-            this.txtDocumentacion = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.gbViajesInter = new System.Windows.Forms.GroupBox();
+            this.txtDocumentacion = new System.Windows.Forms.TextBox();
+            this.lblDocumentacion = new System.Windows.Forms.Label();
+            this.chkServicioaBordo = new System.Windows.Forms.CheckBox();
+            this.lblServicioaBordo = new System.Windows.Forms.Label();
+            this.txtAsientos = new System.Windows.Forms.TextBox();
+            this.lblAsientos = new System.Windows.Forms.Label();
+            this.txtHoraArribo = new System.Windows.Forms.TextBox();
+            this.lblFechaArribo = new System.Windows.Forms.Label();
+            this.txtHoraPartida = new System.Windows.Forms.TextBox();
+            this.lblFechaPartida = new System.Windows.Forms.Label();
+            this.lblTerminal = new System.Windows.Forms.Label();
+            this.lblCompania = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.cbCompanias = new System.Windows.Forms.ComboBox();
+            this.cbTerminales = new System.Windows.Forms.ComboBox();
+            this.dtFechaPartida = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraPartida = new System.Windows.Forms.Label();
+            this.dtFechaArribo = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraArribo = new System.Windows.Forms.Label();
             this.tsAcciones.SuspendLayout();
             this.gbViajesInter.SuspendLayout();
             this.SuspendLayout();
@@ -68,175 +70,51 @@
             this.btnLimpiar});
             this.tsAcciones.Location = new System.Drawing.Point(0, 0);
             this.tsAcciones.Name = "tsAcciones";
-            this.tsAcciones.Size = new System.Drawing.Size(390, 25);
+            this.tsAcciones.Size = new System.Drawing.Size(729, 25);
             this.tsAcciones.TabIndex = 0;
             this.tsAcciones.Text = "toolStrip1";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // gbViajesInter
             // 
+            this.gbViajesInter.Controls.Add(this.lblHoraArribo);
+            this.gbViajesInter.Controls.Add(this.dtFechaArribo);
+            this.gbViajesInter.Controls.Add(this.lblHoraPartida);
+            this.gbViajesInter.Controls.Add(this.dtFechaPartida);
+            this.gbViajesInter.Controls.Add(this.cbTerminales);
+            this.gbViajesInter.Controls.Add(this.cbCompanias);
             this.gbViajesInter.Controls.Add(this.txtDocumentacion);
             this.gbViajesInter.Controls.Add(this.lblDocumentacion);
             this.gbViajesInter.Controls.Add(this.chkServicioaBordo);
             this.gbViajesInter.Controls.Add(this.lblServicioaBordo);
-            this.gbViajesInter.Controls.Add(this.txtEmpleado);
-            this.gbViajesInter.Controls.Add(this.lblEmpleado);
             this.gbViajesInter.Controls.Add(this.txtAsientos);
             this.gbViajesInter.Controls.Add(this.lblAsientos);
-            this.gbViajesInter.Controls.Add(this.txtFechaArribo);
+            this.gbViajesInter.Controls.Add(this.txtHoraArribo);
             this.gbViajesInter.Controls.Add(this.lblFechaArribo);
-            this.gbViajesInter.Controls.Add(this.txtFechaPartida);
+            this.gbViajesInter.Controls.Add(this.txtHoraPartida);
             this.gbViajesInter.Controls.Add(this.lblFechaPartida);
-            this.gbViajesInter.Controls.Add(this.txtTerminal);
             this.gbViajesInter.Controls.Add(this.lblTerminal);
-            this.gbViajesInter.Controls.Add(this.txtCompania);
             this.gbViajesInter.Controls.Add(this.lblCompania);
             this.gbViajesInter.Controls.Add(this.txtNumero);
             this.gbViajesInter.Controls.Add(this.lblNumero);
             this.gbViajesInter.Controls.Add(this.label1);
             this.gbViajesInter.Location = new System.Drawing.Point(13, 38);
             this.gbViajesInter.Name = "gbViajesInter";
-            this.gbViajesInter.Size = new System.Drawing.Size(351, 295);
+            this.gbViajesInter.Size = new System.Drawing.Size(695, 295);
             this.gbViajesInter.TabIndex = 1;
             this.gbViajesInter.TabStop = false;
             this.gbViajesInter.Text = "Viajes Internacionales";
             // 
-            // label1
+            // txtDocumentacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(6, 31);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(44, 13);
-            this.lblNumero.TabIndex = 1;
-            this.lblNumero.Text = "Número";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(202, 24);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
-            this.txtNumero.TabIndex = 0;
-            // 
-            // lblCompania
-            // 
-            this.lblCompania.AutoSize = true;
-            this.lblCompania.Location = new System.Drawing.Point(7, 63);
-            this.lblCompania.Name = "lblCompania";
-            this.lblCompania.Size = new System.Drawing.Size(94, 13);
-            this.lblCompania.TabIndex = 3;
-            this.lblCompania.Text = "Nombre Compañia";
-            // 
-            // txtCompania
-            // 
-            this.txtCompania.Location = new System.Drawing.Point(202, 56);
-            this.txtCompania.Name = "txtCompania";
-            this.txtCompania.Size = new System.Drawing.Size(100, 20);
-            this.txtCompania.TabIndex = 1;
-            // 
-            // lblTerminal
-            // 
-            this.lblTerminal.AutoSize = true;
-            this.lblTerminal.Location = new System.Drawing.Point(6, 89);
-            this.lblTerminal.Name = "lblTerminal";
-            this.lblTerminal.Size = new System.Drawing.Size(83, 13);
-            this.lblTerminal.TabIndex = 5;
-            this.lblTerminal.Text = "Código Terminal";
-            // 
-            // txtTerminal
-            // 
-            this.txtTerminal.Location = new System.Drawing.Point(202, 82);
-            this.txtTerminal.Name = "txtTerminal";
-            this.txtTerminal.Size = new System.Drawing.Size(100, 20);
-            this.txtTerminal.TabIndex = 2;
-            // 
-            // lblFechaPartida
-            // 
-            this.lblFechaPartida.AutoSize = true;
-            this.lblFechaPartida.Location = new System.Drawing.Point(7, 116);
-            this.lblFechaPartida.Name = "lblFechaPartida";
-            this.lblFechaPartida.Size = new System.Drawing.Size(119, 13);
-            this.lblFechaPartida.TabIndex = 7;
-            this.lblFechaPartida.Text = "Fecha y hora de partida";
-            // 
-            // txtFechaPartida
-            // 
-            this.txtFechaPartida.Location = new System.Drawing.Point(202, 109);
-            this.txtFechaPartida.Name = "txtFechaPartida";
-            this.txtFechaPartida.Size = new System.Drawing.Size(100, 20);
-            this.txtFechaPartida.TabIndex = 3;
-            // 
-            // lblFechaArribo
-            // 
-            this.lblFechaArribo.AutoSize = true;
-            this.lblFechaArribo.Location = new System.Drawing.Point(6, 139);
-            this.lblFechaArribo.Name = "lblFechaArribo";
-            this.lblFechaArribo.Size = new System.Drawing.Size(113, 13);
-            this.lblFechaArribo.TabIndex = 9;
-            this.lblFechaArribo.Text = "Fecha y hora de arribo";
-            // 
-            // txtFechaArribo
-            // 
-            this.txtFechaArribo.Location = new System.Drawing.Point(202, 132);
-            this.txtFechaArribo.Name = "txtFechaArribo";
-            this.txtFechaArribo.Size = new System.Drawing.Size(100, 20);
-            this.txtFechaArribo.TabIndex = 4;
-            // 
-            // lblAsientos
-            // 
-            this.lblAsientos.AutoSize = true;
-            this.lblAsientos.Location = new System.Drawing.Point(7, 169);
-            this.lblAsientos.Name = "lblAsientos";
-            this.lblAsientos.Size = new System.Drawing.Size(107, 13);
-            this.lblAsientos.TabIndex = 11;
-            this.lblAsientos.Text = "Cantidad de Asientos";
-            // 
-            // txtAsientos
-            // 
-            this.txtAsientos.Location = new System.Drawing.Point(202, 161);
-            this.txtAsientos.Name = "txtAsientos";
-            this.txtAsientos.Size = new System.Drawing.Size(100, 20);
-            this.txtAsientos.TabIndex = 5;
-            // 
-            // lblEmpleado
-            // 
-            this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Location = new System.Drawing.Point(7, 199);
-            this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(105, 13);
-            this.lblEmpleado.TabIndex = 13;
-            this.lblEmpleado.Text = "Cédula de Empleado";
-            // 
-            // txtEmpleado
-            // 
-            this.txtEmpleado.Location = new System.Drawing.Point(202, 191);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txtEmpleado.TabIndex = 6;
-            // 
-            // lblServicioaBordo
-            // 
-            this.lblServicioaBordo.AutoSize = true;
-            this.lblServicioaBordo.Location = new System.Drawing.Point(7, 231);
-            this.lblServicioaBordo.Name = "lblServicioaBordo";
-            this.lblServicioaBordo.Size = new System.Drawing.Size(0, 13);
-            this.lblServicioaBordo.TabIndex = 15;
-            // 
-            // chkServicioaBordo
-            // 
-            this.chkServicioaBordo.AutoSize = true;
-            this.chkServicioaBordo.Location = new System.Drawing.Point(6, 227);
-            this.chkServicioaBordo.Name = "chkServicioaBordo";
-            this.chkServicioaBordo.Size = new System.Drawing.Size(104, 17);
-            this.chkServicioaBordo.TabIndex = 16;
-            this.chkServicioaBordo.Text = "Servicio a Bordo";
-            this.chkServicioaBordo.UseVisualStyleBackColor = true;
+            this.txtDocumentacion.Location = new System.Drawing.Point(202, 254);
+            this.txtDocumentacion.Name = "txtDocumentacion";
+            this.txtDocumentacion.Size = new System.Drawing.Size(121, 20);
+            this.txtDocumentacion.TabIndex = 7;
             // 
             // lblDocumentacion
             // 
@@ -247,12 +125,115 @@
             this.lblDocumentacion.TabIndex = 17;
             this.lblDocumentacion.Text = "Documentación";
             // 
-            // txtDocumentacion
+            // chkServicioaBordo
             // 
-            this.txtDocumentacion.Location = new System.Drawing.Point(202, 254);
-            this.txtDocumentacion.Name = "txtDocumentacion";
-            this.txtDocumentacion.Size = new System.Drawing.Size(100, 20);
-            this.txtDocumentacion.TabIndex = 7;
+            this.chkServicioaBordo.AutoSize = true;
+            this.chkServicioaBordo.Location = new System.Drawing.Point(6, 211);
+            this.chkServicioaBordo.Name = "chkServicioaBordo";
+            this.chkServicioaBordo.Size = new System.Drawing.Size(104, 17);
+            this.chkServicioaBordo.TabIndex = 16;
+            this.chkServicioaBordo.Text = "Servicio a Bordo";
+            this.chkServicioaBordo.UseVisualStyleBackColor = true;
+            // 
+            // lblServicioaBordo
+            // 
+            this.lblServicioaBordo.AutoSize = true;
+            this.lblServicioaBordo.Location = new System.Drawing.Point(7, 231);
+            this.lblServicioaBordo.Name = "lblServicioaBordo";
+            this.lblServicioaBordo.Size = new System.Drawing.Size(0, 13);
+            this.lblServicioaBordo.TabIndex = 15;
+            // 
+            // txtAsientos
+            // 
+            this.txtAsientos.Location = new System.Drawing.Point(202, 161);
+            this.txtAsientos.Name = "txtAsientos";
+            this.txtAsientos.Size = new System.Drawing.Size(121, 20);
+            this.txtAsientos.TabIndex = 5;
+            // 
+            // lblAsientos
+            // 
+            this.lblAsientos.AutoSize = true;
+            this.lblAsientos.Location = new System.Drawing.Point(7, 169);
+            this.lblAsientos.Name = "lblAsientos";
+            this.lblAsientos.Size = new System.Drawing.Size(107, 13);
+            this.lblAsientos.TabIndex = 11;
+            this.lblAsientos.Text = "Cantidad de Asientos";
+            // 
+            // txtHoraArribo
+            // 
+            this.txtHoraArribo.Location = new System.Drawing.Point(454, 162);
+            this.txtHoraArribo.Name = "txtHoraArribo";
+            this.txtHoraArribo.Size = new System.Drawing.Size(200, 20);
+            this.txtHoraArribo.TabIndex = 4;
+            this.txtHoraArribo.TextChanged += new System.EventHandler(this.txtFechaArribo_TextChanged);
+            // 
+            // lblFechaArribo
+            // 
+            this.lblFechaArribo.AutoSize = true;
+            this.lblFechaArribo.Location = new System.Drawing.Point(362, 131);
+            this.lblFechaArribo.Name = "lblFechaArribo";
+            this.lblFechaArribo.Size = new System.Drawing.Size(82, 13);
+            this.lblFechaArribo.TabIndex = 9;
+            this.lblFechaArribo.Text = "Fecha de Arribo";
+            // 
+            // txtHoraPartida
+            // 
+            this.txtHoraPartida.Location = new System.Drawing.Point(454, 63);
+            this.txtHoraPartida.Name = "txtHoraPartida";
+            this.txtHoraPartida.Size = new System.Drawing.Size(200, 20);
+            this.txtHoraPartida.TabIndex = 3;
+            this.txtHoraPartida.TextChanged += new System.EventHandler(this.txtHoraPartida_TextChanged);
+            // 
+            // lblFechaPartida
+            // 
+            this.lblFechaPartida.AutoSize = true;
+            this.lblFechaPartida.Location = new System.Drawing.Point(359, 31);
+            this.lblFechaPartida.Name = "lblFechaPartida";
+            this.lblFechaPartida.Size = new System.Drawing.Size(88, 13);
+            this.lblFechaPartida.TabIndex = 7;
+            this.lblFechaPartida.Text = "Fecha de Partida";
+            // 
+            // lblTerminal
+            // 
+            this.lblTerminal.AutoSize = true;
+            this.lblTerminal.Location = new System.Drawing.Point(7, 131);
+            this.lblTerminal.Name = "lblTerminal";
+            this.lblTerminal.Size = new System.Drawing.Size(83, 13);
+            this.lblTerminal.TabIndex = 5;
+            this.lblTerminal.Text = "Código Terminal";
+            // 
+            // lblCompania
+            // 
+            this.lblCompania.AutoSize = true;
+            this.lblCompania.Location = new System.Drawing.Point(3, 78);
+            this.lblCompania.Name = "lblCompania";
+            this.lblCompania.Size = new System.Drawing.Size(94, 13);
+            this.lblCompania.TabIndex = 3;
+            this.lblCompania.Text = "Nombre Compañia";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(202, 24);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(121, 20);
+            this.txtNumero.TabIndex = 0;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(6, 31);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(44, 13);
+            this.lblNumero.TabIndex = 1;
+            this.lblNumero.Text = "Número";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 0;
             // 
             // btnAgregar
             // 
@@ -263,15 +244,6 @@
             this.btnAgregar.Size = new System.Drawing.Size(23, 22);
             this.btnAgregar.Text = "Nuevo";
             // 
-            // btnModificar
-            // 
-            this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(23, 22);
-            this.btnModificar.Text = "Modificar";
-            // 
             // btnEliminar
             // 
             this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -280,6 +252,15 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(23, 22);
             this.btnEliminar.Text = "Eliminar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnModificar.Image = global::Administracion.Properties.Resources.modificar;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(23, 22);
+            this.btnModificar.Text = "Modificar";
             // 
             // btnLimpiar
             // 
@@ -290,16 +271,59 @@
             this.btnLimpiar.Size = new System.Drawing.Size(23, 22);
             this.btnLimpiar.Text = "Limpiar";
             // 
-            // toolStripSeparator1
+            // cbCompanias
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.cbCompanias.FormattingEnabled = true;
+            this.cbCompanias.Location = new System.Drawing.Point(202, 70);
+            this.cbCompanias.Name = "cbCompanias";
+            this.cbCompanias.Size = new System.Drawing.Size(121, 21);
+            this.cbCompanias.TabIndex = 18;
+            // 
+            // cbTerminales
+            // 
+            this.cbTerminales.FormattingEnabled = true;
+            this.cbTerminales.Location = new System.Drawing.Point(202, 123);
+            this.cbTerminales.Name = "cbTerminales";
+            this.cbTerminales.Size = new System.Drawing.Size(121, 21);
+            this.cbTerminales.TabIndex = 19;
+            // 
+            // dtFechaPartida
+            // 
+            this.dtFechaPartida.Location = new System.Drawing.Point(454, 23);
+            this.dtFechaPartida.Name = "dtFechaPartida";
+            this.dtFechaPartida.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaPartida.TabIndex = 20;
+            // 
+            // lblHoraPartida
+            // 
+            this.lblHoraPartida.AutoSize = true;
+            this.lblHoraPartida.Location = new System.Drawing.Point(362, 70);
+            this.lblHoraPartida.Name = "lblHoraPartida";
+            this.lblHoraPartida.Size = new System.Drawing.Size(81, 13);
+            this.lblHoraPartida.TabIndex = 21;
+            this.lblHoraPartida.Text = "Hora de Partida";
+            // 
+            // dtFechaArribo
+            // 
+            this.dtFechaArribo.Location = new System.Drawing.Point(454, 124);
+            this.dtFechaArribo.Name = "dtFechaArribo";
+            this.dtFechaArribo.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaArribo.TabIndex = 22;
+            // 
+            // lblHoraArribo
+            // 
+            this.lblHoraArribo.AutoSize = true;
+            this.lblHoraArribo.Location = new System.Drawing.Point(362, 168);
+            this.lblHoraArribo.Name = "lblHoraArribo";
+            this.lblHoraArribo.Size = new System.Drawing.Size(75, 13);
+            this.lblHoraArribo.TabIndex = 23;
+            this.lblHoraArribo.Text = "Hora de Arribo";
             // 
             // ABMViajesInternacionales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 345);
+            this.ClientSize = new System.Drawing.Size(729, 345);
             this.Controls.Add(this.gbViajesInter);
             this.Controls.Add(this.tsAcciones);
             this.Name = "ABMViajesInternacionales";
@@ -323,23 +347,25 @@
         private System.Windows.Forms.GroupBox gbViajesInter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.TextBox txtCompania;
         private System.Windows.Forms.Label lblCompania;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtTerminal;
         private System.Windows.Forms.Label lblTerminal;
-        private System.Windows.Forms.TextBox txtFechaPartida;
+        private System.Windows.Forms.TextBox txtHoraPartida;
         private System.Windows.Forms.Label lblFechaPartida;
         private System.Windows.Forms.CheckBox chkServicioaBordo;
         private System.Windows.Forms.Label lblServicioaBordo;
-        private System.Windows.Forms.TextBox txtEmpleado;
-        private System.Windows.Forms.Label lblEmpleado;
         private System.Windows.Forms.TextBox txtAsientos;
         private System.Windows.Forms.Label lblAsientos;
-        private System.Windows.Forms.TextBox txtFechaArribo;
+        private System.Windows.Forms.TextBox txtHoraArribo;
         private System.Windows.Forms.Label lblFechaArribo;
         private System.Windows.Forms.TextBox txtDocumentacion;
         private System.Windows.Forms.Label lblDocumentacion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ComboBox cbTerminales;
+        private System.Windows.Forms.ComboBox cbCompanias;
+        private System.Windows.Forms.Label lblHoraPartida;
+        private System.Windows.Forms.DateTimePicker dtFechaPartida;
+        private System.Windows.Forms.Label lblHoraArribo;
+        private System.Windows.Forms.DateTimePicker dtFechaArribo;
     }
 }

@@ -15,5 +15,15 @@ namespace Administracion
         {
             InitializeComponent();
         }
+
+        private void txtHoraPartida_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaArribo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
