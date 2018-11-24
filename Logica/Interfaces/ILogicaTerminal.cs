@@ -19,5 +19,7 @@ namespace Logica
         void Modificar(Terminal pTerminal);
 
         List<Terminal> Listar();
+
+        List<Terminal> ListarNoBajas();
     }
 }

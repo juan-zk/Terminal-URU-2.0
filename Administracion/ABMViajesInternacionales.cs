@@ -14,6 +14,7 @@ namespace Administracion
     {
         internal Empleado _Emp = new Empleado();
         internal Viaje Viaje = new Viaje();
+        internal Compania comp = new Compania();
         internal ViajesInternacionales Vinter = new ViajesInternacionales();
 
         public ABMViajesInternacionales(Empleado pEmp)
@@ -23,7 +24,7 @@ namespace Administracion
             _Emp = pEmp;
             //Lista de terminales
             List<Terminal> Terminales = new List<Terminal>();
-            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
+            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminalesNoBajas().ToList();
             foreach (Terminal ter in Terminales)
             {
                 cbTerminales.Items.Add(ter._Codigo);
@@ -31,7 +32,7 @@ namespace Administracion
 
             //lista de Compañias 
             List<Compania> Compania = new List<Compania>();
-            Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompanias().ToList();
+            Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompaniasNoBajas().ToList();
             foreach (Compania com in Compania)
             {
                 cbCompanias.Items.Add(com._Nombre);
@@ -108,6 +109,7 @@ namespace Administracion
                 else
                 {                   
                     HabilitarBajaModificar();
+                    comp = Vinter._Com;
                     txtAsientos.Text = Vinter._CantidadAsientos.ToString();
                     txtDocumentacion.Text = Vinter._Documentacion;
                     txtHoraArribo.Text = Vinter._FechaArribo.ToShortTimeString();
@@ -185,9 +187,15 @@ namespace Administracion
                 if (ControlVacio())
                     throw new Exception("Debe completar todos los campos");
                 ServicioTURU Sweb = new ServicioTURU();
-                Compania _Comp = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
-                Terminal _Term = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
-                var test = dtFechaPartida.Value.ToShortDateString() + txtHoraPartida.Text;
+                if (cbCompanias.Text != Vinter._Com._Nombre)
+                {
+                    Vinter._Com = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
+                }
+                if (cbTerminales.Text != Vinter._Ter._Codigo)
+                {
+                    Vinter._Ter = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
+                }
+               
                 DateTime fechaPartida = Convert.ToDateTime(dtFechaPartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
                 DateTime fechaArribo = Convert.ToDateTime(dtFechaArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
 
@@ -199,8 +207,6 @@ namespace Administracion
                 Vinter._FechaPartida = fechaPartida;
 
                 Vinter._ServicioBordo = chkServicioaBordo.Checked;
-                Vinter._Ter = _Term;
-                Vinter._Com = _Comp;
                 Sweb.ModificarViaje(Vinter);
                 lblError.Text = "Viaje modificado correctamente";
                 LimpiarForm();

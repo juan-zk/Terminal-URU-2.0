@@ -126,6 +126,26 @@ namespace ServicioWeb
                 throw _MiEx;
             }
         }
+        [WebMethod]
+        public List<Compania> ListarCompaniasNoBajas()
+        {
+            try
+            {
+                ILogicaCompania Lcompania = FabricaLogica.GetLogicaCompania();
+                return (Lcompania.ListarNoBajas());
+            }
+            catch (Exception ex)
+            {
+                XmlDocument _undoc = new System.Xml.XmlDocument();
+                XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
+
+                _NodoDetalle.InnerText = ex.Message;
+                _NodoError.AppendChild(_NodoDetalle);
+                SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
+                throw _MiEx;
+            }
+        }
 
 
         //EMPLEADOS-----------------------------------------------------------------------
@@ -326,6 +346,26 @@ namespace ServicioWeb
             {
                 ILogicaTerminal LTerminal = FabricaLogica.GetLogicaTerminales();
                 return (LTerminal.Listar());
+            }
+            catch (Exception ex)
+            {
+                XmlDocument _undoc = new System.Xml.XmlDocument();
+                XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+                XmlNode _NodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", ex.Message);
+
+                _NodoDetalle.InnerText = ex.Message;
+                _NodoError.AppendChild(_NodoDetalle);
+                SoapException _MiEx = new SoapException("Error WS", SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
+                throw _MiEx;
+            }
+        }
+        [WebMethod]
+        public List<Terminal> ListarTerminalesNoBajas()
+        {
+            try
+            {
+                ILogicaTerminal LTerminal = FabricaLogica.GetLogicaTerminales();
+                return (LTerminal.ListarNoBajas());
             }
             catch (Exception ex)
             {

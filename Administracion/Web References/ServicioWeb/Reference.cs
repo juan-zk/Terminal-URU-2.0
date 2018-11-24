@@ -39,6 +39,8 @@ namespace Administracion.ServicioWeb {
         
         private System.Threading.SendOrPostCallback ListarCompaniasOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ListarCompaniasNoBajasOperationCompleted;
+        
         private System.Threading.SendOrPostCallback BuscarEmpleadoOperationCompleted;
         
         private System.Threading.SendOrPostCallback AgregarEmpleadoOperationCompleted;
@@ -58,6 +60,8 @@ namespace Administracion.ServicioWeb {
         private System.Threading.SendOrPostCallback EliminarTerminalOperationCompleted;
         
         private System.Threading.SendOrPostCallback ListarTerminalesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ListarTerminalesNoBajasOperationCompleted;
         
         private System.Threading.SendOrPostCallback HerenciaInternacionalesOperationCompleted;
         
@@ -129,6 +133,9 @@ namespace Administracion.ServicioWeb {
         public event ListarCompaniasCompletedEventHandler ListarCompaniasCompleted;
         
         /// <remarks/>
+        public event ListarCompaniasNoBajasCompletedEventHandler ListarCompaniasNoBajasCompleted;
+        
+        /// <remarks/>
         public event BuscarEmpleadoCompletedEventHandler BuscarEmpleadoCompleted;
         
         /// <remarks/>
@@ -157,6 +164,9 @@ namespace Administracion.ServicioWeb {
         
         /// <remarks/>
         public event ListarTerminalesCompletedEventHandler ListarTerminalesCompleted;
+        
+        /// <remarks/>
+        public event ListarTerminalesNoBajasCompletedEventHandler ListarTerminalesNoBajasCompleted;
         
         /// <remarks/>
         public event HerenciaInternacionalesCompletedEventHandler HerenciaInternacionalesCompleted;
@@ -319,6 +329,33 @@ namespace Administracion.ServicioWeb {
             if ((this.ListarCompaniasCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ListarCompaniasCompleted(this, new ListarCompaniasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarCompaniasNoBajas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Compania[] ListarCompaniasNoBajas() {
+            object[] results = this.Invoke("ListarCompaniasNoBajas", new object[0]);
+            return ((Compania[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarCompaniasNoBajasAsync() {
+            this.ListarCompaniasNoBajasAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarCompaniasNoBajasAsync(object userState) {
+            if ((this.ListarCompaniasNoBajasOperationCompleted == null)) {
+                this.ListarCompaniasNoBajasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarCompaniasNoBajasOperationCompleted);
+            }
+            this.InvokeAsync("ListarCompaniasNoBajas", new object[0], this.ListarCompaniasNoBajasOperationCompleted, userState);
+        }
+        
+        private void OnListarCompaniasNoBajasOperationCompleted(object arg) {
+            if ((this.ListarCompaniasNoBajasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarCompaniasNoBajasCompleted(this, new ListarCompaniasNoBajasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -603,6 +640,33 @@ namespace Administracion.ServicioWeb {
             if ((this.ListarTerminalesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ListarTerminalesCompleted(this, new ListarTerminalesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarTerminalesNoBajas", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Terminal[] ListarTerminalesNoBajas() {
+            object[] results = this.Invoke("ListarTerminalesNoBajas", new object[0]);
+            return ((Terminal[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ListarTerminalesNoBajasAsync() {
+            this.ListarTerminalesNoBajasAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ListarTerminalesNoBajasAsync(object userState) {
+            if ((this.ListarTerminalesNoBajasOperationCompleted == null)) {
+                this.ListarTerminalesNoBajasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarTerminalesNoBajasOperationCompleted);
+            }
+            this.InvokeAsync("ListarTerminalesNoBajas", new object[0], this.ListarTerminalesNoBajasOperationCompleted, userState);
+        }
+        
+        private void OnListarTerminalesNoBajasOperationCompleted(object arg) {
+            if ((this.ListarTerminalesNoBajasCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ListarTerminalesNoBajasCompleted(this, new ListarTerminalesNoBajasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1224,6 +1288,32 @@ namespace Administracion.ServicioWeb {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarCompaniasNoBajasCompletedEventHandler(object sender, ListarCompaniasNoBajasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarCompaniasNoBajasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarCompaniasNoBajasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Compania[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Compania[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void BuscarEmpleadoCompletedEventHandler(object sender, BuscarEmpleadoCompletedEventArgs e);
     
     /// <remarks/>
@@ -1337,6 +1427,32 @@ namespace Administracion.ServicioWeb {
         private object[] results;
         
         internal ListarTerminalesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Terminal[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Terminal[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    public delegate void ListarTerminalesNoBajasCompletedEventHandler(object sender, ListarTerminalesNoBajasCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ListarTerminalesNoBajasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ListarTerminalesNoBajasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

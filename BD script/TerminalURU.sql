@@ -243,7 +243,7 @@ begin
 	declare @respuesta int
 	if not exists (select * from Companias where nombre=@nombre and baja=0)
 		return -2 --no existe la compania
-	if exists (select telefono from Companias where telefono=@tel and baja=0)
+	if exists (select nombre, telefono from Companias where telefono=@tel and nombre!=@nombre and baja=0)
 		return -3 --telefono unico
 	update Companias 
 	set direccion = @direccion,
@@ -302,6 +302,12 @@ begin
 end
 go
 
+create proc ListarCompaniasNoBajas-- da las que estan sin baja
+as
+begin
+	select nombre, direccion, telefono from Companias where baja=0
+end
+go
 ----------------------------------------------------------------
 ---MANEJO DE TERMINALES-----------------------------------
 
@@ -436,6 +442,12 @@ create proc ListarTerminales -- da las que estan con baja porque solo es para ar
 as
 begin
 	select codigo, ciudad, pais from Terminales
+end
+go
+create proc ListarTerminalesNoBajas -- da las que estan sin baja
+as
+begin
+	select codigo, ciudad, pais from Terminales where baja=0
 end
 go
 

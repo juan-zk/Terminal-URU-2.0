@@ -42,5 +42,9 @@ namespace Logica
         {
             return FabricaPersistencia.GetPersistenciaCompania().Listar();
         }
+        public List<Compania> ListarNoBajas()
+        {
+            return FabricaPersistencia.GetPersistenciaCompania().ListarNoBajas();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Persistencia
         Terminal Buscar(string cod);
         Terminal BuscarParaViaje(string cod);
         List<Terminal> Listar();
+        List<Terminal> ListarNoBajas();
 
     }
 }

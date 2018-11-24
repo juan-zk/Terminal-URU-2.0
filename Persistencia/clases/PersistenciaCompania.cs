@@ -209,6 +209,39 @@ namespace Persistencia
 
             return resp;
         }
+        //--------LISTAR---------------------
+        public List<Compania> ListarNoBajas()
+        {
+            List<Compania> resp = null;
+            SqlConnection cnn = new SqlConnection(Conexion.CONEXION);
+            SqlCommand cmd = new SqlCommand("ListarCompaniasNoBajas", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cnn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    Compania c = null;
+                    resp = new List<Compania>();
+                    while (dr.Read())
+                    {
+                        string nombre = (string)dr[0];
+                        string direccion = (string)dr[1];
+                        string telefono = (string)dr[2];
+
+                        c = new Compania(nombre, direccion, telefono);
+                        resp.Add(c);
+                    }
+                }
+                dr.Close();
+            }
+            catch (Exception ex) { throw ex; }
+            finally { cnn.Close(); }
+
+            return resp;
+        }
 
     }
 }

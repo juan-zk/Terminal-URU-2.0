@@ -68,6 +68,16 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Compania" nillable="true" type="tns:Compania" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ListarCompaniasNoBajas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarCompaniasNoBajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarCompaniasNoBajasResult" type="tns:ArrayOfCompania" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="BuscarEmpleado">
         <s:complexType>
           <s:sequence>
@@ -206,6 +216,16 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Terminal" nillable="true" type="tns:Terminal" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ListarTerminalesNoBajas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarTerminalesNoBajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarTerminalesNoBajasResult" type="tns:ArrayOfTerminal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="HerenciaInternacionales">
         <s:complexType>
           <s:sequence>
@@ -366,6 +386,12 @@
   <wsdl:message name="ListarCompaniasSoapOut">
     <wsdl:part name="parameters" element="tns:ListarCompaniasResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarCompaniasNoBajasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarCompaniasNoBajas" />
+  </wsdl:message>
+  <wsdl:message name="ListarCompaniasNoBajasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarCompaniasNoBajasResponse" />
+  </wsdl:message>
   <wsdl:message name="BuscarEmpleadoSoapIn">
     <wsdl:part name="parameters" element="tns:BuscarEmpleado" />
   </wsdl:message>
@@ -425,6 +451,12 @@
   </wsdl:message>
   <wsdl:message name="ListarTerminalesSoapOut">
     <wsdl:part name="parameters" element="tns:ListarTerminalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarTerminalesNoBajasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarTerminalesNoBajas" />
+  </wsdl:message>
+  <wsdl:message name="ListarTerminalesNoBajasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarTerminalesNoBajasResponse" />
   </wsdl:message>
   <wsdl:message name="HerenciaInternacionalesSoapIn">
     <wsdl:part name="parameters" element="tns:HerenciaInternacionales" />
@@ -495,6 +527,10 @@
       <wsdl:input message="tns:ListarCompaniasSoapIn" />
       <wsdl:output message="tns:ListarCompaniasSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ListarCompaniasNoBajas">
+      <wsdl:input message="tns:ListarCompaniasNoBajasSoapIn" />
+      <wsdl:output message="tns:ListarCompaniasNoBajasSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <wsdl:input message="tns:BuscarEmpleadoSoapIn" />
       <wsdl:output message="tns:BuscarEmpleadoSoapOut" />
@@ -534,6 +570,10 @@
     <wsdl:operation name="ListarTerminales">
       <wsdl:input message="tns:ListarTerminalesSoapIn" />
       <wsdl:output message="tns:ListarTerminalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTerminalesNoBajas">
+      <wsdl:input message="tns:ListarTerminalesNoBajasSoapIn" />
+      <wsdl:output message="tns:ListarTerminalesNoBajasSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="HerenciaInternacionales">
       <wsdl:input message="tns:HerenciaInternacionalesSoapIn" />
@@ -608,6 +648,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarCompanias">
       <soap:operation soapAction="http://tempuri.org/ListarCompanias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCompaniasNoBajas">
+      <soap:operation soapAction="http://tempuri.org/ListarCompaniasNoBajas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -698,6 +747,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarTerminales">
       <soap:operation soapAction="http://tempuri.org/ListarTerminales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTerminalesNoBajas">
+      <soap:operation soapAction="http://tempuri.org/ListarTerminalesNoBajas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -825,6 +883,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ListarCompaniasNoBajas">
+      <soap12:operation soapAction="http://tempuri.org/ListarCompaniasNoBajas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="BuscarEmpleado">
       <soap12:operation soapAction="http://tempuri.org/BuscarEmpleado" style="document" />
       <wsdl:input>
@@ -908,6 +975,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarTerminales">
       <soap12:operation soapAction="http://tempuri.org/ListarTerminales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTerminalesNoBajas">
+      <soap12:operation soapAction="http://tempuri.org/ListarTerminalesNoBajas" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

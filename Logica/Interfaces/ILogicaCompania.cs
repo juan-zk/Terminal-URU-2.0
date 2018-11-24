@@ -20,6 +20,8 @@ namespace Logica
 
         List<Compania> Listar();
 
+        List<Compania> ListarNoBajas();
+
 
     }
 }

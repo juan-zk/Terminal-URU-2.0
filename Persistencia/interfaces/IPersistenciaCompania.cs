@@ -19,5 +19,7 @@ namespace Persistencia
         void Eliminar(Compania pComp);
 
         List<Compania> Listar();
+
+        List<Compania> ListarNoBajas();
     }
 }

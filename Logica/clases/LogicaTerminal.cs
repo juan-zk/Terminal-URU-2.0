@@ -46,5 +46,10 @@ namespace Logica
             return FabricaPersistencia.GetPersistenciaTerminal().Listar();
         }
 
+        public List<Terminal> ListarNoBajas()
+        {
+            return FabricaPersistencia.GetPersistenciaTerminal().ListarNoBajas();
+        }
+
     }
 }
