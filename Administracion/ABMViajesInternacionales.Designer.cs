@@ -35,6 +35,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnLimpiar = new System.Windows.Forms.ToolStripButton();
             this.gbViajesInter = new System.Windows.Forms.GroupBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.lblHoraArribo = new System.Windows.Forms.Label();
             this.dtFechaArribo = new System.Windows.Forms.DateTimePicker();
             this.lblHoraPartida = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.tsAcciones.SuspendLayout();
             this.gbViajesInter.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(23, 22);
             this.btnAgregar.Text = "Nuevo";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -92,6 +93,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(23, 22);
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -101,6 +103,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(23, 22);
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -148,6 +151,14 @@
             this.gbViajesInter.TabStop = false;
             this.gbViajesInter.Text = "Viajes Internacionales";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(376, 231);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 24;
+            // 
             // lblHoraArribo
             // 
             this.lblHoraArribo.AutoSize = true;
@@ -162,7 +173,7 @@
             this.dtFechaArribo.Location = new System.Drawing.Point(454, 124);
             this.dtFechaArribo.Name = "dtFechaArribo";
             this.dtFechaArribo.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaArribo.TabIndex = 22;
+            this.dtFechaArribo.TabIndex = 7;
             // 
             // lblHoraPartida
             // 
@@ -178,7 +189,7 @@
             this.dtFechaPartida.Location = new System.Drawing.Point(454, 23);
             this.dtFechaPartida.Name = "dtFechaPartida";
             this.dtFechaPartida.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaPartida.TabIndex = 20;
+            this.dtFechaPartida.TabIndex = 5;
             // 
             // cbTerminales
             // 
@@ -186,7 +197,7 @@
             this.cbTerminales.Location = new System.Drawing.Point(202, 123);
             this.cbTerminales.Name = "cbTerminales";
             this.cbTerminales.Size = new System.Drawing.Size(121, 21);
-            this.cbTerminales.TabIndex = 19;
+            this.cbTerminales.TabIndex = 2;
             // 
             // cbCompanias
             // 
@@ -194,14 +205,14 @@
             this.cbCompanias.Location = new System.Drawing.Point(202, 70);
             this.cbCompanias.Name = "cbCompanias";
             this.cbCompanias.Size = new System.Drawing.Size(121, 21);
-            this.cbCompanias.TabIndex = 18;
+            this.cbCompanias.TabIndex = 1;
             // 
             // txtDocumentacion
             // 
             this.txtDocumentacion.Location = new System.Drawing.Point(202, 254);
             this.txtDocumentacion.Name = "txtDocumentacion";
             this.txtDocumentacion.Size = new System.Drawing.Size(245, 20);
-            this.txtDocumentacion.TabIndex = 7;
+            this.txtDocumentacion.TabIndex = 4;
             // 
             // lblDocumentacion
             // 
@@ -235,7 +246,7 @@
             this.txtAsientos.Location = new System.Drawing.Point(202, 161);
             this.txtAsientos.Name = "txtAsientos";
             this.txtAsientos.Size = new System.Drawing.Size(121, 20);
-            this.txtAsientos.TabIndex = 5;
+            this.txtAsientos.TabIndex = 3;
             // 
             // lblAsientos
             // 
@@ -251,7 +262,7 @@
             this.txtHoraArribo.Location = new System.Drawing.Point(454, 162);
             this.txtHoraArribo.Name = "txtHoraArribo";
             this.txtHoraArribo.Size = new System.Drawing.Size(200, 20);
-            this.txtHoraArribo.TabIndex = 4;
+            this.txtHoraArribo.TabIndex = 8;
             this.txtHoraArribo.TextChanged += new System.EventHandler(this.txtFechaArribo_TextChanged);
             // 
             // lblFechaArribo
@@ -268,7 +279,7 @@
             this.txtHoraPartida.Location = new System.Drawing.Point(454, 63);
             this.txtHoraPartida.Name = "txtHoraPartida";
             this.txtHoraPartida.Size = new System.Drawing.Size(200, 20);
-            this.txtHoraPartida.TabIndex = 3;
+            this.txtHoraPartida.TabIndex = 6;
             this.txtHoraPartida.TextChanged += new System.EventHandler(this.txtHoraPartida_TextChanged);
             // 
             // lblFechaPartida
@@ -322,14 +333,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(376, 231);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 24;
             // 
             // ABMViajesInternacionales
             // 

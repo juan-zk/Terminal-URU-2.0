@@ -127,5 +127,101 @@ namespace Administracion
         {
             LimpiarForm();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sweb = new ServicioTURU();
+                Compania _Comp = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
+                Terminal _Term = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
+                Vinter = new ViajesInternacionales();
+                Vinter._NumViaje = Convert.ToInt32(txtNumero.Text);
+                Vinter._Documentacion = txtDocumentacion.Text;
+                Vinter._Emp = _Emp;
+                Vinter._CantidadAsientos = Convert.ToInt32(txtAsientos.Text);
+                Vinter._FechaArribo = Convert.ToDateTime(dtFechaArribo.Value);
+                Vinter._FechaPartida = Convert.ToDateTime(dtFechaPartida.Value);
+                //Vinter._FechaPartida.AddHours = Convert.ToInt32(txtHoraPartida.Text);
+                //buscar solucion para horas
+                Vinter._ServicioBordo = chkServicioaBordo.Checked;
+                Vinter._Ter = _Term;
+                Vinter._Com = _Comp;
+                Sweb.AgregarViaje(Vinter);
+                lblError.Text = "Viaje agregado correctamente";
+                LimpiarForm();
+
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sweb = new ServicioTURU();
+                Compania _Comp = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
+                Terminal _Term = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
+                //Vinter = new ViajesInternacionales();
+                Vinter._NumViaje = Convert.ToInt32(txtNumero.Text);
+                Vinter._Documentacion = txtDocumentacion.Text;
+                Vinter._Emp = _Emp;
+                Vinter._CantidadAsientos = Convert.ToInt32(txtAsientos.Text);
+                Vinter._FechaArribo = Convert.ToDateTime(dtFechaArribo.Value);
+                Vinter._FechaPartida = Convert.ToDateTime(dtFechaPartida.Value);
+                //Vinter._FechaPartida.AddHours = Convert.ToInt32(txtHoraPartida.Text);
+                //buscar solucion para horas
+                Vinter._ServicioBordo = chkServicioaBordo.Checked;
+                Vinter._Ter = _Term;
+                Vinter._Com = _Comp;
+                Sweb.ModificarViaje(Vinter);
+                lblError.Text = "Viaje modificado correctamente";
+                LimpiarForm();
+
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServicioTURU Sweb = new ServicioTURU();
+                Sweb.EliminarViaje(Vinter);
+                lblError.Text = "Viaje eliminado correctamente";
+                LimpiarForm();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 40)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                else
+                    lblError.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
     }
 }

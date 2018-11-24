@@ -70,3 +70,12 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\Persistencia.pdb
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.dll
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\Logica.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\Logica.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\EntidadesCompartidas.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\Persistencia.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\bin\Debug\Persistencia.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Logica\obj\Debug\Logica.pdb

@@ -31,3 +31,14 @@ C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Persistencia.pdb
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.csprojResolveAssemblyReference.cache
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.dll
 C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\ServicioWeb.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\ServicioWeb.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\EntidadesCompartidas.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Logica.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Persistencia.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\EntidadesCompartidas.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Logica.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\bin\Persistencia.pdb
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.dll
+C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\ServicioWeb\obj\Debug\ServicioWeb.pdb

@@ -235,10 +235,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://192.168.0.106:8091/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://localhost/ServicioWeb/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://192.168.0.106:8091/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost/ServicioWeb/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

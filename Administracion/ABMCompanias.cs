@@ -133,7 +133,6 @@ namespace Administracion
             try
             {
                 ServicioTURU Sweb = new ServicioTURU();
-               // _Comp = new Compania();
                 _Comp._Nombre = txtNombre.Text;
                 _Comp._Direccion = txtDireccion.Text;
                 _Comp._Telefono = txtTelefono.Text;
