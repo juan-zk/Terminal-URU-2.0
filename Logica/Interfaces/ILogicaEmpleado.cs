@@ -12,7 +12,7 @@ namespace Logica
 
         Empleado Buscar(string pCedula);
 
-        Empleado BuscarParaViaje(string pCedula);
+        //Empleado BuscarParaViaje(string pCedula);
 
         void Agregar(Empleado pEmp);
 

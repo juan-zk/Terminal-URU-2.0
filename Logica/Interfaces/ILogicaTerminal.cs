@@ -10,7 +10,7 @@ namespace Logica
     {
         Terminal Buscar(string pCodigo);
 
-        Terminal BuscarParaViaje(string pCodigo);
+        //Terminal BuscarParaViaje(string pCodigo);
 
         void Agregar(Terminal pTerminal);
 

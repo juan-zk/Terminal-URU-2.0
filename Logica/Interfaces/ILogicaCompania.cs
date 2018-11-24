@@ -10,7 +10,7 @@ namespace Logica
     {
         Compania Buscar(string pNombre);
 
-        Compania BuscarParaViaje(string pNombre);
+        //Compania BuscarParaViaje(string pNombre);
 
         void Agregar(Compania pComp);
 

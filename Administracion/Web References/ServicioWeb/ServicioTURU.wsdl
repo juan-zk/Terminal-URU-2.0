@@ -990,10 +990,10 @@
   </wsdl:binding>
   <wsdl:service name="ServicioTURU">
     <wsdl:port name="ServicioTURUSoap" binding="tns:ServicioTURUSoap">
-      <soap:address location="http://localhost/ServicioWeb/ServicioTURU.asmx" />
+      <soap:address location="http://192.168.0.106:8091/ServicioTURU.asmx" />
     </wsdl:port>
     <wsdl:port name="ServicioTURUSoap12" binding="tns:ServicioTURUSoap12">
-      <soap12:address location="http://localhost/ServicioWeb/ServicioTURU.asmx" />
+      <soap12:address location="http://192.168.0.106:8091/ServicioTURU.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

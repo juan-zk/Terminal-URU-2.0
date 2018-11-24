@@ -21,6 +21,7 @@ namespace Administracion
 
         void LimpiarForm()
         {
+            txtNombre.Enabled = true;
             txtDireccion.Text = "";
             txtNombre.Text = "";
             txtTelefono.Text = "";
@@ -33,12 +34,21 @@ namespace Administracion
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+            txtNombre.Enabled = false;
         }
         void HabilitarBajaModificar()
         {
+            txtNombre.Enabled = false;
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             btnAgregar.Enabled = false;
+        }
+        bool ControlVacio()
+        {
+            var vacio = false;
+            if (String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtTelefono.Text) || String.IsNullOrEmpty(txtDireccion.Text))
+                vacio = true;
+            return vacio;
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -105,6 +115,8 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Debe completar todos los campos");
                 ServicioTURU Sweb = new ServicioTURU();
                 _Comp = new Compania();
                 _Comp._Nombre = txtNombre.Text;
@@ -132,6 +144,8 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Debe completar todos los campos");
                 ServicioTURU Sweb = new ServicioTURU();
                 _Comp._Nombre = txtNombre.Text;
                 _Comp._Direccion = txtDireccion.Text;

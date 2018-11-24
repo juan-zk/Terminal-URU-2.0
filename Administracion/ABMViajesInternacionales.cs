@@ -39,6 +39,7 @@ namespace Administracion
         }
         void LimpiarForm()
         {
+            txtNumero.Enabled = true;
             txtAsientos.Text = "";
             txtDocumentacion.Text = "";
             txtHoraArribo.Text = "";
@@ -53,9 +54,11 @@ namespace Administracion
             cbTerminales.Text = "";
             dtFechaPartida.Text = "";
             dtFechaArribo.Text = "";
+            chkServicioaBordo.Checked = false;
         }
         void HabilitarAgregar()
         {
+            txtNumero.Enabled = false;
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
@@ -64,13 +67,20 @@ namespace Administracion
         }
         void HabilitarBajaModificar()
         {
+            txtNumero.Enabled = false;
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             btnAgregar.Enabled = false;
             cbCompanias.Enabled = true;
             cbTerminales.Enabled = true;
         }
-
+        bool ControlVacio()
+        {
+            var vacio = false;
+            if (String.IsNullOrEmpty(txtDocumentacion.Text) || String.IsNullOrEmpty(txtNumero.Text) || String.IsNullOrEmpty(txtHoraArribo.Text) || String.IsNullOrEmpty(txtHoraPartida.Text) || String.IsNullOrEmpty(txtDocumentacion.Text) || String.IsNullOrEmpty(txtAsientos.Text) || String.IsNullOrEmpty(txtAsientos.Text))
+                vacio = true;
+            return vacio;
+        }
         private void txtHoraPartida_TextChanged(object sender, EventArgs e)
         {
 
@@ -100,8 +110,8 @@ namespace Administracion
                     HabilitarBajaModificar();
                     txtAsientos.Text = Vinter._CantidadAsientos.ToString();
                     txtDocumentacion.Text = Vinter._Documentacion;
-                    txtHoraArribo.Text = Vinter._FechaArribo.Hour.ToString();
-                    txtHoraPartida.Text = Vinter._FechaPartida.Hour.ToString();
+                    txtHoraArribo.Text = Vinter._FechaArribo.ToShortTimeString();
+                    txtHoraPartida.Text = Vinter._FechaPartida.ToShortTimeString();
                     dtFechaArribo.Text = Vinter._FechaArribo.ToShortDateString();
                     dtFechaPartida.Text = Vinter._FechaPartida.ToShortDateString();
                     cbTerminales.Text = Vinter._Ter._Codigo;
@@ -132,18 +142,21 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Debe completar todos los campos");
                 ServicioTURU Sweb = new ServicioTURU();
                 Compania _Comp = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
                 Terminal _Term = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
+                DateTime fechaPartida = Convert.ToDateTime(dtFechaPartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
+                DateTime fechaArribo = Convert.ToDateTime(dtFechaArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
+
                 Vinter = new ViajesInternacionales();
                 Vinter._NumViaje = Convert.ToInt32(txtNumero.Text);
                 Vinter._Documentacion = txtDocumentacion.Text;
                 Vinter._Emp = _Emp;
                 Vinter._CantidadAsientos = Convert.ToInt32(txtAsientos.Text);
-                Vinter._FechaArribo = Convert.ToDateTime(dtFechaArribo.Value);
-                Vinter._FechaPartida = Convert.ToDateTime(dtFechaPartida.Value);
-                //Vinter._FechaPartida.AddHours = Convert.ToInt32(txtHoraPartida.Text);
-                //buscar solucion para horas
+                Vinter._FechaArribo = fechaArribo;
+                Vinter._FechaPartida = fechaPartida;
                 Vinter._ServicioBordo = chkServicioaBordo.Checked;
                 Vinter._Ter = _Term;
                 Vinter._Com = _Comp;
@@ -169,18 +182,22 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Debe completar todos los campos");
                 ServicioTURU Sweb = new ServicioTURU();
                 Compania _Comp = Sweb.BuscarCompania(cbCompanias.SelectedItem.ToString());
                 Terminal _Term = Sweb.BuscarTerminal(cbTerminales.SelectedItem.ToString());
-                //Vinter = new ViajesInternacionales();
+                var test = dtFechaPartida.Value.ToShortDateString() + txtHoraPartida.Text;
+                DateTime fechaPartida = Convert.ToDateTime(dtFechaPartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
+                DateTime fechaArribo = Convert.ToDateTime(dtFechaArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
+
                 Vinter._NumViaje = Convert.ToInt32(txtNumero.Text);
                 Vinter._Documentacion = txtDocumentacion.Text;
                 Vinter._Emp = _Emp;
                 Vinter._CantidadAsientos = Convert.ToInt32(txtAsientos.Text);
-                Vinter._FechaArribo = Convert.ToDateTime(dtFechaArribo.Value);
-                Vinter._FechaPartida = Convert.ToDateTime(dtFechaPartida.Value);
-                //Vinter._FechaPartida.AddHours = Convert.ToInt32(txtHoraPartida.Text);
-                //buscar solucion para horas
+                Vinter._FechaArribo = fechaArribo;
+                Vinter._FechaPartida = fechaPartida;
+
                 Vinter._ServicioBordo = chkServicioaBordo.Checked;
                 Vinter._Ter = _Term;
                 Vinter._Com = _Comp;

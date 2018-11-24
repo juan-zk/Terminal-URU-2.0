@@ -23,7 +23,7 @@ namespace Administracion.ServicioWeb {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ServicioTURUSoap", Namespace="http://tempuri.org/")]
@@ -850,8 +850,8 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -864,7 +864,7 @@ namespace Administracion.ServicioWeb {
         
         private string _TelefonoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Nombre {
             get {
                 return this._NombreField;
@@ -874,7 +874,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Direccion {
             get {
                 return this._DireccionField;
@@ -884,7 +884,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Telefono {
             get {
                 return this._TelefonoField;
@@ -895,10 +895,10 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ViajesNacionales))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ViajesInternacionales))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -921,7 +921,7 @@ namespace Administracion.ServicioWeb {
         
         private Empleado _EmpField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Destino {
             get {
                 return this._DestinoField;
@@ -931,7 +931,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int _NumViaje {
             get {
                 return this._NumViajeField;
@@ -941,7 +941,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public Compania _Com {
             get {
                 return this._ComField;
@@ -951,7 +951,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public Terminal _Ter {
             get {
                 return this._TerField;
@@ -961,7 +961,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime _FechaPartida {
             get {
                 return this._FechaPartidaField;
@@ -971,7 +971,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public System.DateTime _FechaArribo {
             get {
                 return this._FechaArriboField;
@@ -981,7 +981,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public int _CantidadAsientos {
             get {
                 return this._CantidadAsientosField;
@@ -991,7 +991,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public Empleado _Emp {
             get {
                 return this._EmpField;
@@ -1002,8 +1002,8 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1018,7 +1018,7 @@ namespace Administracion.ServicioWeb {
         
         private string[] _FacilidadesField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Codigo {
             get {
                 return this._CodigoField;
@@ -1028,7 +1028,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Ciudad {
             get {
                 return this._CiudadField;
@@ -1038,7 +1038,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Pais {
             get {
                 return this._PaisField;
@@ -1048,7 +1048,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string[] _Facilidades {
             get {
                 return this._FacilidadesField;
@@ -1059,8 +1059,8 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1073,7 +1073,7 @@ namespace Administracion.ServicioWeb {
         
         private string _NombreCompletoField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Cedula {
             get {
                 return this._CedulaField;
@@ -1083,7 +1083,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Contraseña {
             get {
                 return this._ContraseñaField;
@@ -1093,7 +1093,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _NombreCompleto {
             get {
                 return this._NombreCompletoField;
@@ -1104,8 +1104,8 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1114,7 +1114,7 @@ namespace Administracion.ServicioWeb {
         
         private int _ParadasIntermediasField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public int _ParadasIntermedias {
             get {
                 return this._ParadasIntermediasField;
@@ -1125,8 +1125,8 @@ namespace Administracion.ServicioWeb {
         }
     }
     
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1137,7 +1137,7 @@ namespace Administracion.ServicioWeb {
         
         private string _DocumentacionField;
         
-        /// <comentarios/>
+        /// <remarks/>
         public bool _ServicioBordo {
             get {
                 return this._ServicioBordoField;
@@ -1147,7 +1147,7 @@ namespace Administracion.ServicioWeb {
             }
         }
         
-        /// <comentarios/>
+        /// <remarks/>
         public string _Documentacion {
             get {
                 return this._DocumentacionField;
@@ -1159,11 +1159,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void BuscarCompaniaCompletedEventHandler(object sender, BuscarCompaniaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class BuscarCompaniaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1185,23 +1185,23 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AgregarCompaniaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ModificarCompaniaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminarCompaniaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarCompaniasCompletedEventHandler(object sender, ListarCompaniasCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarCompaniasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1223,11 +1223,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void BuscarEmpleadoCompletedEventHandler(object sender, BuscarEmpleadoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class BuscarEmpleadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1249,23 +1249,23 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AgregarEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ModificarEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminarEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void LogueoCompletedEventHandler(object sender, LogueoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LogueoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1287,11 +1287,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void BuscarTerminalCompletedEventHandler(object sender, BuscarTerminalCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class BuscarTerminalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1313,23 +1313,23 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AgregarTerminalCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ModificarTerminalCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminarTerminalCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarTerminalesCompletedEventHandler(object sender, ListarTerminalesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarTerminalesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1351,11 +1351,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void HerenciaInternacionalesCompletedEventHandler(object sender, HerenciaInternacionalesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class HerenciaInternacionalesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1377,11 +1377,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void HerenciaNacionalesCompletedEventHandler(object sender, HerenciaNacionalesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class HerenciaNacionalesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1403,11 +1403,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void BuscarViajeCompletedEventHandler(object sender, BuscarViajeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class BuscarViajeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1429,23 +1429,23 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void AgregarViajeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ModificarViajeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void EliminarViajeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ListarViajesCompletedEventHandler(object sender, ListarViajesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarViajesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1467,11 +1467,11 @@ namespace Administracion.ServicioWeb {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     public delegate void ViajesXMLCompletedEventHandler(object sender, ViajesXMLCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ViajesXMLCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

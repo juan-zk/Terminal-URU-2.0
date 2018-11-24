@@ -26,8 +26,8 @@ namespace Logica
         public Empleado Buscar(string pCedula)
         { return FabricaPersistencia.GetPersistenciaEmpleado().Buscar(pCedula); } 
 
-        public Empleado BuscarParaViaje(string pCedula)
-        { return FabricaPersistencia.GetPersistenciaEmpleado().BuscarParaViaje(pCedula); }
+        //public Empleado BuscarParaViaje(string pCedula)
+        //{ return FabricaPersistencia.GetPersistenciaEmpleado().BuscarParaViaje(pCedula); }
 
         public void Agregar(Empleado pEmp)
         {
