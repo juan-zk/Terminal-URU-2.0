@@ -85,7 +85,10 @@ namespace Administracion
                 if (_Emp == null)
                     this.ActivoAgregar();
                 else
+                {
                     this.ActivoActualizacion();
+                    txtCedula.Enabled = false;
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -135,6 +138,7 @@ namespace Administracion
             try
             {
                 _Emp = new Empleado();
+              
                 _Emp._Cedula = txtCedula.Text.Trim();
                
            
