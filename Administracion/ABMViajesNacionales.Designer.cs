@@ -51,6 +51,10 @@
             this.txtNumViaje = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.EPNNumViaje = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtHoraPartida = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtHoraArribo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPNNumViaje)).BeginInit();
             this.SuspendLayout();
@@ -258,11 +262,48 @@
             // 
             this.EPNNumViaje.ContainerControl = this;
             // 
+            // txtHoraPartida
+            // 
+            this.txtHoraPartida.Location = new System.Drawing.Point(356, 136);
+            this.txtHoraPartida.Name = "txtHoraPartida";
+            this.txtHoraPartida.Size = new System.Drawing.Size(200, 20);
+            this.txtHoraPartida.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(360, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Hora de Partida";
+            // 
+            // txtHoraArribo
+            // 
+            this.txtHoraArribo.Location = new System.Drawing.Point(621, 136);
+            this.txtHoraArribo.Name = "txtHoraArribo";
+            this.txtHoraArribo.Size = new System.Drawing.Size(200, 20);
+            this.txtHoraArribo.TabIndex = 18;
+            
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(618, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Hora de Arribo";
+            // 
             // ABMViajesNacionales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 330);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtHoraArribo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtHoraPartida);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtNumViaje);
             this.Controls.Add(this.txtAsientos);
@@ -313,5 +354,9 @@
         private System.Windows.Forms.TextBox txtNumViaje;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ErrorProvider EPNNumViaje;
+        private System.Windows.Forms.TextBox txtHoraPartida;
+        private System.Windows.Forms.TextBox txtHoraArribo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

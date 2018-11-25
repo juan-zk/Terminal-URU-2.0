@@ -14,7 +14,7 @@ namespace Administracion
     public partial class ABMEmpleado : Form
     {
 
-        private Empleado _Emp = null;
+        private Empleado _Emp = new Empleado();
         
         public ABMEmpleado()
         {
@@ -28,6 +28,8 @@ namespace Administracion
             btnAgregar1.Enabled = false;
             btnEliminar1.Enabled = false;
             btnModificar1.Enabled = false;
+           
+            
             lblError.Text = "";
         }
         
@@ -65,6 +67,20 @@ namespace Administracion
 
             try
             {
+                Convert.ToInt32(txtCedula.Text);
+                EPNCedula.Clear();
+
+            }
+            catch (Exception ex)
+            {
+                EPNCedula.SetError(txtCedula, "Solo se puede ingresar numeros");
+                e.Cancel = true;
+            }
+            
+            
+            
+            try
+            {
                 _Emp = new Administracion.ServicioWeb.ServicioTURU().BuscarEmpleado(txtCedula.Text);
                 if (_Emp == null)
                     this.ActivoAgregar();
@@ -92,10 +108,14 @@ namespace Administracion
         {
             try
             {
-                new Administracion.ServicioWeb.ServicioTURU().EliminarEmpleado(_Emp);
-                this.DesactivoBotones();
-                this.LimpioCajaTexto();
-                lblError.Text = "Baja con exito";
+
+             
+                    new Administracion.ServicioWeb.ServicioTURU().EliminarEmpleado(_Emp);
+                    this.DesactivoBotones();
+                    this.LimpioCajaTexto();
+                    txtCedula.Enabled = false;
+                    lblError.Text = "Baja con exito";
+                
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -116,12 +136,24 @@ namespace Administracion
             {
                 _Emp = new Empleado();
                 _Emp._Cedula = txtCedula.Text.Trim();
-                _Emp._Contraseña = txtContraseña.Text.Trim();
-                _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
+               
+           
+
+                if (txtContraseña.Text.Length != 6)
+                { throw new Exception("La cotraseña debe de tener 6 caracteres"); }
+                else
+                { _Emp._Contraseña = txtContraseña.Text.Trim(); }
+
+                if (txtNombreCompleto.Text.Length == 0)
+                { throw new Exception("Debe ingresar su nombre completo "); }
+                else
+                { _Emp._NombreCompleto = txtNombreCompleto.Text.Trim(); }
+
                 new Administracion.ServicioWeb.ServicioTURU().ModificarEmpleado(_Emp);
 
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
+                txtCedula.Enabled = false;
                 lblError.Text = " Modificar con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -139,8 +171,9 @@ namespace Administracion
 
         private void btnDeshacer_Click(object sender, EventArgs e)
         {
-            _Emp = null;
+          
             this.DesactivoBotones();
+            txtCedula.Enabled = true;
             this.LimpioCajaTexto();
 
         }
@@ -151,14 +184,29 @@ namespace Administracion
             {
                 _Emp = new Empleado();
 
-                _Emp._Cedula = txtCedula.Text.Trim();
-                _Emp._Contraseña = txtContraseña.Text.Trim();
-                _Emp._NombreCompleto = txtNombreCompleto.Text.Trim();
+
+                if (txtCedula.Text.Length != 8)
+                { throw new Exception("La cedula debe de tener 8 caracteres"); }
+                else
+                {
+                    _Emp._Cedula = txtCedula.Text.Trim();
+                }
+               
+                
+                if (txtContraseña.Text.Length != 6)
+                { throw new Exception("La cotraseña debe de tener 6 caracteres"); }
+                else
+                { _Emp._Contraseña = txtContraseña.Text.Trim(); }
+
+                if (txtNombreCompleto.Text.Length == 0)
+                { throw new Exception("Debe ingresar su nombre completo "); }
+                else
+                { _Emp._NombreCompleto = txtNombreCompleto.Text.Trim(); }
 
                 new Administracion.ServicioWeb.ServicioTURU().AgregarEmpleado(_Emp);
                 this.DesactivoBotones();
                 this.LimpioCajaTexto();
-
+                txtCedula.Enabled = false;
                 lblError.Text = "Alta con Exito";
             }
             catch (System.Web.Services.Protocols.SoapException ex)

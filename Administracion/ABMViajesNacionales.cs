@@ -15,7 +15,7 @@ namespace Administracion
 
         internal Empleado _Emp = new Empleado();
         internal Viaje Viaje = new Viaje();
-         
+        internal Compania Comp = new Compania();
         internal ViajesNacionales Vnacional = new ViajesNacionales();
 
         public ABMViajesNacionales(Empleado pEmp)
@@ -27,7 +27,7 @@ namespace Administracion
 
             //Lista de terminales
             List<Terminal> Terminales = new List<Terminal>();
-            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminales().ToList();
+            Terminales = new Administracion.ServicioWeb.ServicioTURU().ListarTerminalesNoBajas().ToList();
             foreach (Terminal ter in Terminales)
             {
                 cbTerminal.Items.Add(ter._Codigo);
@@ -35,7 +35,7 @@ namespace Administracion
 
             //lista de Compañias 
             List<Compania> Compania = new List<Compania>();
-            Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompanias().ToList();
+            Compania = new Administracion.ServicioWeb.ServicioTURU().ListarCompaniasNoBajas().ToList();
             foreach (Compania com in Compania)
             {
                 cbCompañia.Items.Add(com._Nombre);
@@ -56,6 +56,11 @@ namespace Administracion
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
 
+            txtNumViaje.Enabled = true;
+            txtAsientos.Enabled = true;
+            txtHoraArribo.Enabled = true;
+            txtHoraPartida.Enabled = true;
+
         }
 
         private void ActivoActualizacion()
@@ -66,16 +71,20 @@ namespace Administracion
             cbTerminal.Enabled = true;
             cbCompañia.Enabled = true;
             cbParadas.Enabled = true;
+            txtNumViaje.Enabled = false;
+            txtAsientos.Enabled = true;
+            txtHoraArribo.Enabled = true;
+            txtHoraPartida.Enabled = true;
+
             
             cbCompañia.Text = Viaje._Com._Nombre;
             cbTerminal.Text = Viaje._Ter._Codigo;
             cbParadas.Text = ((ViajesNacionales)Viaje)._ParadasIntermedias.ToString();
             txtAsientos.Text = Viaje._CantidadAsientos.ToString();
-            
-            
-                 
+
+            txtHoraArribo.Text = Viaje._FechaArribo.ToShortTimeString();
             dateArribo.Text = Viaje._FechaArribo.ToString();
-            
+            txtHoraPartida.Text = Viaje._FechaPartida.ToShortTimeString();
             datePartida.Text = Viaje._FechaPartida.ToString();
             
             
@@ -87,17 +96,23 @@ namespace Administracion
            // _Emp = null;
             this.DesactivoBotones();
             this.LimpioCajaTexto();
+            txtNumViaje.Enabled = true;
         }
         
         private void LimpioCajaTexto()
         {
 
-
+            txtNumViaje.Enabled = false;
+            txtAsientos.Enabled = false;
+            txtHoraArribo.Enabled = false;
+            txtHoraPartida.Enabled = false;
             this.cbCompañia.SelectedItem = null;
             this.cbParadas.SelectedItem = null;
             this.cbTerminal.SelectedItem = null;
             txtNumViaje.Text = "";
             txtAsientos.Text = "";
+            txtHoraArribo.Text = "";
+            txtHoraPartida.Text = "";
             dateArribo.Value = DateTime.Now;
             datePartida.Value = DateTime.Now;
             lblError.Text = "";
@@ -121,17 +136,23 @@ namespace Administracion
             {
 
                 Viaje = new Administracion.ServicioWeb.ServicioTURU().BuscarViaje(Convert.ToInt32(txtNumViaje.Text));
-                Vnacional = (ViajesNacionales)Viaje;
+
+
+               if (Viaje is ViajesInternacionales)
+                     throw new Exception("Ese numero corresponde a un viaje internacional!");
+                    Vnacional = (ViajesNacionales)Viaje;
+                
                 if (Vnacional == null)
                 {
+                 
                     this.ActivoAgregar();
                     lblError.Text = "No hay viajes asociados al numero seleccionado. Si lo desea puede agregar un viaje.";
                 }
                 else
                 {
-                    if (Viaje is ViajesInternacionales)
-                        throw new Exception("Ese numero corresponde a un viaje internacional!");
+                   
                         this.ActivoActualizacion();
+                        txtNumViaje.Enabled = false;
                         lblError.Text = "";
                 }
             }
@@ -157,13 +178,16 @@ namespace Administracion
             {
                 Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.SelectedItem.ToString());
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.SelectedItem.ToString());
+                DateTime fechaPartida = Convert.ToDateTime(datePartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
+                DateTime fechaArribo = Convert.ToDateTime(dateArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
 
+                
                 Vnacional = new ViajesNacionales();
                 Vnacional._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
                 Vnacional._Com = Com;
                 Vnacional._Ter = Ter;
-                Vnacional._FechaPartida = Convert.ToDateTime(datePartida.Value);
-                Vnacional._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Vnacional._FechaPartida = fechaPartida;
+                Vnacional._FechaArribo = fechaArribo;
                 Vnacional._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
                 Vnacional._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
                 Vnacional._Emp = _Emp;
@@ -195,12 +219,14 @@ namespace Administracion
             {
                 Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.Text);
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.Text);
+                DateTime fechaPartida = Convert.ToDateTime(datePartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
+                DateTime fechaArribo = Convert.ToDateTime(dateArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
 
                 Vnacional._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
                 Vnacional._Com = Com;
                 Vnacional._Ter = Ter;
-                Vnacional._FechaPartida = Convert.ToDateTime(datePartida.Value);
-                Vnacional._FechaArribo = Convert.ToDateTime(dateArribo.Value);
+                Vnacional._FechaPartida = fechaPartida;
+                Vnacional._FechaArribo = fechaArribo;
                 Vnacional._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());
                 Vnacional._ParadasIntermedias = Convert.ToInt32(cbParadas.Text.Trim());
                 Vnacional._Emp = _Emp;
@@ -247,5 +273,7 @@ namespace Administracion
                 lblError.Text = ex.Message;
             }
         }
+
+        
     }
 }

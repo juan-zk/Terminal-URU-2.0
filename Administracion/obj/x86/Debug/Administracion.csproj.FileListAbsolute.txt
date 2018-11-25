@@ -75,3 +75,4 @@ C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug
 C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.Properties.Resources.resources
 C:\Users\sistemas\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csproj.GenerateResource.Cache
 C:\Users\Florencia\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.csprojResolveAssemblyReference.cache
+C:\Users\fer\Documents\GitHub\Terminal-URU-2.0\Administracion\obj\x86\Debug\Administracion.ABMViajesInternacionales.resources
