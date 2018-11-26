@@ -151,18 +151,31 @@ namespace Administracion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ServicioTURU Sweb = new ServicioTURU();
+            try
+            {
+                ServicioTURU Sweb = new ServicioTURU();
 
-            Sweb.EliminarTerminal(term);
-            lblMensaje.Text = "Terminal eliminada correctamente";
-            LimpiarCampos();
+                Sweb.EliminarTerminal(term);
+                lblMensaje.Text = "Terminal eliminada correctamente";
+                LimpiarCampos();
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                if (ex.Detail.InnerText.Length > 100)
+                    lblMensaje.Text = ex.Detail.InnerText.Substring(0, 100);
+                else
+                    lblMensaje.Text = ex.Detail.InnerText;
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
-
                 term._Pais = cmbPais.Text;
                 term._Ciudad = txtCiudad.Text;
                 string[] listaT = new string[lstFacilidad.Items.Count];

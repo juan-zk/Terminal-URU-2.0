@@ -10,27 +10,24 @@ using System.Windows.Forms;
 using Administracion.ServicioWeb;
 
 namespace Administracion
-    
 {
     public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
+
+            ctrlLogin.AutenticarUsuario += new EventHandler(VerificarIngreso);
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void VerificarIngreso(object sender, EventArgs e)
         {
             try
             {
                 ServicioTURU Sweb = new ServicioTURU();
-                string ci = txtUsr.Text;
-                string pass = txtPass.Text;
-
-                Empleado emp = Sweb.Logueo(ci, pass);
-
+                Empleado emp = Sweb.Logueo(ctrlLogin.usuario, ctrlLogin.pass);
                 if (emp == null)
-                    throw new Exception("Usuario o contraseña invalidos");                
+                    throw new Exception("Usuario o contraseña invalidos");
                 else
                 {
                     this.Hide();
@@ -49,11 +46,6 @@ namespace Administracion
             {
                 lblError.Text = ex.Message;
             }
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

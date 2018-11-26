@@ -96,6 +96,12 @@
     <Compile Include="ABMViajesNacionales.Designer.cs">
       <DependentUpon>ABMViajesNacionales.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLogin.Designer.cs">
+      <DependentUpon>ControlLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,10 +241,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://192.168.0.106:8091/ServicioTURU.asmx">
+    <WebReferenceUrl Include="http://localhost:8091/ServicioTURU.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\ServicioWeb\</RelPath>
-      <UpdateFromURL>http://192.168.0.106:8091/ServicioTURU.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:8091/ServicioTURU.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
