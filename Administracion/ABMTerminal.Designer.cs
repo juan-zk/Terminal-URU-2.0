@@ -41,15 +41,17 @@
             this.lstFacilidad = new System.Windows.Forms.ListBox();
             this.cmbPais = new System.Windows.Forms.ComboBox();
             this.grp = new System.Windows.Forms.GroupBox();
-            this.lblMensaje = new System.Windows.Forms.Label();
             this.btnFacilidadAgregar = new System.Windows.Forms.Button();
             this.btnFacilidadBorrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.stat = new System.Windows.Forms.StatusStrip();
+            this.lblMensaje = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBotones.SuspendLayout();
             this.grp.SuspendLayout();
+            this.stat.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsBotones
@@ -162,7 +164,6 @@
             // 
             // grp
             // 
-            this.grp.Controls.Add(this.lblMensaje);
             this.grp.Controls.Add(this.btnFacilidadAgregar);
             this.grp.Controls.Add(this.btnFacilidadBorrar);
             this.grp.Controls.Add(this.label4);
@@ -176,18 +177,10 @@
             this.grp.Controls.Add(this.txtFacilidad);
             this.grp.Location = new System.Drawing.Point(12, 28);
             this.grp.Name = "grp";
-            this.grp.Size = new System.Drawing.Size(501, 431);
+            this.grp.Size = new System.Drawing.Size(501, 407);
             this.grp.TabIndex = 6;
             this.grp.TabStop = false;
             this.grp.Text = "Terminales";
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(133, 344);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
-            this.lblMensaje.TabIndex = 12;
             // 
             // btnFacilidadAgregar
             // 
@@ -245,11 +238,27 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Codigo";
             // 
+            // stat
+            // 
+            this.stat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblMensaje});
+            this.stat.Location = new System.Drawing.Point(0, 449);
+            this.stat.Name = "stat";
+            this.stat.Size = new System.Drawing.Size(525, 22);
+            this.stat.TabIndex = 7;
+            this.stat.Text = "statusStrip1";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
+            // 
             // ABMTerminal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 471);
+            this.Controls.Add(this.stat);
             this.Controls.Add(this.grp);
             this.Controls.Add(this.tsBotones);
             this.Name = "ABMTerminal";
@@ -258,6 +267,8 @@
             this.tsBotones.PerformLayout();
             this.grp.ResumeLayout(false);
             this.grp.PerformLayout();
+            this.stat.ResumeLayout(false);
+            this.stat.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,12 +288,13 @@
         private System.Windows.Forms.ListBox lstFacilidad;
         private System.Windows.Forms.ComboBox cmbPais;
         private System.Windows.Forms.GroupBox grp;
-        private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Button btnFacilidadAgregar;
         private System.Windows.Forms.Button btnFacilidadBorrar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.StatusStrip stat;
+        private System.Windows.Forms.ToolStripStatusLabel lblMensaje;
     }
 }

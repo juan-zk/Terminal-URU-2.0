@@ -170,6 +170,7 @@ namespace Administracion
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarForm();
+            lblError.Text = "";
         }
     }
 }

@@ -21,6 +21,14 @@ namespace Administracion
             LimpiarCampos();
         }
 
+        bool ControlVacio()
+        {
+            var vacio = false;
+            if (String.IsNullOrEmpty(txtCodigo.Text) || String.IsNullOrEmpty(txtCiudad.Text) || String.IsNullOrEmpty(cmbPais.Text) || (lstFacilidad.Items.Count==0))
+                vacio = true;
+            return vacio;
+        }
+
         void LimpiarCampos()
         {
             txtCodigo.Text = "";
@@ -120,6 +128,8 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Todos los campos deben contener datos");
                 Terminal t = new Terminal();
                 t._Codigo = txtCodigo.Text;
                 t._Pais = cmbPais.Text;

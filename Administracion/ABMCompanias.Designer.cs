@@ -42,9 +42,11 @@
              this.lblDireccion = new System.Windows.Forms.Label();
              this.txtNombre = new System.Windows.Forms.TextBox();
              this.lblNombre = new System.Windows.Forms.Label();
-             this.lblError = new System.Windows.Forms.Label();
+             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+             this.lblError = new System.Windows.Forms.ToolStripStatusLabel();
              this.tsAcciones.SuspendLayout();
              this.gbCompanias.SuspendLayout();
+             this.statusStrip1.SuspendLayout();
              this.SuspendLayout();
              // 
              // tsAcciones
@@ -57,7 +59,7 @@
             this.btnLimpiar});
              this.tsAcciones.Location = new System.Drawing.Point(0, 0);
              this.tsAcciones.Name = "tsAcciones";
-             this.tsAcciones.Size = new System.Drawing.Size(353, 25);
+             this.tsAcciones.Size = new System.Drawing.Size(471, 25);
              this.tsAcciones.TabIndex = 0;
              this.tsAcciones.Text = "toolStrip1";
              // 
@@ -108,7 +110,9 @@
              // 
              // gbCompanias
              // 
-             this.gbCompanias.Controls.Add(this.lblError);
+             this.gbCompanias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                         | System.Windows.Forms.AnchorStyles.Left)
+                         | System.Windows.Forms.AnchorStyles.Right)));
              this.gbCompanias.Controls.Add(this.txtTelefono);
              this.gbCompanias.Controls.Add(this.lblTelefono);
              this.gbCompanias.Controls.Add(this.txtDireccion);
@@ -116,49 +120,56 @@
              this.gbCompanias.Controls.Add(this.txtNombre);
              this.gbCompanias.Controls.Add(this.lblNombre);
              this.gbCompanias.Location = new System.Drawing.Point(13, 29);
+             this.gbCompanias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
              this.gbCompanias.Name = "gbCompanias";
-             this.gbCompanias.Size = new System.Drawing.Size(315, 230);
+             this.gbCompanias.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+             this.gbCompanias.Size = new System.Drawing.Size(445, 238);
              this.gbCompanias.TabIndex = 1;
              this.gbCompanias.TabStop = false;
              this.gbCompanias.Text = "Compañias";
              // 
              // txtTelefono
              // 
-             this.txtTelefono.Location = new System.Drawing.Point(141, 84);
+             this.txtTelefono.Location = new System.Drawing.Point(188, 103);
+             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
              this.txtTelefono.Name = "txtTelefono";
-             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+             this.txtTelefono.Size = new System.Drawing.Size(132, 22);
              this.txtTelefono.TabIndex = 2;
              // 
              // lblTelefono
              // 
              this.lblTelefono.AutoSize = true;
-             this.lblTelefono.Location = new System.Drawing.Point(7, 92);
+             this.lblTelefono.Location = new System.Drawing.Point(9, 113);
+             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
              this.lblTelefono.Name = "lblTelefono";
-             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+             this.lblTelefono.Size = new System.Drawing.Size(64, 17);
              this.lblTelefono.TabIndex = 4;
              this.lblTelefono.Text = "Teléfono";
              // 
              // txtDireccion
              // 
-             this.txtDireccion.Location = new System.Drawing.Point(141, 54);
+             this.txtDireccion.Location = new System.Drawing.Point(188, 66);
+             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
              this.txtDireccion.Name = "txtDireccion";
-             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+             this.txtDireccion.Size = new System.Drawing.Size(132, 22);
              this.txtDireccion.TabIndex = 1;
              // 
              // lblDireccion
              // 
              this.lblDireccion.AutoSize = true;
-             this.lblDireccion.Location = new System.Drawing.Point(7, 62);
+             this.lblDireccion.Location = new System.Drawing.Point(9, 76);
+             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
              this.lblDireccion.Name = "lblDireccion";
-             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+             this.lblDireccion.Size = new System.Drawing.Size(67, 17);
              this.lblDireccion.TabIndex = 2;
              this.lblDireccion.Text = "Dirección";
              // 
              // txtNombre
              // 
-             this.txtNombre.Location = new System.Drawing.Point(141, 21);
+             this.txtNombre.Location = new System.Drawing.Point(188, 26);
+             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
              this.txtNombre.Name = "txtNombre";
-             this.txtNombre.Size = new System.Drawing.Size(100, 20);
+             this.txtNombre.Size = new System.Drawing.Size(132, 22);
              this.txtNombre.TabIndex = 0;
              this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
              this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
@@ -166,33 +177,45 @@
              // lblNombre
              // 
              this.lblNombre.AutoSize = true;
-             this.lblNombre.Location = new System.Drawing.Point(7, 29);
+             this.lblNombre.Location = new System.Drawing.Point(9, 36);
+             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
              this.lblNombre.Name = "lblNombre";
-             this.lblNombre.Size = new System.Drawing.Size(44, 13);
+             this.lblNombre.Size = new System.Drawing.Size(58, 17);
              this.lblNombre.TabIndex = 0;
              this.lblNombre.Text = "Nombre";
              // 
+             // statusStrip1
+             // 
+             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblError});
+             this.statusStrip1.Location = new System.Drawing.Point(0, 281);
+             this.statusStrip1.Name = "statusStrip1";
+             this.statusStrip1.Size = new System.Drawing.Size(471, 22);
+             this.statusStrip1.TabIndex = 2;
+             this.statusStrip1.Text = "statusStrip1";
+             // 
              // lblError
              // 
-             this.lblError.AutoSize = true;
-             this.lblError.Location = new System.Drawing.Point(141, 152);
              this.lblError.Name = "lblError";
-             this.lblError.Size = new System.Drawing.Size(0, 13);
-             this.lblError.TabIndex = 5;
+             this.lblError.Size = new System.Drawing.Size(0, 17);
              // 
              // ABMCompanias
              // 
-             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
              this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-             this.ClientSize = new System.Drawing.Size(353, 246);
+             this.ClientSize = new System.Drawing.Size(471, 303);
+             this.Controls.Add(this.statusStrip1);
              this.Controls.Add(this.gbCompanias);
              this.Controls.Add(this.tsAcciones);
+             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
              this.Name = "ABMCompanias";
              this.Text = "Compañias";
              this.tsAcciones.ResumeLayout(false);
              this.tsAcciones.PerformLayout();
              this.gbCompanias.ResumeLayout(false);
              this.gbCompanias.PerformLayout();
+             this.statusStrip1.ResumeLayout(false);
+             this.statusStrip1.PerformLayout();
              this.ResumeLayout(false);
              this.PerformLayout();
 
@@ -213,6 +236,7 @@
          private System.Windows.Forms.TextBox txtNombre;
          private System.Windows.Forms.Label lblNombre;
          private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-         private System.Windows.Forms.Label lblError;
+         private System.Windows.Forms.StatusStrip statusStrip1;
+         private System.Windows.Forms.ToolStripStatusLabel lblError;
      }
  }

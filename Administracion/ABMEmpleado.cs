@@ -69,15 +69,13 @@ namespace Administracion
             {
                 Convert.ToInt32(txtCedula.Text);
                 EPNCedula.Clear();
-
             }
             catch (Exception ex)
             {
                 EPNCedula.SetError(txtCedula, "Solo se puede ingresar numeros");
                 e.Cancel = true;
                 lblError.Text = ex.Message;
-            }
-            
+            }           
             
             
             try
@@ -102,11 +100,7 @@ namespace Administracion
             {
                 lblError.Text = ex.Message;
             }
-        }
-
-
-
-     
+        }     
 
         private void btnEliminar1_Click(object sender, EventArgs e)
         {
@@ -152,7 +146,7 @@ namespace Administracion
            
 
                 if (txtContraseña.Text.Length != 6)
-                { throw new Exception("La cotraseña debe de tener 6 caracteres"); }
+                { throw new Exception("La contraseña debe de tener 6 caracteres"); }
                 else
                 { _Emp._Contraseña = txtContraseña.Text.Trim(); }
 
