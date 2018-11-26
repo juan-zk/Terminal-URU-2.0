@@ -92,8 +92,8 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 100)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 100);
                 else
                     lblError.Text = ex.Detail.InnerText;
             }
@@ -122,8 +122,8 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 100)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 100);
                 else
                     lblError.Text = ex.Detail.InnerText;
             }
@@ -162,8 +162,8 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 100)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 100);
                 else
                     lblError.Text = ex.Detail.InnerText;
             }
@@ -215,8 +215,8 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
-                    lblError.Text = ex.Detail.InnerText.Substring(0, 40);
+                if (ex.Detail.InnerText.Length > 100)
+                    lblError.Text = ex.Detail.InnerText.Substring(0, 100);
                 else
                     lblError.Text = ex.Detail.InnerText;
             }

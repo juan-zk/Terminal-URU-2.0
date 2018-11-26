@@ -36,9 +36,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -64,9 +64,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -98,9 +98,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -132,9 +132,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -166,9 +166,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -200,9 +200,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -229,9 +229,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else
@@ -263,9 +263,9 @@ namespace Administracion
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                if (ex.Detail.InnerText.Length > 40)
+                if (ex.Detail.InnerText.Length > 100)
                 {
-                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 40));
+                    Form f = new FormErrores(ex.Detail.InnerText.Substring(0, 100));
                     f.ShowDialog();
                 }
                 else

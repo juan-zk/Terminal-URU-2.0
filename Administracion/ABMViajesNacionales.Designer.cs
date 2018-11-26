@@ -252,7 +252,7 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(391, 264);
+            this.lblError.Location = new System.Drawing.Point(298, 252);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(39, 13);
             this.lblError.TabIndex = 15;
@@ -284,7 +284,6 @@
             this.txtHoraArribo.Name = "txtHoraArribo";
             this.txtHoraArribo.Size = new System.Drawing.Size(200, 20);
             this.txtHoraArribo.TabIndex = 18;
-            
             // 
             // label9
             // 
