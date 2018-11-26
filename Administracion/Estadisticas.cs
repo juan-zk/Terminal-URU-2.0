@@ -62,7 +62,7 @@ namespace Administracion
                 this.Carga = Sewb.ViajesXML();
                 XElement XML = XElement.Parse(Carga);
                 var Filtro = (from viaje in XML.Elements("Viaje")
-                              where (Convert.ToDateTime(viaje.Element("FechaPartida").Value) >= dateFecha1.Value) && (Convert.ToDateTime(viaje.Element("FechaPartida").Value) <= dateFecha2.Value)
+                              where (Convert.ToDateTime(viaje.Element("FechaPartida").Value).Date >= dateFecha1.Value.Date) && (Convert.ToDateTime(viaje.Element("FechaPartida").Value).Date <= dateFecha2.Value.Date)
                               select new
                               {
                                   NumeroViaje = viaje.Element("Numero").Value,
@@ -158,7 +158,16 @@ namespace Administracion
 
         private void btnDeshacer_Click(object sender, EventArgs e)
         {
-            this.CargoDatos();
+            try
+            {
+                dateFecha1.Value = DateTime.Today;
+                dateFecha2.Value = DateTime.Today;
+                this.CargoDatos();
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
 
     }
