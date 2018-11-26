@@ -106,9 +106,12 @@ namespace Administracion
             txtAsientos.Enabled = false;
             txtHoraArribo.Enabled = false;
             txtHoraPartida.Enabled = false;
-            this.cbCompañia.SelectedItem = null;
-            this.cbParadas.SelectedItem = null;
-            this.cbTerminal.SelectedItem = null;
+            cbCompañia.Enabled = false;
+            cbParadas.Enabled = false;
+            cbTerminal.Enabled = false;
+            cbTerminal.Text = "";
+            cbCompañia.Text = "";
+            cbParadas.Text = "";
             txtNumViaje.Text = "";
             txtAsientos.Text = "";
             txtHoraArribo.Text = "";
@@ -130,6 +133,7 @@ namespace Administracion
             {
                 EPNNumViaje.SetError(txtNumViaje, "Solo se puede ingresar numeros");
                 e.Cancel = true;
+                lblError.Text = ex.Message;
             }
 
             try
@@ -217,14 +221,20 @@ namespace Administracion
         {
             try
             {
-                Compania Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.Text);
+                if (cbCompañia.Text != Vnacional._Com._Nombre)
+                {
+                    Vnacional._Com = new Administracion.ServicioWeb.ServicioTURU().BuscarCompania(cbCompañia.SelectedItem.ToString());
+                }
+                if (cbTerminal.Text != Vnacional._Ter._Codigo)
+                {
+                    Vnacional._Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.SelectedItem.ToString());
+                }
                 Terminal Ter = new Administracion.ServicioWeb.ServicioTURU().BuscarTerminal(cbTerminal.Text);
                 DateTime fechaPartida = Convert.ToDateTime(datePartida.Value.ToShortDateString() + " " + txtHoraPartida.Text);
                 DateTime fechaArribo = Convert.ToDateTime(dateArribo.Value.ToShortDateString() + " " + txtHoraArribo.Text);
 
                 Vnacional._NumViaje = Convert.ToInt32(txtNumViaje.Text.Trim());
-                Vnacional._Com = Com;
-                Vnacional._Ter = Ter;
+
                 Vnacional._FechaPartida = fechaPartida;
                 Vnacional._FechaArribo = fechaArribo;
                 Vnacional._CantidadAsientos = Convert.ToInt32(txtAsientos.Text.Trim());

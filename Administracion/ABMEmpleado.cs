@@ -15,12 +15,12 @@ namespace Administracion
     {
 
         private Empleado _Emp = new Empleado();
-        
-        public ABMEmpleado()
+        private Empleado emp2 = new Empleado();
+        public ABMEmpleado(Empleado pEmp)
         {
             InitializeComponent();
             this.DesactivoBotones();
-            
+            emp2 = pEmp;
         }
 
         private void DesactivoBotones()
@@ -75,6 +75,7 @@ namespace Administracion
             {
                 EPNCedula.SetError(txtCedula, "Solo se puede ingresar numeros");
                 e.Cancel = true;
+                lblError.Text = ex.Message;
             }
             
             
@@ -112,12 +113,19 @@ namespace Administracion
             try
             {
 
-             
-                    new Administracion.ServicioWeb.ServicioTURU().EliminarEmpleado(_Emp);
-                    this.DesactivoBotones();
-                    this.LimpioCajaTexto();
-                    txtCedula.Enabled = false;
-                    lblError.Text = "Baja con exito";
+
+                if (_Emp._Cedula == emp2._Cedula)
+                {
+                    throw new Exception("El empleado logueado no se puede eliminar.");
+                }
+                else
+
+                { new Administracion.ServicioWeb.ServicioTURU().EliminarEmpleado(_Emp); }
+                this.DesactivoBotones();
+                this.LimpioCajaTexto();
+                txtCedula.Enabled = false;
+                lblError.Text = "Baja con exito";
+                
                 
             }
             catch (System.Web.Services.Protocols.SoapException ex)

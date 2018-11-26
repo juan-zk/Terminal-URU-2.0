@@ -91,7 +91,7 @@ namespace Administracion
                     f.Close();
                     f = null;
                 }
-                f = new ABMEmpleado();
+                f = new ABMEmpleado(_Emp);
                 f.MdiParent = this;
                 f.StartPosition = FormStartPosition.Manual;
                 f.Show();
