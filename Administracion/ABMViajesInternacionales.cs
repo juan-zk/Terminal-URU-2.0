@@ -14,7 +14,6 @@ namespace Administracion
     {
         internal Empleado _Emp = new Empleado();
         internal Viaje Viaje = new Viaje();
-        internal Compania comp = new Compania();
         internal ViajesInternacionales Vinter = new ViajesInternacionales();
 
         public ABMViajesInternacionales(Empleado pEmp)
@@ -109,7 +108,6 @@ namespace Administracion
                 else
                 {                   
                     HabilitarBajaModificar();
-                    comp = Vinter._Com;
                     txtAsientos.Text = Vinter._CantidadAsientos.ToString();
                     txtDocumentacion.Text = Vinter._Documentacion;
                     txtHoraArribo.Text = Vinter._FechaArribo.ToShortTimeString();
