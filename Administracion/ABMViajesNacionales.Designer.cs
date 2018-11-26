@@ -179,7 +179,6 @@
             // 
             // cbCompañia
             // 
-            this.cbCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbCompañia.FormattingEnabled = true;
             this.cbCompañia.Location = new System.Drawing.Point(175, 128);
             this.cbCompañia.Name = "cbCompañia";
@@ -206,7 +205,6 @@
             // 
             // cbParadas
             // 
-            this.cbParadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbParadas.FormattingEnabled = true;
             this.cbParadas.Items.AddRange(new object[] {
             "0",
@@ -227,9 +225,8 @@
             // 
             // cbTerminal
             // 
-            this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(175, 97);
+            this.cbTerminal.Location = new System.Drawing.Point(175, 102);
             this.cbTerminal.Name = "cbTerminal";
             this.cbTerminal.Size = new System.Drawing.Size(121, 21);
             this.cbTerminal.TabIndex = 12;
