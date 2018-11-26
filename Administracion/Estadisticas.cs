@@ -156,5 +156,10 @@ namespace Administracion
             }
         }
 
+        private void btnDeshacer_Click(object sender, EventArgs e)
+        {
+            this.CargoDatos();
+        }
+
     }
 }
