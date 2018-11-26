@@ -36,11 +36,6 @@ namespace Logica
             return FabricaPersistencia.GetPersistenciaTerminal().Buscar(pCodigo);
         }
 
-        /*public Terminal BuscarParaViaje(string pCodigo)
-        {
-            return FabricaPersistencia.GetPersistenciaTerminal().BuscarParaViaje(pCodigo);
-        }*/
-
         public List<Terminal> Listar()
         {
             return FabricaPersistencia.GetPersistenciaTerminal().Listar();
