@@ -106,9 +106,7 @@ namespace Administracion
             txtAsientos.Enabled = false;
             txtHoraArribo.Enabled = false;
             txtHoraPartida.Enabled = false;
-            cbCompañia.Enabled = false;
-            cbParadas.Enabled = false;
-            cbTerminal.Enabled = false;
+           
             cbTerminal.Text = "";
             cbCompañia.Text = "";
             cbParadas.Text = "";
