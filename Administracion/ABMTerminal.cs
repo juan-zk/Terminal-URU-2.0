@@ -186,6 +186,8 @@ namespace Administracion
         {
             try
             {
+                if (ControlVacio())
+                    throw new Exception("Todos los campos deben contener datos");
                 term._Pais = cmbPais.Text;
                 term._Ciudad = txtCiudad.Text;
                 string[] listaT = new string[lstFacilidad.Items.Count];

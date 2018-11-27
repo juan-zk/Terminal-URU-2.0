@@ -21,10 +21,14 @@ namespace Logica
 
         public void Agregar(Terminal t) 
         {
+            if (t._Facilidades.Length == 0)
+                throw new Exception("Debe seleccionar al menos una facilidad");
             FabricaPersistencia.GetPersistenciaTerminal().Agregar(t);
         }
         public void Modificar(Terminal t)
         {
+            if (t._Facilidades.Length == 0)
+                throw new Exception("Debe seleccionar al menos una facilidad");
             FabricaPersistencia.GetPersistenciaTerminal().Modificar(t);
         }
         public void Eliminar(Terminal t)

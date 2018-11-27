@@ -107,7 +107,7 @@ namespace Persistencia
             retorno.Direction = ParameterDirection.ReturnValue;
             cmd.Parameters.Add(retorno);
 
-            SqlTransaction tran = null;
+            SqlTransaction tran = null;            
             try
             {
                 cnn.Open();

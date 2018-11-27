@@ -106,8 +106,6 @@ namespace Administracion
         {
             try
             {
-
-
                 if (_Emp._Cedula == emp2._Cedula)
                 {
                     throw new Exception("El empleado logueado no se puede eliminar.");
